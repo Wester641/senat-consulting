@@ -1,0 +1,154 @@
+.footer-area {
+    background: #231b0e;
+}
+
+.footer-top {
+    padding: 80px 0 50px;
+}
+.footer-logo {
+    margin-bottom: 30px;
+}
+
+.footer-top p {
+    color: #ddd;
+}
+
+.footer-top a {
+    color: #ddd;
+}
+
+.footer-top h3 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-link ul li a {
+    padding-top: 10px;
+    display: block;
+    transition: all .3s;
+    position: relative;
+    padding-left: 30px;
+}
+
+.footer-link ul li a:before {
+    font-family: FontAwesome;
+    content: "\f101";
+    font-size: 15px;
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    border-radius: 50%;
+}
+.footer-link ul li a:hover{
+  color:#d0a15e;
+}
+.footer-link {
+    margin-bottom: 30px;
+}
+
+.footer-practice {
+    margin-bottom: 30px;
+}
+
+.footer-practice ul li a {
+    padding-top: 10px;
+    display: block;
+    transition: all .3s;
+    position: relative;
+    padding-left: 30px;
+}
+.footer-practice ul li a:before {
+    font-family: FontAwesome;
+    content: "\f101";
+    font-size: 15px;
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    border-radius: 50%;
+}
+.footer-practice ul li a:hover{
+  color:#d0a15e;
+}
+
+.footer-top .newsletter-widget form {
+  margin-top: 25px;
+  position: relative;
+}
+
+.footer-top .newsletter-widget form input {
+  background:#444444a3;
+  height: 50px;
+  color: #fff;
+  padding: 6px 15px;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.footer-top .newsletter-widget form .submit {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.footer-top .newsletter-widget form .submit button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  color: #fff;
+}
+.footer-bottom-content {
+    border-top: 1px solid rgba(255, 255, 255,  0.08);
+    padding: 30px 0;
+}
+
+.footer-bottom-content span {
+    color: #ddd;
+    font-size: 16px;
+}
+.footer-bottom-content span a{
+  color:#d0a15e; 
+}
+.footer-bottom-content ul {
+    justify-content: flex-end;
+}
+
+.footer-bottom-content ul li {
+    padding-right: 15px;
+}
+
+.footer-bottom-content ul li a {
+    color: #ddd;
+}
+.newsletter-widget ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #ddd;
+    font-size: 14px;
+}
+
+.newsletter-widget ::-moz-placeholder {
+    /* Firefox 19+ */
+
+    color: #ddd;
+    font-size: 14px;
+}
+
+.newsletter-widget :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #ddd;
+    font-size: 14px;
+}
+
+.newsletter-widget :-moz-placeholder {
+    /* Firefox 18- */
+
+    color: #ddd;
+    font-size: 14px;
+}

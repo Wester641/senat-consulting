@@ -1,0 +1,198 @@
+.about-style,.about-style-1,.about-style-2,.about-style-3{
+    background: #fff;
+    padding: 100px 0;
+}
+
+.about-style .about-content p,.about-style-1 .about-content p,.about-style-2 .about-content p{
+    margin-bottom: 40px;
+    color:#333;
+}
+.about-style .about-content,.about-style-1 .about-content,.about-style-2 .about-content,.about-style-3 .about-content{
+    padding-left:0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.about-img img{
+  padding:15px;
+  border:1px solid #ffc7b1;
+}
+.about-style .about-content h2,.about-style-1 .about-content h2,.about-style-3 .about-content h2 {
+    color: #1d375c;
+}
+.section-title span,.section-title-1 span  {
+    font-size: 16px;
+    color: #d0a15e;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.section-title h2,.section-title-1 h2  {
+    font-size: 36px;
+    font-weight: 700;
+    color: #444;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    position: relative;
+    margin-top: 15px;
+}
+.section-title h2:before,.section-title-1 h2:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 3px;
+    background: #d0a15e;
+    border-radius: 20px;
+}
+.section-title-1 h2{
+  margin-bottom: 60px;
+}
+.section-title-1 h2:before{
+  left: 46%;
+
+}
+.about-style-1 .about-img{
+  text-align: right;
+}
+.col-m{
+  padding-right: 0;
+}
+.about-style,.about-style-1,.about-style-2{
+    padding: 100px 0;
+}
+
+.about-style .about-content p,.about-style-1 .about-content p{
+    margin-bottom: 40px;
+    color:#333;
+}
+.about-style .about-content,.about-style-1 .about-content,.about-style-2 .about-content{
+    padding-left:0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.about-img img{
+  padding:15px;
+  border:1px solid #ffc7b1;
+  width: 100%;
+}
+.about-style .about-content h2,.about-style-1 .about-content h2 {
+    color: #1d375c;
+}
+.section-title span,.section-title-1 span  {
+    font-size: 16px;
+    color: #d0a15e;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.section-title h2,.section-title-1 h2  {
+    font-size: 36px;
+    font-weight: 700;
+    color: #444;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    position: relative;
+    margin-top: 15px;
+}
+.section-title h2:before,.section-title-1 h2:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 3px;
+    background: #d0a15e;
+    border-radius: 20px;
+}
+.section-title-1 h2{
+  margin-bottom: 60px;
+}
+.section-title-1 h2:before{
+  left: 46%;
+
+}
+.about-style-2 .about-img{
+  text-align: right;
+}
+.col-m{
+  padding-right: 0;
+}
+
+.about-style-1 .about-img,.about-style-2 .about-img{
+  position: relative;
+  text-align: left;
+}
+.about-style-1 .about-img:before, .about-style-2 .about-img:before {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    width: 95%;
+    height: 95%;
+    background: rgba(0,0,0,.40);
+    content: "";
+}
+.about-style-2 .video-btn {
+  position: absolute;
+  left: 42%;
+  top: 42%;
+  color: #fff;
+  text-align: center;
+}
+.about-style-2 .video-btn  .fa-play{
+  position: relative;
+}
+.about-style-2 .video-btn .fa-play:before {
+  position: absolute;
+  border: 10px solid rgba(158,112,68,.4);
+  border-radius: 50%;
+  font-size: 30px;
+  background: rgba(158,112,68,.7);
+  animation: spineer 2s infinite;
+  width: 70px;
+  height: 70px;
+  line-height: 50px;
+  color: #fff;
+}
+.about-style-2 .video-btn button{
+  background: none;
+  border: none;
+}
+.about-style-2 .video-btn button:focus{
+  outline: none;
+}
+@-webkit-keyframes spineer {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #d0a15e;
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 20px rgba(250,92,93,.0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(250,92,93,.0);
+  }
+}
+
+@keyframes spineer {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #d0a15e;
+    box-shadow: 0 0 0 0 #d0a15e;
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 20px rgba(250,92,93,.0);
+    box-shadow: 0 0 0 20px rgba(255,255,255,0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(250,92,93,.0);
+    box-shadow: 0 0 0 0 rgba(250,92,93,.0);
+  }
+}
+.signature {
+    margin-top: 20px;
+}

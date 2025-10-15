@@ -1,0 +1,60 @@
+
+.my-testimonial .inner-content {
+  padding: 40px 30px 30px 40px;
+  position: relative;
+  background:#f5f5f5;
+  margin: 15px;
+}
+
+.my-testimonial .inner-content .content {
+  padding-left: 115px;
+  position: relative;
+}
+
+.my-testimonial .inner-content .image-box {
+  border-radius: 50%;
+  height: 90px;
+  left: 0;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 90px;
+}
+
+.my-testimonial .inner-content h4 {
+  color: #444;
+  font-size: 18px;
+  font-weight: 700;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.my-testimonial .inner-content .quote-icon {
+  color: #d0a15e;
+  font-size: 36px;
+  line-height: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.my-testimonial .inner-content .designation {
+  color: #666;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.my-testimonial .inner-content .text {
+  color: #606060;
+  font-size: 16px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.testimonial-active .slick-dots li button:before{
+  color: #bbb;
+}
+.testimonial-active .slick-dots li.slick-active button:before {
+  color: #d0a15e;
+}

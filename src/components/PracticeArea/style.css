@@ -1,0 +1,196 @@
+.practice-area,.practice-area-2,.practice-area-3 {
+    background: #fff;
+    border-top: 1px solid #f1f1f1;
+}
+.practice-section .practices-wrapper {
+    text-align: center;
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 45px;
+    -webkit-box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
+    -moz-box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
+    box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
+}
+.section-title-1 h2:before{
+    left: 46%;
+}
+.practices-icon-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border:1px solid rgba(158,112,68,.25);
+  font-size: 50px;
+  background: #fff;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color:#d0a15e;
+  margin: auto;
+}
+
+.practice-section .practices-icon-wrapper .practice-dot {
+    width: 100%;
+    height: 100%;
+    left: 56%;
+    top: 8%;
+}
+.practices-icon-wrapper i.fi {
+  position: absolute;
+  left: 20px;
+  top: -11px;
+  width: 55px;
+}
+.dots {
+    width: 15px;
+    height: 15px;
+    background: #d0a15e;
+    border-radius: 50%;
+    left: 14px;
+    top: 0;
+    position: relative;
+
+}
+.practice-content h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.practice-content p{
+  margin-bottom: 0;
+}
+.practice-content{
+  margin-top: 20px;
+}
+.practice-section .practices-icon-wrapper .practice-dot:nth-child(1) {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-animation: practice-dot_1 2s infinite linear;
+  -moz-animation: practice-dot_1 2s infinite linear;
+  -o-animation: practice-dot_1 2s infinite linear;
+  animation: practice-dot_1 2s infinite linear;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.practice-section .practices-wrapper:hover .practice-dot:nth-child(1) {
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running; }
+
+
+@-webkit-keyframes practice-dot_1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-moz-keyframes practice-dot_1 {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-o-keyframes practice-dot_1 {
+  0% {
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes practice-dot_1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes practice-dot_2 {
+  0% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(540deg);
+    transform: rotate(540deg); } }
+
+@-moz-keyframes practice-dot_2 {
+  0% {
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  100% {
+    -moz-transform: rotate(540deg);
+    transform: rotate(540deg); } }
+
+@-o-keyframes practice-dot_2 {
+  0% {
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  100% {
+    -o-transform: rotate(540deg);
+    transform: rotate(540deg); } }
+
+@keyframes practice-dot_2 {
+  0% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(540deg);
+    -moz-transform: rotate(540deg);
+    -o-transform: rotate(540deg);
+    transform: rotate(540deg); } }
+.practice-section .practices-icon {
+    color: #ffc600;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(0deg, #ffc600 0%, #ff4200 100%);
+    background-image: -moz-linear-gradient(0deg, #ffc600 0%, #ff4200 100%);
+}
+
+
+.practice-area-2 .practice-section .practices-wrapper{
+  -webkit-box-shadow:none;
+ -moz-box-shadow:none;
+ box-shadow:none;
+ transition: all .3s;
+}
+.practice-area-2 .practice-section .practices-wrapper:hover{
+  -webkit-box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
+ -moz-box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
+ box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
+}
+
+.practice-area-3 .practice-section .practices-wrapper{
+  -webkit-box-shadow:none;
+ -moz-box-shadow:none;
+ box-shadow:none;
+ border:1px solid #f1f1f1;
+
+}
+
+.hero-style-3 .slide-caption{
+  padding-top: 65px;
+  padding-bottom: 0;
+}

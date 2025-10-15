@@ -1,0 +1,49 @@
+.contact-page-area .contact-map {
+    height: 450px;
+    margin-top: 100px;
+    cursor: pointer;
+}
+
+.contact-page-area .contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+}
+
+.contact-page-item h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.contact-page-item h3 {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contact-page-item span {
+    color: #666;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.contact-page-item .adress {
+    margin-bottom: 20px;
+}
+
+.contact-page-item .phone {
+    margin-bottom: 20px;
+}
+
+.contact-area.contact-area-2.contact-area-3 {
+    padding-top: 0px;
+    padding-bottom: 0;
+}
+
+.contact-area.contact-area-2.contact-area-3 h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
