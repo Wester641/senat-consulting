@@ -44,7 +44,7 @@ const Header = () => {
                                             <ul className="submenu">
                                                 <li className="active"><Link to="/">Home One</Link></li>
                                                 <li><Link to="/home2">Home Two</Link></li>
-                                                <li><Link to="/home3">Home Three</Link></li>
+                                                <li><Link to="/">Home Three</Link></li>
                                             </ul>
                                         </li>
                                         <li><Link to="/about">About Us</Link></li>

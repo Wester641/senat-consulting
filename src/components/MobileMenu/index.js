@@ -26,7 +26,7 @@ const menus = [
             {
                 id: 13,
                 title: 'Home One 3',
-                link: '/home3'
+                link: '/'
             },
         ]
     },

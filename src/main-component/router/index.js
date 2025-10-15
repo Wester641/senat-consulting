@@ -26,9 +26,9 @@ const AllRoute = () => {
       <Router>
         <Switch>
           <Route exact path='/' component={Homepage2} />
-          <Route path='/home' component={Homepage} />
+          {/* <Route path='/home' component={Homepage} /> */}
           <Route path='/home2' component={Homepage2} />
-          <Route path='/home3' component={Homepage3} />
+          {/* <Route path='/' component={Homepage3} /> */}
           <Route path='/about' component={AboutPage} />
           <Route path='/practice' component={PracticePage} />
           <Route path='/case-stadies' component={CaseStadies} />
