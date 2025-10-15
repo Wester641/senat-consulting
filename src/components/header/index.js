@@ -11,25 +11,25 @@ const Header = () => {
 
     return (
         <header>
-            <div className="header-top-1" >
-                {/* <div className="container">
+            <div className="header-top-1 d-none d-lg-block" >
+                <div className="container">
                     <div className="row">
-                        <div className="col-md-9 col-sm-12 col-12 col-lg-9">
+                        <div className="col-md-9 col-sm-12 col-12 col-lg-9 d-flex align-items-center">
                             <ul className="d-flex account_login-area">
-                                <li><i className="fa fa-clock-o" aria-hidden="true"></i>Mon - Tues : 6.00 am - 10.00 pm</li>
-                                <li><i className="fa fa-map-marker"></i>150 Street, London, USA</li>
+                                <li><i className="fa fa-clock-o" aria-hidden="true"></i>Пн - Пт : 9.00 - 19.00</li>
+                                <li><i className="fa fa-map-marker"></i>ул. Айни 85, Бишкек, Кыргызстан</li>
                             </ul>
                         </div>
-                        <div className="col-lg-3 col-md-3 col-sm-12">
-                            <div className="btn-style"><Link to="/">Free Consultation</Link></div>
+                        <div className="col-lg-3 col-md-3 col-sm-12 d-flex justify-content-center">
+                            <div className="btn-style"><Link to="/">Бесплатная консультация</Link></div>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
             <div className="header-style-1">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-lg-3 col-md-10 col-sm-10 col-8 col-t">
+                    <div className="row d-flex align-items-center justify-content-between py-2">
+                        <div className="col-lg-3 col-md-10 col-sm-10 col-8 col-t ">
                             <div className="logo">
                                 <Link to="/"><img src={logo} alt="" /></Link>
                             </div>
@@ -38,31 +38,29 @@ const Header = () => {
                             <div className="main-menu">
                                 <nav className="nav_mobile_menu">
                                     <ul>
-                                        <li className="active"><Link to="/">Home</Link>
-                                            {/* <ul className="submenu">
-                                                <li className="active"><Link to="/">Home One</Link></li>
-                                                <li><Link to="/">Home Two</Link></li>
-                                                <li><Link to="/">Home Three</Link></li>
-                                            </ul> */}
+                                        <li className="active"><Link to="/">Главная</Link></li>
+                                        <li><Link to="/about">О компании</Link></li>
+                                        <li><Link to="/practice">Наши услуги <i className="fa fa-angle-down"></i></Link>
+                                            <ul className="submenu">
+                                                <li><Link to="/practice-details">Суды и споры</Link></li>
+                                                <li><Link to="/practice-details">Регистрация бизнеса</Link></li>
+                                                <li><Link to="/practice-details">Договоры</Link></li>
+                                                <li><Link to="/practice-details">Сопровождение бизнеса</Link></li>
+                                                <li><Link to="/practice-details">Организация проектов и фестивалей</Link></li>
+                                            </ul>
                                         </li>
-                                        <li><Link to="/about">About Us</Link></li>
-                                        <li><Link to="/practice">Practices</Link>
+                                        <li><Link to="/case-stadies">Отзывы</Link></li>
+                                        <li><Link to="/blog-fullwidth">Новости</Link>
+
                                         </li>
-                                        <li><Link to="/case-stadies">Cases</Link>
-                                        </li>
-                                        <li><Link to="/blog-fullwidth">Blog</Link>
-                                            {/* <ul className="submenu">
-                                                <li><Link to="/blog">Blog Grid</Link></li>
-                                                <li><Link to="/blog-list">Blog with sidebar</Link></li>
-                                                <li><Link to="/blog-fullwidth">Blog full width</Link></li>
-                                                <li><Link to="/blog-single">Blog single sidebar</Link></li>
-                                                <li><Link to="/blog-single-fullwidth">Blog single fullwidth</Link></li>
-                                            </ul> */}
-                                        </li>
-                                        <li><Link to="/contact">Contact</Link></li>
+                                        <li><Link to="/contact">Контакты</Link></li>
+
                                     </ul>
+
                                 </nav>
+
                             </div>
+
                         </div>
                         {/* <div className="col-lg-1 col-md-1 col-sm-1 col-1 search">
                             <ul>
@@ -78,9 +76,11 @@ const Header = () => {
                                 </li>
                             </ul>
                         </div> */}
-                        <div className="">
+
+                        <div className="mr-3">
                             <MobileMenu />
                         </div>
+
                     </div>
                 </div>
             </div>

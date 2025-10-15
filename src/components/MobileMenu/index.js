@@ -10,33 +10,60 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 const menus = [
     {
         id: 1,
-        title: 'Home',
+        title: 'Главная',
         link: '/',
     },
     {
         id: 2,
-        title: 'About Us',
+        title: 'О компании',
         link: '/about',
     },
     {
         id: 3,
-        title: 'Practices',
+        title: 'Наши услуги',
         link: '/practice',
+        submenu: [
+            {
+                id: 1,
+                title: 'Суды и споры',
+                link: '/practice-details',
+            },
+            {
+                id: 2,
+                title: 'Регистрация бизнеса',
+                link: '/practice-details',
+            },
+            {
+                id: 3,
+                title: 'Договоры',
+                link: '/practice-details',
+            },
+            {
+                id: 4,
+                title: 'Сопровождение бизнеса',
+                link: '/practice-details',
+            },
+            {
+                id: 5,
+                title: 'Организация проектов и фестивалей',
+                link: '/practice-details',
+            },
+        ]
     },
     {
         id: 4,
-        title: 'Cases',
+        title: 'Отзывы',
         link: '/case-stadies',
     },
 
     {
         id: 5,
-        title: 'Blog',
+        title: 'Новости',
         link: '/blog-fullwidth',
     },
     {
         id: 6,
-        title: 'Contact',
+        title: 'Контакты',
         link: '/contact',
     },
 
@@ -78,7 +105,7 @@ class MobileMenu extends Component {
                                     <li key={item.id}>
                                         {item.submenu ? <p onClick={this.setIsOpen(item.id)}>
                                             {item.title}
-                                            {item.submenu ? <i className="fa fa-angle-right" aria-hidden="true"></i> : ''}
+                                            {item.submenu ? <i className="fa fa-angle-down" aria-hidden="true"></i> : ''}
                                         </p> : <Link to={item.link}>{item.title}</Link>}
                                         {item.submenu ?
                                             <Collapse isOpen={item.id === isOpen}>
