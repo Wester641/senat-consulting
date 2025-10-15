@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Homepage from '../HomePage'
 import Homepage2 from '../HomePage2'
-import Homepage3 from '../HomePage3'
 import AboutPage from '../AboutPage'
 import PracticePage from '../PracticePage'
 import CaseStadies from '../CaseStadies'
@@ -26,9 +25,6 @@ const AllRoute = () => {
       <Router>
         <Switch>
           <Route exact path='/' component={Homepage2} />
-          {/* <Route path='/home' component={Homepage} /> */}
-          <Route path='/home2' component={Homepage2} />
-          {/* <Route path='/' component={Homepage3} /> */}
           <Route path='/about' component={AboutPage} />
           <Route path='/practice' component={PracticePage} />
           <Route path='/case-stadies' component={CaseStadies} />

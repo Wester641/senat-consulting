@@ -1,18 +1,17 @@
-
 /*---------------------------
   Fonts
 ----------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Open+Sans:300,400,600,700');
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Open+Sans:300,400,600,700");
 /*--------------------------------------------------------------
 #0.1    Theme Reset Style
 --------------------------------------------------------------*/
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  color:#333;
+  color: #333;
 }
 
 @media (max-width: 767px) {
@@ -24,7 +23,7 @@ body {
 p {
   color: #666;
   line-height: 30px;
-  font-size:16px;
+  font-size: 16px;
 }
 
 h1,
@@ -33,14 +32,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   color: #353535;
 }
 
 ul {
   list-style-type: none;
   padding-left: 0;
-  margin: 0!important;
+  margin: 0 !important;
   margin-bottom: 0;
 }
 
@@ -54,7 +53,7 @@ a {
 }
 
 a:hover {
-  text-decoration: none!important;
+  text-decoration: none !important;
 }
 
 img {
@@ -81,17 +80,15 @@ a:focus {
   }
 }
 
-.features-padding{
+.features-padding {
   padding: 100px 0;
 }
-.section-padding{
+.section-padding {
   padding: 100px 0;
 }
-.ptb-100-70{
+.ptb-100-70 {
   padding: 100px 0 70px;
 }
-
-
 
 .fixed-navbar {
   position: relative;
@@ -99,19 +96,19 @@ a:focus {
 }
 .fixed-navbar.active .header-style-1,
 .fixed-navbar.active .header-style-2,
-.fixed-navbar.active .header-style-3{
+.fixed-navbar.active .header-style-3 {
   position: fixed;
   z-index: 555;
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
+  background: #231b0e;
   border: none;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, .1);
-    -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, .1);
-    -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, .1);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 }
 .fixed-navbar.active .header-style-2,
-.fixed-navbar.active .header-style-3{
+.fixed-navbar.active .header-style-3 {
   background: #231b0e;
 }

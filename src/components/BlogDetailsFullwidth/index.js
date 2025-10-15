@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import blog1 from '../../images/blog-page/1.jpg'
 import blog2 from '../../images/blog-details/1.jpg'
 import blog3 from '../../images/blog-details/author.jpg'
@@ -11,10 +11,10 @@ import blog6 from '../../images/blog-details/comment/2.jpg'
 const BlogDetailFullwidth = () => {
 
     const SubmitHandler = (e) => {
-      e.preventDefault()
+        e.preventDefault()
     }
 
-    return(
+    return (
         <div className="blog-page-area section-padding">
             <div className="container">
                 <div className="row">
@@ -23,10 +23,10 @@ const BlogDetailFullwidth = () => {
                             <div className="blog-item">
                                 <div className="blog-img">
                                     <div className="blog-s2">
-                                        <img src={blog1} alt=""/>
+                                        <img src={blog1} alt="" />
                                     </div>
                                     <ul className="post-meta">
-                                        <li><img src={blog4} alt=""/></li>
+                                        <li><img src={blog4} alt="" /></li>
                                         <li><Link to="/blog-single">By Aliza anne</Link></li>
                                         <li className="clr">Family Law</li>
                                         <li> Oct 12,2018</li>
@@ -40,7 +40,7 @@ const BlogDetailFullwidth = () => {
                             </div>
                             <div className="importent-section">
                                 <div className="importent-img">
-                                    <img src={blog2} alt=""/>
+                                    <img src={blog2} alt="" />
                                 </div>
                                 <div className="importent-text">
                                     <h2>The display is most important</h2>
@@ -70,7 +70,7 @@ const BlogDetailFullwidth = () => {
                             </div>
                             <div className="author-box">
                                 <div className="author-avatar">
-                                    <Link to="/blog-single" target="_blank"><img src={blog3} alt=""/></Link>
+                                    <Link to="/blog-single" target="_blank"><img src={blog3} alt="" /></Link>
                                 </div>
                                 <div className="author-content">
                                     <Link to="/blog-single" className="author-name">Alizabeth Anne</Link>
@@ -84,7 +84,7 @@ const BlogDetailFullwidth = () => {
                                         </ul>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                             <div className="more-posts">
                                 <div className="previous-post">
                                     <Link to="/blog-single">
@@ -96,7 +96,7 @@ const BlogDetailFullwidth = () => {
                                         <span className="post-control-link">Next post<i className="fa fa-long-arrow-right"></i></span>
                                     </Link>
                                 </div>
-                            </div> 
+                            </div>
                             <div className="comments-area">
                                 <div className="comments-section">
                                     <h3 className="comments-title">Comments</h3>
@@ -104,7 +104,7 @@ const BlogDetailFullwidth = () => {
                                         <li className="comment even thread-even depth-1" id="comment-1">
                                             <div id="div-comment-1">
                                                 <div className="comment-theme">
-                                                    <div className="comment-image"><img src={blog5} alt=""/></div>
+                                                    <div className="comment-image"><img src={blog5} alt="" /></div>
                                                 </div>
                                                 <div className="comment-main-area">
                                                     <div className="comment-wrapper">
@@ -125,7 +125,7 @@ const BlogDetailFullwidth = () => {
                                                 <li className="comment comment-2">
                                                     <div>
                                                         <div className="comment-theme">
-                                                            <div className="comment-image"><img src={blog6} alt=""/></div>
+                                                            <div className="comment-image"><img src={blog6} alt="" /></div>
                                                         </div>
                                                         <div className="comment-main-area">
                                                             <div className="comment-wrapper">
@@ -146,7 +146,7 @@ const BlogDetailFullwidth = () => {
                                                         <li className="comment">
                                                             <div>
                                                                 <div className="comment-theme">
-                                                                    <div className="comment-image"><img src={blog5} alt=""/></div>
+                                                                    <div className="comment-image"><img src={blog5} alt="" /></div>
                                                                 </div>
                                                                 <div className="comment-main-area">
                                                                     <div className="comment-wrapper">
@@ -171,7 +171,7 @@ const BlogDetailFullwidth = () => {
                                         <li className="comment">
                                             <div>
                                                 <div className="comment-theme">
-                                                    <div className="comment-image"><img src={blog6} alt=""/></div>
+                                                    <div className="comment-image"><img src={blog6} alt="" /></div>
                                                 </div>
                                                 <div className="comment-main-area">
                                                     <div className="comment-wrapper">
@@ -192,7 +192,7 @@ const BlogDetailFullwidth = () => {
                                         <li className="comment comment-5">
                                             <div>
                                                 <div className="comment-theme">
-                                                    <div className="comment-image"><img src={blog5} alt=""/></div>
+                                                    <div className="comment-image"><img src={blog5} alt="" /></div>
                                                 </div>
                                                 <div className="comment-main-area">
                                                     <div className="comment-wrapper">
@@ -211,7 +211,7 @@ const BlogDetailFullwidth = () => {
                                             </div>
                                         </li>
                                     </ol>
-                                </div> 
+                                </div>
                                 <div className="comment-respond">
                                     <h3 className="comment-reply-title">Leave a Comment</h3>
                                     <form onSubmit={SubmitHandler} id="commentform" className="comment-form">
@@ -219,12 +219,12 @@ const BlogDetailFullwidth = () => {
                                             <textarea id="comment" placeholder="Write Your Comments..."></textarea>
                                         </div>
                                         <div className="form-inputs">
-                                            <input placeholder="Website" type="url"/>
-                                            <input placeholder="Name" type="text"/>
-                                            <input placeholder="Email" type="email"/>
+                                            <input placeholder="Website" type="url" />
+                                            <input placeholder="Name" type="text" />
+                                            <input placeholder="Email" type="email" />
                                         </div>
                                         <div className="form-submit">
-                                            <input id="submit" value="Reply" type="submit"/>
+                                            <input id="submit" value="Reply" type="submit" />
                                         </div>
                                     </form>
                                 </div>
@@ -234,8 +234,8 @@ const BlogDetailFullwidth = () => {
                 </div>
             </div>
         </div>
-     )
-        
+    )
+
 }
 
 export default BlogDetailFullwidth;

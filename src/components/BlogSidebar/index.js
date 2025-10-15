@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ins1 from '../../images/instragram/1.jpg'
 import ins2 from '../../images/instragram/2.jpg'
 import ins3 from '../../images/instragram/3.jpg'
@@ -16,19 +16,19 @@ import './style.css'
 
 const BlogSidebar = () => {
 
-    const SubmitHandler = (e) =>{
-       e.preventDefault()
+    const SubmitHandler = (e) => {
+        e.preventDefault()
     }
 
-    return(
+    return (
         <div className="blog-right-bar practice-details-area case-stadies-details-area">
             <div className="row">
                 <div className="col-lg-12 col-12">
                     <div className="widget search-widget">
                         <form onSubmit={SubmitHandler}>
                             <div>
-                                <input type="text" className="form-control" placeholder="Search Post.."/>
-                                <button type="submit"><i className="fa fa-search" aria-hidden="true"></i></button>
+                                <input type="text" className="form-control" placeholder="Search Post.." />
+                                {/* <button type="submit"><i className="fa fa-search" aria-hidden="true"></i></button> */}
                             </div>
                         </form>
                     </div>
@@ -56,7 +56,7 @@ const BlogSidebar = () => {
                         <div className="posts">
                             <div className="post post2">
                                 <div className="img-holder">
-                                    <img src={rp1} alt=""/>
+                                    <img src={rp1} alt="" />
                                 </div>
                                 <div className="details">
                                     <p>Actual teachings of the great explorer of the truth, </p>
@@ -64,7 +64,7 @@ const BlogSidebar = () => {
                             </div>
                             <div className="post">
                                 <div className="img-holder">
-                                    <img src={rp2} alt=""/>
+                                    <img src={rp2} alt="" />
                                 </div>
                                 <div className="details">
                                     <p>The truth, the master-builder of human happiness</p>
@@ -72,7 +72,7 @@ const BlogSidebar = () => {
                             </div>
                             <div className="post post3">
                                 <div className="img-holder">
-                                    <img src={rp3} alt=""/>
+                                    <img src={rp3} alt="" />
                                 </div>
                                 <div className="details">
                                     <p>Explorer of the truth, the master-builder of human happiness</p>
@@ -103,19 +103,19 @@ const BlogSidebar = () => {
                     <div className="widget instagram">
                         <h3>Instagram</h3>
                         <ul className="d-flex">
-                            <li><Link to="/blog-single"><img src={ins1} alt=""/></Link></li>
-                            <li><Link to="/blog-single"><img src={ins2} alt=""/></Link></li>
-                            <li><Link to="/blog-single"><img src={ins3} alt=""/></Link></li>
-                            <li><Link to="/blog-single"><img src={ins4} alt=""/></Link></li>
-                            <li><Link to="/blog-single"><img src={ins5} alt=""/></Link></li>
-                            <li><Link to="/blog-single"><img src={ins6} alt=""/></Link></li>
+                            <li><Link to="/blog-single"><img src={ins1} alt="" /></Link></li>
+                            <li><Link to="/blog-single"><img src={ins2} alt="" /></Link></li>
+                            <li><Link to="/blog-single"><img src={ins3} alt="" /></Link></li>
+                            <li><Link to="/blog-single"><img src={ins4} alt="" /></Link></li>
+                            <li><Link to="/blog-single"><img src={ins5} alt="" /></Link></li>
+                            <li><Link to="/blog-single"><img src={ins6} alt="" /></Link></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-     )
-        
+    )
+
 }
 
 export default BlogSidebar;
