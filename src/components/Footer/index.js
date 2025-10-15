@@ -64,7 +64,7 @@ const FooterSection = () => {
                     <div className="footer-bottom-content">
                         <div className="row">
                             <div className="col-lg-6 col-md-8 col-sm-9 col-12">
-                                <span>Privacy Policy | © 2020 <Link to="/">Kazi</Link>. All rights reserved</span>
+                                <span>Privacy Policy | © 2020 <Link to="/">Senat Consulting</Link>. All rights reserved</span>
                             </div>
                             <div className="col-lg-6 col-md-4 col-sm-3 col-12">
                                 <ul className="d-flex">
