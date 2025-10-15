@@ -32,7 +32,7 @@
   padding: 0;
 }
 .header-style-1 {
-  background: #231b0e;
+  background: #c08329;
   /* background: #fff; */
 }
 .header-style-1 .main-menu,
@@ -242,8 +242,9 @@
   text-transform: capitalize;
   display: inline-block;
   margin-top: 3px;
-  border-radius: 5px;
-  background: -webkit-linear-gradient(left, #9e7044, #d0a15e);
+  /* border-radius: 5px; */
+  background: #c08329;
+  /* background: -webkit-linear-gradient(left, #9e7044, #d0a15e); */
   border: 1px solid #d0a15e;
   position: relative;
   z-index: 11;
