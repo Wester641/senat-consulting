@@ -1,13 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-
-
 import blog1 from '../../images/blog-page/7.jpg'
 import blog4 from '../../images/blog-page/6.jpg'
-
-
 const BlogFullWidth = () => {
-
     return (
         <div className="blog-page-area section-padding">
             <div className="container">
@@ -22,14 +17,14 @@ const BlogFullWidth = () => {
                                     <ul className="post-meta">
                                         <li><img src={blog4} alt="" /></li>
                                         <li><Link to="/blog-single">By Aliza anne</Link></li>
-                                        <li className="clr">Family Law</li>
-                                        <li> Oct 12,2018</li>
+                                        <li className="clr">Суды и споры</li>
+                                        <li>Oct 12,2018</li>
                                     </ul>
                                 </div>
                                 <div className="blog-content-2">
-                                    <h2>What lawyer can do for you</h2>
-                                    <p>I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
-                                    <Link to="/blog-single">read more..</Link>
+                                    <h2>Что адвокат может сделать для вас</h2>
+                                    <p>Профессиональный адвокат поможет вам разобраться в сложных юридических вопросах и защитить ваши права в суде. Опыт и знание законодательства позволяют специалисту предвидеть возможные проблемы и предложить наиболее эффективное решение. Многие люди боятся судебных процессов, но с помощью грамотного юриста вы сможете чувствовать себя защищённо и уверенно на протяжении всего разбирательства.</p>
+                                    <Link to="/blog-single">читать далее..</Link>
                                 </div>
                             </div>
                             <div className="blog-item blog-item-2">
@@ -39,12 +34,12 @@ const BlogFullWidth = () => {
                                             <ul className="post-meta">
                                                 <li><img src={blog4} alt="" /></li>
                                                 <li><Link to="/blog-single">By Aliza anne</Link></li>
-                                                <li className="clr">Family Law</li>
-                                                <li> Oct 12,2018</li>
+                                                <li className="clr">Суды и споры</li>
+                                                <li>Oct 12,2018</li>
                                             </ul>
-                                            <h2>The things only for you</h2>
-                                            <p>I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure,</p>
-                                            <Link to="/blog-single">read more..</Link>
+                                            <h2>Разрешение споров: ваши возможности</h2>
+                                            <p>Судебный процесс требует специальных знаний и подготовки. Юридическая консультация поможет вам понять, какие действия предпринять при возникновении конфликта с другой стороной. Правильная подготовка документов и понимание процедуры судопроизводства могут существенно повлиять на результат вашего дела и защитить ваши интересы.</p>
+                                            <Link to="/blog-single">читать далее..</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -55,7 +50,5 @@ const BlogFullWidth = () => {
             </div>
         </div>
     )
-
 }
-
 export default BlogFullWidth;

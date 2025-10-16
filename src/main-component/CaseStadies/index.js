@@ -12,7 +12,7 @@ const CaseStadies = () => {
     return(
        <div>
            <Navbar/>
-           <Breadcumb bdtitle={'Case Stadies'} bdsub={'Resent Case Studies'}/>
+           <Breadcumb bdtitle={'Наши дела'} bdsub={'Отзыва'}/>
            <Porfolio/>
            <FooterSection/>
        </div>

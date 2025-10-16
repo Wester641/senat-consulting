@@ -18,8 +18,8 @@ const Features = () => {
                                 <i className="fi"><img src={fe1} alt=""/></i>
                             </div>
                             <div className="features-content">
-                                <p>Book Your</p>
-                                <h3>Appointment</h3>
+                                <p>Забронируйте свою</p>
+                                <h3>Встречу</h3>
                             </div>
                         </div>
                     </div>
@@ -29,8 +29,8 @@ const Features = () => {
                                 <i className="fi"><img src={fe2} alt=""/></i>
                             </div>
                             <div className="features-content">
-                                <p>Get Free</p>
-                                <h3>Expert Advice</h3>
+                                <p>Получите бесплатно</p>
+                                <h3>Советы эксперта</h3>
                             </div>
                         </div>
                     </div>
@@ -40,8 +40,8 @@ const Features = () => {
                                 <i className="fi"><img src={fe3} alt=""/></i>
                             </div>
                             <div className="features-content">
-                                <p>You Can Easily</p>
-                                <h3>Join Our Team</h3>
+                                <p>Вы можете легко</p>
+                                <h3>Присоединиться к нашей команде</h3>
                             </div>
                         </div>
                     </div>

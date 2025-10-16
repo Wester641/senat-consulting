@@ -26,36 +26,38 @@ class SimpleSlider2 extends Component {
                             <div className="container">
                                 <div className="row">
                                     <div className="col col-lg-8 slide-caption">
-                                        <h2>We Fight For Your Justice As Like A Friend.</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+                                        <h2>Мы защищаем ваши права с преданностью и опытом.</h2>
+                                        <p>Наши юристы готовы отстаивать ваши интересы в любой ситуации — от консультации до суда. Мы рядом, когда справедливость важнее всего.</p>
                                         <div className="btns">
-                                            <div className="btn-style"><Link to="/">Contact us now</Link></div>
+                                            <div className="btn-style"><Link to="/">Связаться с нами</Link></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div className="slide3 slide">
                             <div className="container">
                                 <div className="row">
                                     <div className="col col-lg-8 slide-caption">
-                                        <h2>We Fight For Your Justice As Like A Friend.</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+                                        <h2>Юридическая поддержка, на которую можно положиться.</h2>
+                                        <p>Мы предлагаем честный, понятный и профессиональный подход к решению ваших правовых вопросов. Ваше спокойствие — наша ответственность.</p>
                                         <div className="btns">
-                                            <div className="btn-style"><Link to="/">Contact us now</Link></div>
+                                            <div className="btn-style"><Link to="/">Получить консультацию</Link></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div className="slide1 slide">
                             <div className="container">
                                 <div className="row">
                                     <div className="col col-lg-8 slide-caption">
-                                        <h2>We Fight For Your Justice As Like A Friend.</h2>
-                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+                                        <h2>Справедливость — наша профессия.</h2>
+                                        <p>Мы защищаем интересы клиентов с уверенностью, уважением и знанием закона. Ваша победа — это наша цель.</p>
                                         <div className="btns">
-                                            <div className="btn-style"><Link to="/">Contact us now</Link></div>
+                                            <div className="btn-style"><Link to="/">Записаться на встречу</Link></div>
                                         </div>
                                     </div>
                                 </div>

@@ -12,7 +12,7 @@ const ContactPage = () => {
     return(
        <div>
            <Navbar/>
-           <Breadcumb bdtitle={'Contact Us'} bdsub={'Contact'}/>
+           <Breadcumb bdtitle={'Наши контакты'} bdsub={'Контакты'}/>
            <Contactpage/>
            <FooterSection/>
        </div>

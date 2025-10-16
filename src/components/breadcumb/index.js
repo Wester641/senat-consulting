@@ -14,7 +14,7 @@ const Breadcumb = (props) => {
                         <div className="breadcumb-wrap text-center">
                             <h2>{props.bdtitle}</h2>
                             <ul>
-                                <li><Link to="/">Home</Link></li>
+                                <li><Link to="/">Главная</Link></li>
                                 <li><span>{props.bdsub}</span></li>
                             </ul>
                         </div>

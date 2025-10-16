@@ -32,19 +32,19 @@ class ContactForm extends Component {
             notes, error } = this.state;
 
         if (name === '') {
-            error.name = "Please enter your name";
+            error.name = "Пожалуйста, введите свое имя";
         }
         if (email === '') {
-            error.email = "Please enter your email";
+            error.email = "Пожалуйста, введите свой адрес электронной почты";
         }
         if (number === '') {
-            error.number = "Select your number of number";
+            error.number = "Выберите номер вашего номера";
         }
         if (events === '') {
-            error.events = "Select your event list";
+            error.events = "Выберите список событий";
         }
         if (notes === '') {
-            error.notes = "Please enter your note";
+            error.notes = "Пожалуйста, введите вашу заметку";
         }
 
 
@@ -77,34 +77,34 @@ class ContactForm extends Component {
             <form onSubmit={this.subimtHandler}>
                 <div className="contact-form form-style row">
                     <div className="col-12 col-lg-6">
-                        <input type="text" value={name} onChange={this.changeHandler} placeholder="Your Name*" id="fname" name="name" />
+                        <input type="text" value={name} onChange={this.changeHandler} placeholder="Ваше Имя*" id="fname" name="name" />
                         <p>{error.name ? error.name : ''}</p>
                     </div>
                     <div className="col col-lg-6">
-                        <input type="text" placeholder="Phone" onChange={this.changeHandler} value={number} id="number" name="number" />
+                        <input type="text" placeholder="Номер телефона" onChange={this.changeHandler} value={number} id="number" name="number" />
                         <p>{error.number ? error.number : ''}</p>
                     </div>
                     <div className="col-12  col-lg-6">
-                        <input type="email" placeholder="Your Email" onChange={this.changeHandler} value={email} id="email" name="email" />
+                        <input type="email" placeholder="Ваша почта" onChange={this.changeHandler} value={email} id="email" name="email" />
                         <p>{error.email ? error.email : ''}</p>
                     </div>
                     <div className="col col-lg-6">
                         <select className="form-control" onChange={this.changeHandler} value={events} name="events">
-                            <option disabled value="">Family Law</option>
-                            <option value="1">Criminal Law</option>
-                            <option value="2">Business Law</option>
-                            <option value="3">Personal Injury</option>
-                            <option value="4">Education Law</option>
-                            <option value="5">Drugs Crime</option>
+                            <option disabled value="">Суды и споры</option>
+                            <option value="1">Регистрация бизнеса</option>
+                            <option value="2">Договоры</option>
+                            <option value="3">Сопровождение бизнеса</option>
+                            <option value="4">Организация проектов и фестивалей</option>
+                            <option value="5">Личная травма</option>
                         </select>
                         <p>{error.events ? error.events : ''}</p>
                     </div>
                     <div className="col-12 col-sm-12">
-                        <textarea className="contact-textarea" value={notes} onChange={this.changeHandler} placeholder="Message" name="notes"></textarea>
+                        <textarea className="contact-textarea" value={notes} onChange={this.changeHandler} placeholder="Комментарии" name="notes"></textarea>
                         <p>{error.notes ? error.notes : ''}</p>
                     </div>
                     <div className="col-12">
-                            <button type="submit" className="theme-btn">Appointment</button>
+                            <button type="submit" className="theme-btn">Записаться</button>
                     </div>
                 </div>
             </form>
