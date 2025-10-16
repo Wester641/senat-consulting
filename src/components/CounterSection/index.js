@@ -4,7 +4,7 @@ import './style.css'
 
 const CounterSection = () => {
 
-    return(
+    return (
         <div className="counter-area">
             <div className="container">
                 <div className="row">
@@ -19,33 +19,32 @@ const CounterSection = () => {
                                 <div>
                                     <h2><span>95</span>%</h2>
                                 </div>
-                                <p>Cases Won</p>
+                                <p>Выигранных дел</p>
                             </div>
                             <div className="grid">
                                 <div>
-                                    <h2><span>863</span></h2>
+                                    <h2><span>86</span></h2>
                                 </div>
-                                <p>Trusted Client</p>
+                                <p>Довольных клиентов</p>
                             </div>
                             <div className="grid">
                                 <div>
-                                    <h2><span>126</span>+</h2>
+                                    <h2><span>2</span></h2>
                                 </div>
-                                <p>Dedicated Lawyer</p>
+                                <p>Опытных юристов</p>
                             </div>
                             <div className="grid">
                                 <div>
                                     <h2><span>25</span>%</h2>
                                 </div>
-                                <p>Case Dismissed</p>
+                                <p>Дел прекращено</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-     )
-        
+    );
 }
 
 export default CounterSection;

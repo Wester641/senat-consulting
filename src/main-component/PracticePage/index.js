@@ -15,7 +15,7 @@ const PracticePage = () => {
     return(
        <div className="practicepage">
            <Navbar/>
-           <Breadcumb bdtitle={'Practice Area'} bdsub={'Practice Area'}/>
+           <Breadcumb bdtitle={'Наши услуги'} bdsub={'Наши услуги'}/>
            <Features/>
            <PracticeArea/>
            <PricingSection/>

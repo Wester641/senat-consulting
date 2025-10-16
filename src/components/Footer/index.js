@@ -1,57 +1,70 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
-import logo from '../../images/logo/logo.png'
-import './style.css'
+import { Link } from 'react-router-dom';
+import logo from '../../images/logo/logo.png';
+import './style.css';
 
 const FooterSection = () => {
-
-    return(
+    return (
         <div className="footer-area">
             <div className="footer-top">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-3 col-md-6 col-sm-6">
                             <div className="footer-logo">
-                                <Link to="/"><img src={logo} alt=""/></Link>
+                                <Link to="/"><img src={logo} alt="" /></Link>
                             </div>
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classNameical Latin literature</p>
+                            <p>
+                                Наша юридическая команда помогает клиентам решать сложные споры, защищать права и достигать успеха в делах любой сложности.
+                            </p>
                         </div>
+
                         <div className="col-lg-3 col-md-6 col-sm-6">
                             <div className="footer-link">
-                                <h3>Quick Link</h3>
+                                <h3>Навигация</h3>
                                 <ul>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="/">Practice Area</Link></li>
-                                    <li><Link to="/">Our Team</Link></li>
-                                    <li><Link to="/">Recent Case</Link></li>
-                                    <li><Link to="/">Our Blog</Link></li>
+                                    <li><Link to="/">Главная</Link></li>
+                                    <li><Link to="/practice">Услуги</Link></li>
+                                    <li><Link to="/">Наша команда</Link></li>
+                                    <li><Link to="/case-stadies">Отзывы</Link></li>
+                                    <li><Link to="/blog-fullwidth">Новости</Link></li>
                                 </ul>
                             </div>
                         </div>
+
                         <div className="col-lg-3 col-md-6 col-sm-6">
                             <div className="footer-practice bd-0">
-                                <h3>Practice Area</h3>
+                                <h3>Услуги</h3>
                                 <ul>
-                                    <li><Link to="/">Family Law</Link></li>
-                                    <li><Link to="/">Criminal Law</Link></li>
-                                    <li><Link to="/">Parsonal Injury</Link></li>
-                                    <li><Link to="/">Real Estate Law</Link></li>
-                                    <li><Link to="/">Business Law</Link></li>
+                                    <li><Link to="/">Суды и споры</Link></li>
+                                    <li><Link to="/">Регистрация бизнеса</Link></li>
+                                    <li><Link to="/">Договоры</Link></li>
+                                    <li><Link to="/">Сопровождение бизнеса</Link></li>
+                                    <li><Link to="/">Организация проектов и фестивалей</Link></li>
                                 </ul>
                             </div>
                         </div>
+
                         <div className="col-lg-3 col-md-6 col-sm-6">
                             <div className="widget newsletter-widget">
                                 <div className="widget-title">
-                                    <h3>Newsletter</h3>
+                                    <h3>Подписка на новости</h3>
                                 </div>
-                                <p>Samsa was a travelling salesman and above it there hung a picture that he had recently</p>
+                                <p>
+                                    Подпишитесь на нашу рассылку, чтобы получать актуальные юридические новости и советы от наших экспертов.
+                                </p>
                                 <form>
                                     <div className="input-1">
-                                        <input type="email" className="form-control" placeholder="Email Address *" required/>
+                                        <input
+                                            type="email"
+                                            className="form-control"
+                                            placeholder="Ваш email *"
+                                            required
+                                        />
                                     </div>
                                     <div className="submit clearfix">
-                                        <button type="submit"><i className="fa fa-envelope-o" aria-hidden="true"></i></button>
+                                        <button type="submit">
+                                            <i className="fa fa-envelope-o" aria-hidden="true"></i>
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -59,18 +72,34 @@ const FooterSection = () => {
                     </div>
                 </div>
             </div>
+
             <div className="footer-bottom">
                 <div className="container">
                     <div className="footer-bottom-content">
                         <div className="row">
                             <div className="col-lg-6 col-md-8 col-sm-9 col-12">
-                                <span>Privacy Policy | © 2020 <Link to="/">Senat Consulting</Link>. All rights reserved</span>
+                                <span>
+                                    Политика конфиденциальности | © 2025{' '}
+                                    <Link to="/">Senat Consulting</Link>. Все права защищены
+                                </span>
                             </div>
                             <div className="col-lg-6 col-md-4 col-sm-3 col-12">
                                 <ul className="d-flex">
-                                    <li><Link to="/"><i className="fa fa-facebook" aria-hidden="true"></i></Link></li>
-                                    <li><Link to="/"><i className="fa fa-twitter" aria-hidden="true"></i></Link></li>
-                                    <li><Link to="/"><i className="fa fa-linkedin" aria-hidden="true"></i></Link></li>
+                                    <li>
+                                        <Link to="/">
+                                            <i className="fa fa-facebook" aria-hidden="true"></i>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            <i className="fa fa-twitter" aria-hidden="true"></i>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/">
+                                            <i className="fa fa-linkedin" aria-hidden="true"></i>
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -78,8 +107,7 @@ const FooterSection = () => {
                 </div>
             </div>
         </div>
-     )
-        
-}
+    );
+};
 
 export default FooterSection;

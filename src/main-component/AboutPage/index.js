@@ -18,7 +18,7 @@ const AboutPage = () => {
     return(
        <div className="about-layout">
            <Navbar/>
-           <Breadcumb bdtitle={'About Us'} bdsub={'About'}/>
+           <Breadcumb bdtitle={'О нас'} bdsub={'О компании'}/>
            <Features/>
            <AboutSection/>
            <PracticeArea/>

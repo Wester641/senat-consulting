@@ -13,8 +13,8 @@ const BlogSection = () => {
             <div className="container">
                 <div className="col-l2">
                     <div className="section-title-1 text-center">
-                        <span>From Our Blog</span>
-                        <h2>Latest News</h2>
+                        <span>Из нашего блога</span>
+                        <h2>Последние новости</h2>
                     </div>
                 </div>
                 <div className="row">
@@ -24,7 +24,9 @@ const BlogSection = () => {
                                <img src={blog1} alt=""/>
                             </div>
                             <div className="blog-content">
-                                <h3><Link to="/blog">Justice May For You If You Are Innocent</Link></h3>
+                                <h3><Link to="/blog-fullwidth">
+                                Правосудие восторжествует, если вы стоите на стороне закона
+                                </Link></h3>
                                 <ul className="post-meta">
                                     <li><img src={blog4} alt=""/></li>
                                     <li><Link to="/blog">By Aliza anne</Link></li>
@@ -39,7 +41,9 @@ const BlogSection = () => {
                                <img src={blog2} alt=""/>
                             </div>
                             <div className="blog-content">
-                                <h3><Link to="/blog">Justice May For You If You Are Innocent</Link></h3>
+                                <h3><Link to="/blog-fullwidth">
+                                Новые изменения в семейном законодательстве — что важно знать
+                                </Link></h3>
                                 <ul className="post-meta">
                                     <li><img src={blog4} alt=""/></li>
                                     <li><Link to="/blog">By Aliza anne</Link></li>
@@ -54,7 +58,9 @@ const BlogSection = () => {
                                 <img src={blog3} alt=""/>
                             </div>
                             <div className="blog-content">
-                                <h3><Link to="/blog">Justice May For You If You Are Innocent</Link></h3>
+                                <h3><Link to="/blog-fullwidth">
+                                Как правильно оформить договор, чтобы избежать судебных споров
+                                </Link></h3>
                                 <ul className="post-meta">
                                     <li><img src={blog4} alt=""/></li>
                                     <li><Link to="/blog">By Aliza anne</Link></li>

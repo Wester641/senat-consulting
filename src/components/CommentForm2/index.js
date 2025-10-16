@@ -1,103 +1,103 @@
 import React, { Component } from 'react';
 
-class ContactForm2 extends Component {
+class ФормаКомментария2 extends Component {
 
-    state = {
-        name: '',
-        email: '',
-        number: '',
-        adress: '',
-        notes: '',
-        error: {}
+    состояние = {
+        имя: '',
+        почта: '',
+        номер: '',
+        адрес: '',
+        заметки: '',
+        ошибка: {}
     }
 
 
-    changeHandler = (e) => {
-        const error = this.state.error;
-        error[e.target.name] = ''
+    обработчикИзменения = (е) => {
+        const ошибка = this.состояние.ошибка;
+        ошибка[е.target.name] = ''
 
         this.setState({
-            [e.target.name]: e.target.value,
-            error
+            [е.target.name]: е.target.value,
+            ошибка
         })
     }
 
-    subimtHandler = (e) => {
-        e.preventDefault();
+    обработчикОтправки = (е) => {
+        е.preventDefault();
 
-        const { name,
-            email,
-            number,
-            adress,
-            notes, error } = this.state;
+        const { имя,
+            почта,
+            номер,
+            адрес,
+            заметки, ошибка } = this.состояние;
 
-        if (name === '') {
-            error.name = "Please enter your name";
+        if (имя === '') {
+            ошибка.имя = "Пожалуйста, введите ваше имя";
         }
-        if (email === '') {
-            error.email = "Please enter your email";
+        if (почта === '') {
+            ошибка.почта = "Пожалуйста, введите вашу почту";
         }
-        if (number === '') {
-            error.number = "Please enter your number";
+        if (номер === '') {
+            ошибка.номер = "Пожалуйста, введите ваш номер";
         }
-        if (adress === '') {
-            error.adress = "Please enter your adress";
+        if (адрес === '') {
+            ошибка.адрес = "Пожалуйста, введите ваш адрес";
         }
-        if (notes === '') {
-            error.notes = "Please enter your note";
+        if (заметки === '') {
+            ошибка.заметки = "Пожалуйста, введите вашу заметку";
         }
 
 
-        if (error) {
+        if (ошибка) {
             this.setState({
-                error
+                ошибка
             })
         }
-        if (error.name === '' && error.email === '' && error.email === '' && error.number === '' && error.adress === '' && error.notes === '') {
+        if (ошибка.имя === '' && ошибка.почта === '' && ошибка.почта === '' && ошибка.номер === '' && ошибка.адрес === '' && ошибка.заметки === '') {
             this.setState({
-                name: '',
-                email: '',
-                number: '',
-                adress: '',
-                notes: '',
-                error: {}
+                имя: '',
+                почта: '',
+                номер: '',
+                адрес: '',
+                заметки: '',
+                ошибка: {}
             })
         }
     }
 
     render() {
 
-        const { name,
-            email,
-            number,
-            adress,
-            notes, error } = this.state;
+        const { имя,
+            почта,
+            номер,
+            адрес,
+            заметки, ошибка } = this.состояние;
 
         return (
-            <form onSubmit={this.subimtHandler}>
+            <form onSubmit={this.обработчикОтправки}>
                 <div className="contact-form form-style row">
                     <div className="col-12 col-lg-6">
-                        <input type="text" value={name} onChange={this.changeHandler} placeholder="Your Name*" id="fname" name="name" />
-                        <p>{error.name ? error.name : ''}</p>
+                        <input type="text" value={имя} onChange={this.обработчикИзменения} placeholder="Ваше имя*" id="fname" name="имя" />
+                        <p>{ошибка.имя ? ошибка.имя : ''}</p>
                     </div>
                     <div className="col-12  col-lg-6">
-                        <input type="email" placeholder="Your Email" onChange={this.changeHandler} value={email} id="email" name="email" />
-                        <p>{error.email ? error.email : ''}</p>
+                        <input type="email" placeholder="Ваша почта" onChange={this.обработчикИзменения} value={почта} id="email" name="почта" />
+                        <p>{ошибка.почта ? ошибка.почта : ''}</p>
                     </div>
                     <div className="col col-lg-6">
-                        <input type="text" placeholder="Phone" onChange={this.changeHandler} value={number} id="number" name="number" />
-                        <p>{error.number ? error.number : ''}</p>
+                        <input type="text" placeholder="Телефон" onChange={this.обработчикИзменения} value={номер} id="number" name="номер" />
+                        <p>{ошибка.номер ? ошибка.номер : ''}</p>
                     </div>
                     <div className="col-12  col-lg-6">
-                        <input type="adress" placeholder="Your adress" onChange={this.changeHandler} value={adress} id="adress" name="adress" />
-                        <p>{error.adress ? error.adress : ''}</p>
+                        <input type="text" placeholder="Ваш адрес" onChange={this.обработчикИзменения} value={адрес} id="adress" name="адрес" />
+                        <p>{ошибка.адрес ? ошибка.адрес : ''}</p>
                     </div>
                     <div className="col-12 col-sm-12">
-                        <textarea className="contact-textarea" value={notes} onChange={this.changeHandler} placeholder="Message" name="notes"></textarea>
-                        <p>{error.notes ? error.notes : ''}</p>
+                        <textarea className="contact-textarea" value={заметки} onChange={this.обработчикИзменения} placeholder="Сообщение" name="заметки"></textarea>
+                        <p>{ошибка.заметки ? ошибка.заметки : ''}</p>
                     </div>
                     <div className="col-12">
-                        <button type="submit" className="theme-btn">Appointment</button>
+                        <button type="submit" className="theme-btn">Записаться</button>
                     </div>
                 </div>
             </form>
@@ -105,4 +105,4 @@ class ContactForm2 extends Component {
     }
 }
 
-export default ContactForm2;
+export default ФормаКомментария2;

@@ -1,43 +1,43 @@
 import React, { Component } from 'react';
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import {Link} from 'react-router-dom'
 import './style.css'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import team_1 from '../../images/team/1.jpg';
 import team_2 from '../../images/team/2.jpg';
-import team_3 from '../../images/team/3.jpg';
-import team_4 from '../../images/team/4.jpg';
-import team_5 from '../../images/team/5.jpg';
-import team_6 from '../../images/team/6.jpg';
+// import team_3 from '../../images/team/3.jpg';
+// import team_4 from '../../images/team/4.jpg';
+// import team_5 from '../../images/team/5.jpg';
+// import team_6 from '../../images/team/6.jpg';
 
 class TeamSection extends Component {
     render() {
-        const settings = {
-            dots: false,
-            infinite: true,
-            speed: 1200,
-            slidesToShow: 1,
-            autoplay:true,
-            arrows: true,
-            margin:50,
-            slidesToScroll: 1,
-            centerPadding: 30,
-            focusOnSelect: false,
+        // const settings = {
+        //     dots: false,
+        //     infinite: true,
+        //     speed: 1200,
+        //     slidesToShow: 1,
+        //     autoplay:true,
+        //     arrows: true,
+        //     margin:50,
+        //     slidesToScroll: 1,
+        //     centerPadding: 30,
+        //     focusOnSelect: false,
 
-        };
+        // };
         return (
             
             <div className="team-area ptb-100-70">
                 <div className="container">
                     <div className="col-l2">
                         <div className="section-title-1  text-center">
-                            <span>Meet Our Experts</span>
-                            <h2>Qualified Attorneys</h2>
+                            <span>Познакомьтесь с нашими экспертами</span>
+                            <h2>Квалифицированные юристы</h2>
                         </div>
                     </div>
                     <div className="team-active owl-carousel">
-                    <Slider {...settings}>
+                    {/* <Slider {...settings}> */}
                         <div className="team-item">
                             <div className="row">
                                 <div className="col-lg-4 col-md-6 col-12">
@@ -76,7 +76,7 @@ class TeamSection extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-4 col-md-6 col-12">
+                                {/* <div className="col-lg-4 col-md-6 col-12">
                                     <div className="team-single">
                                         <div className="team-img">
                                              <img src={team_3} alt=""/>
@@ -93,12 +93,12 @@ class TeamSection extends Component {
                                             <span>Business Lawyer</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="team-item">
                             <div className="row">
-                                <div className="col-lg-4 col-md-6 col-12">
+                                {/* <div className="col-lg-4 col-md-6 col-12">
                                     <div className="team-single">
                                         <div className="team-img">
                                             <img src={team_4} alt=""/>
@@ -115,8 +115,8 @@ class TeamSection extends Component {
                                             <span>Family Lawyer</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 col-12">
+                                </div> */}
+                                {/* <div className="col-lg-4 col-md-6 col-12">
                                     <div className="team-single">
                                         <div className="team-img">
                                             <img src={team_5} alt=""/>
@@ -133,8 +133,8 @@ class TeamSection extends Component {
                                             <span>Criminal Lawyer</span>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-4 col-md-6 col-12">
+                                </div> */}
+                                {/* <div className="col-lg-4 col-md-6 col-12">
                                     <div className="team-single">
                                         <div className="team-img">
                                             <img src={team_6} alt=""/>
@@ -151,10 +151,10 @@ class TeamSection extends Component {
                                             <span>Business Lawyer</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
-                    </Slider>
+                    {/* </Slider> */}
                 </div>
             </div>
         </div>

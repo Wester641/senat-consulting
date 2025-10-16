@@ -12,7 +12,7 @@ const PracticeDetails = () => {
     return(
        <div>
            <Navbar/>
-           <Breadcumb bdtitle={'Practice Area'} bdsub={'Practice area details'}/>
+           <Breadcumb bdtitle={'Услуги'} bdsub={'Детали услуг'}/>
            <PracticDetails/>
            <FooterSection/>
        </div>
