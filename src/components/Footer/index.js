@@ -80,7 +80,7 @@ const FooterSection = () => {
                             <div className="col-lg-6 col-md-8 col-sm-9 col-12">
                                 <span>
                                     Политика конфиденциальности | © 2025{' '}
-                                    <Link to="/">Kazi</Link>. Все права защищены
+                                    <Link to="/">Senat Consulting</Link>. Все права защищены
                                 </span>
                             </div>
                             <div className="col-lg-6 col-md-4 col-sm-3 col-12">
