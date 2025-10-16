@@ -1,66 +1,85 @@
-.features-icon i.fi {
-    background: #f5f5f5;
-    padding: 57px 70px 30px 56px;
-    transition: all .5s;
-    border:1px solid #ddd;
-}
-.col-d{
-  padding: 0;
-}
 .features-area {
     background: #fff;
     padding: 30px 0 0;
     border-bottom: 1px solid #f1f1f1;
 }
-.features-area .features-item{
-  overflow: hidden;
+
+.col-d {
+  padding: 0;
 }
+.col-p {
+  padding-left: 0;
+}
+
+.features-area .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.col-lg-4, .col-md-6, .col-sm-12 {
+    display: flex;
+}
+
+.features-area .features-item-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
+    padding: 25px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    min-height: 250px;
+    background: #fff;
+}
+
 .features-area .features-icon {
-    margin-top: 0;
-    float: left;
+    margin-bottom: 15px;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-
-}
-.features-area .features-item-2 {
-    margin-bottom: 30px;
-    -webkit-box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
-    -moz-box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
-    box-shadow: 0px 10px 40px 0px rgba(50, 50, 50, 0.1);
-    padding: 20px 0 25px;
-}
-.features-area .features-content p a:hover {
-    color: #199ca4;
 }
 
-.features-content h3 {
-    color: #444;
-    font-size: 30px;
-    margin-top: 5px;
-}
-.features-area .features-content p {
-    font-size: 16px;
-    color: #777;
-}
 .features-area .features-icon i.fi {
-    padding: 0;
     width: 100px;
     height: 100px;
     background: #fff;
     line-height: 100px;
     text-align: center;
-    margin-right: 20px;
     color: #d0a15e;
-    margin-left: 15px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.features-area .features-content p {
-    margin-bottom: 0px;
+
+.features-area .features-icon img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
 }
+
 .features-content {
-    overflow: hidden;
-    margin-top: 15px;
+    margin-top: 10px;
+    padding: 0 10px;
 }
-.col-p{
-  padding-left: 0;
+
+.features-content p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.features-content h3 {
+    color: #444;
+    font-size: 22px;
+    line-height: 1.3;
+    margin-top: 5px;
+    word-wrap: break-word;
 }
