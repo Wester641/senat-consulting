@@ -1,99 +1,102 @@
-import React, { Component } from 'react';
-
-class ContactForm3 extends Component {
-
-    state = {
-        name: '',
-        number: '',
-        company_name: '',
-        notes: '',
-        error: {}
-    }
+import React, { useState } from 'react';
+import { supabase } from '../../integrationSupabase/client';
 
 
-    changeHandler = (e) => {
-        const error = this.state.error;
-        error[e.target.name] = ''
 
-        this.setState({
-            [e.target.name]: e.target.value,
-            error
-        })
-    }
+function ContactForm3() {
 
-    subimtHandler = (e) => {
+    const [name, setName] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [companyName, setCompanyName] = useState('');
+    const [notes, setNotes] = useState('');
+    const [statusMessage, setStatusMessage] = useState('');
+
+
+    const SubmitHandler = async (e) => {
         e.preventDefault();
 
-        const { name,
-            number,
-            company_name,
-            notes, error } = this.state;
+        setStatusMessage('Отправка...');
 
-        if (name === '') {
-            error.name = "Please enter your name";
-        }
-        if (number === '') {
-            error.number = "Please enter your number";
-        }
-        if (company_name === '') {
-            error.company_name = "Please enter your company name";
-        }
-        if (notes === '') {
-            error.notes = "Please enter your note";
-        }
+        const commentData = {
+            name: name,
+            phone_number: phoneNumber,
+            company_name: companyName,
+            notes: notes
+        };
 
+        const { data, error } = await supabase
+            .from('comments')
+            .insert([commentData])
+            .select();
 
         if (error) {
-            this.setState({
-                error
-            })
-        }
-        if (error.name === '' && error.number === '' && error.company_name === '' && error.notes === '') {
-            this.setState({
-                name: '',
-                number: '',
-                company_name: '',
-                notes: '',
-                error: {}
-            })
-        }
+            console.error("Ошибка Supabase:", error);
+            setStatusMessage(`Ошибка отправки: ${error.message}`);
+        } else {
+            console.log("Данные Supabase успешно вставлены:", data);
+            setStatusMessage('Сообщение успешно отправлено!');
 
-        console.log(this.state);
+
+            setName('');
+            setPhoneNumber('');
+            setCompanyName('');
+            setNotes('');
+        }
     }
 
-    render() {
 
-        const { name,
-            number,
-            company_name,
-            notes, error } = this.state;
+    return (
+        <form onSubmit={SubmitHandler}>
+            <div className="contact-form form-style row">
+                <div className="col-12 col-lg-12">
 
-        return (
-            <form onSubmit={this.subimtHandler}>
-                <div className="contact-form form-style row">
-                    <div className="col-12 col-lg-12">
-                        <input type="text" value={name} onChange={this.changeHandler} placeholder="Your Name*" id="fname" name="name" />
-                        <p>{error.name ? error.name : ''}</p>
-                    </div>
-                    <div className="col col-lg-12">
-                        <input type="text" placeholder="Phone number" onChange={this.changeHandler} value={number} id="number" name="number" />
-                        <p>{error.number ? error.number : ''}</p>
-                    </div>
-                    <div className="col-12  col-lg-12">
-                        <input type="text" placeholder="Your company name" onChange={this.changeHandler} value={company_name} id="company_name" name="company_name" />
-                        <p>{error.company_name ? error.company_name : ''}</p>
-                    </div>
-                    <div className="col-12 col-sm-12">
-                        <textarea className="contact-textarea" value={notes} onChange={this.changeHandler} placeholder="Message" name="notes"></textarea>
-                        <p>{error.notes ? error.notes : ''}</p>
-                    </div>
-                    <div className="col-12">
-                        <button type="submit" className="theme-btn">Submit</button>
-                    </div>
+                    <input
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Your Name*"
+                        id="fname"
+                        name="name"
+                    />
                 </div>
-            </form>
-        )
-    }
+
+                <div className="col col-lg-12">
+                    <input
+                        type="number"
+                        value={phoneNumber}
+                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        placeholder="Phone number"
+                        id="phone_number"
+                        name="phone_number"
+                    />
+                </div>
+                <div className="col-12  col-lg-12">
+                    <input
+                        type="text"
+                        value={companyName}
+                        onChange={(e) => setCompanyName(e.target.value)}
+                        placeholder="Your company name"
+                        id="company_name"
+                        name="company_name"
+                    />
+                </div>
+                <div className="col-12 col-sm-12">
+                    <textarea
+                        className="contact-textarea"
+                        value={notes}
+                        onChange={(e) => setNotes(e.target.value)}
+                        placeholder="Message"
+                        name="notes"
+                    ></textarea>
+                </div>
+                <div className="col-12">
+                    <button type="submit" className="theme-btn">Submit</button>
+                </div>
+
+                {statusMessage && <p style={{ marginTop: '10px' }}>{statusMessage}</p>}
+            </div>
+        </form>
+    )
 }
 
-export default ContactForm3;
+export default ContactForm3
