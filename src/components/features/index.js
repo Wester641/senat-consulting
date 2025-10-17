@@ -40,8 +40,8 @@ const Features = () => {
                                 <i className="fi"><img src={fe3} alt=""/></i>
                             </div>
                             <div className="features-content">
-                                <p>Вы можете легко</p>
-                                <h3>Присоединиться к нашей команде</h3>
+                                <p>Легко начать</p>
+                                <h3>С нами</h3>
                             </div>
                         </div>
                     </div>

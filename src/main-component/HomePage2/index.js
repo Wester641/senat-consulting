@@ -14,6 +14,7 @@ import TeamSection from '../../components/Team'
 import CounterSection from '../../components/CounterSection'
 import BlogSection from '../../components/BlogSection'
 import FooterSection from '../../components/Footer'
+import PhoneButton from '../../components/PhoneForm'
 
 
 const Homepage2 = () => {
@@ -31,6 +32,7 @@ const Homepage2 = () => {
             <CounterSection />
             <BlogSection />
             <FooterSection />
+            <PhoneButton />
         </div>
     )
 }
