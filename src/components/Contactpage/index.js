@@ -3,7 +3,7 @@ import ContactForm2 from '../CommentForm2'
 
 import './style.css'
 
-const СтраницаКонтактов = () => {
+const Contactpage = () => {
 
     return (
         <div className="contact-page-area section-padding">
@@ -48,4 +48,4 @@ const СтраницаКонтактов = () => {
 
 }
 
-export default СтраницаКонтактов;
+export default Contactpage;
