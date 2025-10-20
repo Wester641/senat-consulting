@@ -53,7 +53,7 @@ const Contactpage = () => {
                                     rel="noopener noreferrer"
                                     className="map-link-btn route-btn"
                                 >
-                                    Найти проезд до Intellect IT & Business College
+                                    Найти проезд до Intellect IT & Business College - Senat Consulting
                                 </a>
                             </div>
                             
@@ -72,5 +72,6 @@ const Contactpage = () => {
         </div>
     )
 }
+
 
 export default Contactpage;
