@@ -1,115 +1,130 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { useState } from 'react';
 
-class ContactForm extends Component {
-
-    state = {
+function ContactForm() {
+    const [formData, setFormData] = useState({
         name: '',
         email: '',
         number: '',
         events: '',
-        notes: '',
-        error: {}
-    }
+        notes: ''
+    });
 
+    const [error, setError] = useState({});
 
-    changeHandler = (e) => {
-        const error = this.state.error;
-        error[e.target.name] = ''
+    const changeHandler = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+        if (error[name]) {
+            setError(prev => ({
+                ...prev,
+                [name]: ''
+            }));
+        }
+    };
 
-        this.setState({
-            [e.target.name]: e.target.value,
-            error
-        })
-    }
-
-    subimtHandler = (e) => {
+    const submitHandler = (e) => {
         e.preventDefault();
+        const newError = {};
 
-        const { name,
-            email,
-            number,
-            events,
-            notes, error } = this.state;
-
-        if (name === '') {
-            error.name = "Пожалуйста, введите свое имя";
+        if (formData.name === '') {
+            newError.name = "Пожалуйста, введите свое имя";
         }
-        if (email === '') {
-            error.email = "Пожалуйста, введите свой адрес электронной почты";
+        if (formData.email === '') {
+            newError.email = "Пожалуйста, введите свой адрес электронной почты";
         }
-        if (number === '') {
-            error.number = "Выберите номер вашего номера";
+        if (formData.number === '') {
+            newError.number = "Пожалуйста, введите номер телефона";
         }
-        if (events === '') {
-            error.events = "Выберите список событий";
-        }
-        if (notes === '') {
-            error.notes = "Пожалуйста, введите вашу заметку";
+        if (formData.events === '') {
+            newError.events = "Выберите список событий";
         }
 
-
-        if (error) {
-            this.setState({
-                error
-            })
-        }
-        if (error.name === '' && error.email === '' && error.email === '' && error.number === '' && error.events === '' && error.notes === '') {
-            this.setState({
+        if (Object.keys(newError).length > 0) {
+            setError(newError);
+        } else {
+            setFormData({
                 name: '',
                 email: '',
                 number: '',
                 events: '',
-                notes: '',
-                error: {}
-            })
+                notes: ''
+            });
+            setError({});
         }
-    }
+    };
 
-    render() {
-
-        const { name,
-            email,
-            number,
-            events,
-            notes, error } = this.state;
-
-        return (
-            <form onSubmit={this.subimtHandler}>
-                <div className="contact-form form-style row">
-                    <div className="col-12 col-lg-6">
-                        <input type="text" value={name} onChange={this.changeHandler} placeholder="Ваше Имя*" id="fname" name="name" />
-                        <p>{error.name ? error.name : ''}</p>
-                    </div>
-                    <div className="col col-lg-6">
-                        <input type="text" placeholder="Номер телефона" onChange={this.changeHandler} value={number} id="number" name="number" />
-                        <p>{error.number ? error.number : ''}</p>
-                    </div>
-                    <div className="col-12  col-lg-6">
-                        <input type="email" placeholder="Ваша почта" onChange={this.changeHandler} value={email} id="email" name="email" />
-                        <p>{error.email ? error.email : ''}</p>
-                    </div>
-                    <div className="col col-lg-6">
-                        <select className="form-control" onChange={this.changeHandler} value={events} name="events">
-                            <option disabled value="">Суды и споры</option>
-                            <option value="1">Регистрация бизнеса</option>
-                            <option value="2">Договоры</option>
-                            <option value="3">Сопровождение бизнеса</option>
-                            <option value="4">Организация проектов и фестивалей</option>
-                            <option value="5">Личная травма</option>
-                        </select>
-                        <p>{error.events ? error.events : ''}</p>
-                    </div>
-                    <div className="col-12 col-sm-12">
-                        <textarea className="contact-textarea" value={notes} onChange={this.changeHandler} placeholder="Комментарии" name="notes"></textarea>
-                        <p>{error.notes ? error.notes : ''}</p>
-                    </div>
-                    <div className="col-12">
-                            <button type="submit" className="theme-btn">Записаться</button>
-                    </div>
+    return (
+        <form onSubmit={submitHandler}>
+            <div className="contact-form form-style row">
+                <div className="col-12 col-lg-6">
+                    <input
+                        type="text"
+                        value={formData.name}
+                        onChange={changeHandler}
+                        placeholder="Ваше Имя*"
+                        id="fname"
+                        name="name"
+                    />
+                    <p style={{ color: 'red' }}>{error.name ? error.name : ''}</p>
                 </div>
-            </form>
-        )
-    }
+                <div className="col col-lg-6">
+                    <input
+                        type="text"
+                        placeholder="Номер телефона"
+                        onChange={changeHandler}
+                        value={formData.number}
+                        id="number"
+                        name="number"
+                    />
+                    <p style={{ color: 'red' }}>{error.number ? error.number : ''}</p>
+                </div>
+                <div className="col-12 col-lg-6">
+                    <input
+                        type="email"
+                        placeholder="Ваша почта"
+                        onChange={changeHandler}
+                        value={formData.email}
+                        id="email"
+                        name="email"
+                    />
+                    <p style={{ color: 'red' }}>{error.email ? error.email : ''}</p>
+                </div>
+                <div className="col col-lg-6">
+                    <select
+                        className="form-control"
+                        onChange={changeHandler}
+                        value={formData.events}
+                        name="events"
+                    >
+                        <option disabled value="">Суды и споры</option>
+                        <option value="1">Регистрация бизнеса</option>
+                        <option value="2">Договоры</option>
+                        <option value="3">Сопровождение бизнеса</option>
+                        <option value="4">Организация проектов и фестивалей</option>
+                        <option value="5">Личная травма</option>
+                    </select>
+                    <p style={{ color: 'red' }}>{error.events ? error.events : ''}</p>
+                </div>
+                <div className="col-12 col-sm-12">
+                    <textarea
+                        className="contact-textarea"
+                        value={formData.notes}
+                        onChange={changeHandler}
+                        placeholder="Комментарии"
+                        name="notes"
+                    ></textarea>
+                    <p style={{ color: 'red' }}>{error.notes ? error.notes : ''}</p>
+                </div>
+                <div className="col-12">
+                    <button type="submit" className="theme-btn">Записаться</button>
+                </div>
+            </div>
+        </form>
+    );
 }
 
 export default ContactForm;

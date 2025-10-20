@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Homepage from '../HomePage'
+import Homepage from '../HomePage' // do not touch this line, do not delete
 import Homepage2 from '../HomePage2'
 import AboutPage from '../AboutPage'
 import PracticePage from '../PracticePage'
