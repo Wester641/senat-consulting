@@ -21,7 +21,7 @@ const ContactSection = () => {
                                 </div>
                                 <div className="contact-c">
                                     <h4>Наш адрес</h4>
-                                    <span>г. Бишкек, ул. Айни, 85</span>
+                                    <span>г. Бишкек, ул. Ибраимова,103/1а Первый этаж</span>
                                 </div>
                             </div>
                             <div className="contact-sub">
@@ -30,7 +30,7 @@ const ContactSection = () => {
                                 </div>
                                 <div className="contact-c">
                                     <h4>Телефон</h4>
-                                    <span>+996 (555) 123-456</span>
+                                    <span>+996 (707) 967-711</span>
                                 </div>
                             </div>
                             <div className="contact-sub">
@@ -39,7 +39,7 @@ const ContactSection = () => {
                                 </div>
                                 <div className="contact-c">
                                     <h4>Электронная почта</h4>
-                                    <span>sample@gmail.com</span>
+                                    <span>guljamal.muni@gmail.com</span>
                                 </div>
                             </div>
                         </div>

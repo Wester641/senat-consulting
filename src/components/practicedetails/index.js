@@ -20,7 +20,7 @@ class PracticDetails extends Component {
                                             <img src={pr_1} alt=""/>
                                         </div>
                                         <div className="field-content">
-                                            <h3><span>5</span> лет опыта в этой сфере</h3>
+                                            <h3><span>8</span> лет опыта в этой сфере</h3>
                                             <div className="btns">
                                                 <div className="btn-style">
                                                     <Link to="/contact">Связаться с нами</Link>
