@@ -36,7 +36,7 @@ function ContactForm() {
             newError.email = "Пожалуйста, введите свой адрес электронной почты";
         }
         if (formData.number === '') {
-            newError.number = "Выберите номер вашего номера";
+            newError.number = "Пожалуйста, введите номер телефона";
         }
         if (formData.events === '') {
             newError.events = "Выберите список событий";
@@ -53,7 +53,6 @@ function ContactForm() {
                 notes: ''
             });
             setError({});
-            console.log('Форма успешно отправлена');
         }
     };
 

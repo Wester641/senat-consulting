@@ -56,7 +56,6 @@ function ContactForm2() {
                 notes: ''
             });
             setError({});
-            console.log('Форма успешно отправлена');
         }
     };
 
