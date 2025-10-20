@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 
 import './style.css';
+import address from '../../images/about/mobileaddress.jpg'
 
 import 'react-perfect-scrollbar/dist/css/styles.css';
 const menus = [
@@ -97,7 +98,6 @@ class MobileMenu extends Component {
             <div>
                 <PerfectScrollbar >
                     <div className={`mobileMenu ${isMenuShow ? 'show' : ''}`}>
-                        {/* <div className="clox" onClick={this.menuHandler}>Close Me</div> */}
 
                         <ul className="responsivemenu">
                             {menus.map(item => {
@@ -123,6 +123,21 @@ class MobileMenu extends Component {
                                     </li>
                                 )
                             })}
+                            <div className="mobile-map-container">
+                                <h3 className="map-address-title">Улица Ибраимова, 103/1а, Бишкек</h3>
+                                <a
+                                    href="https://2gis.kg/bishkek/geo/70030076493877457/74.618063%2C42.878776?m=74.618691%2C42.878209%2F18.24"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="map-link"
+                                >
+                                    <img 
+                                        src={address} 
+                                        alt="Адрес компании - Улица Ибраимова, 103/1а, Бишкек" 
+                                        className="map-image"
+                                    />
+                                </a>
+                            </div>
                         </ul>
                     </div>
                 </PerfectScrollbar>

@@ -1,10 +1,9 @@
 import React from 'react';
-import ContactForm2 from '../CommentForm2'
-
-import './style.css'
+import ContactForm2 from '../CommentForm2';
+import address from '../../images/about/address.jpg';
+import './style.css';
 
 const Contactpage = () => {
-
     return (
         <div className="contact-page-area section-padding">
             <div className="container">
@@ -38,14 +37,41 @@ const Contactpage = () => {
                 <div className="row">
                     <div className="col col-xs-12">
                         <div className="contact-map">
-                            <iframe title='db' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57763.58882182253!2d55.38442113562169!3d25.195692423227655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2z4Kam4KeB4Kas4Ka-4KaHIC0g4Kam4KeB4Kas4Ka-4KaHIOCmhuCmruCmv-CmsOCmvuCmpCAtIOCmuOCmguCmr-CngeCmleCnjeCmpCDgpobgprDgpqwg4KaG4Kau4Ka_4Kaw4Ka-4Kak!5e0!3m2!1sbn!2sbd!4v1540725271741"></iframe>
+                            <div className="map-links">
+                                <a 
+                                    href="http://2gis.kg/bishkek/firm/70000001101156993/center/74.61802482604982,42.879077532561865/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="map-link-btn"
+                                >
+                                    Посмотреть на карте Бишкека
+                                </a>
+                                
+                                <a 
+                                    href="http://2gis.kg/bishkek/center/74.61802,42.878519/zoom/16/routeTab/rsType/bus/to/74.61802,42.878519╎Intellect IT & Business College?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="map-link-btn route-btn"
+                                >
+                                    Найти проезд до Intellect IT & Business College - Senat Consulting
+                                </a>
+                            </div>
+                            
+                            <h3>Улица Ибраимова, 103/1а, Бишкек</h3>
+                            <a
+                                href="https://2gis.kg/bishkek/geo/70030076493877457/74.618063%2C42.878776?m=74.618691%2C42.878209%2F18.24"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img src={address} width="100%" height="500px" alt="Адрес" />
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     )
-
 }
+
 
 export default Contactpage;
