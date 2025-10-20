@@ -3,14 +3,10 @@ import React from  'react';
 // components
 import Navbar from '../../components/Navbar'
 import Breadcumb from '../../components/breadcumb'
-
-import Features from '../../components/features'
 import AboutSection from '../../components/about'
 import PracticeArea from '../../components/PracticeArea'
 import Testimonial from '../../components/testimonial'
 import TeamSection from '../../components/Team'
-import CounterSection from '../../components/CounterSection'
-import BlogSection from '../../components/BlogSection'
 import FooterSection from '../../components/Footer'
 
 
@@ -19,13 +15,10 @@ const AboutPage = () => {
        <div className="about-layout">
            <Navbar/>
            <Breadcumb bdtitle={'О нас'} bdsub={'О компании'}/>
-           <Features/>
            <AboutSection/>
            <PracticeArea/>
            <Testimonial/>
            <TeamSection/>
-           <CounterSection/>
-           <BlogSection/>
            <FooterSection/>
        </div>
     )

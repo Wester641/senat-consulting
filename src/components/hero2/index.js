@@ -26,8 +26,8 @@ class SimpleSlider2 extends Component {
                             <div className="container">
                                 <div className="row">
                                     <div className="col col-lg-8 slide-caption">
-                                        <h2>Мы защищаем ваши права с преданностью и опытом.</h2>
-                                        <p>Наши юристы готовы отстаивать ваши интересы в любой ситуации — от консультации до суда. Мы рядом, когда справедливость важнее всего.</p>
+                                        <h2>Не остановимся, пока не выиграем!</h2>
+                                        <p>Мы готовим позицию, защищаем ваши интересы и говорим на языке закона.</p>
                                         <div className="btns">
                                             <div className="btn-style"><Link to="/">Связаться с нами</Link></div>
                                         </div>
@@ -40,8 +40,8 @@ class SimpleSlider2 extends Component {
                             <div className="container">
                                 <div className="row">
                                     <div className="col col-lg-8 slide-caption">
-                                        <h2>Юридическая поддержка, на которую можно положиться.</h2>
-                                        <p>Мы предлагаем честный, понятный и профессиональный подход к решению ваших правовых вопросов. Ваше спокойствие — наша ответственность.</p>
+                                        <h2>Ваше здоровье — наш приоритет</h2>
+                                        <p> Оказываем правовую помощь в делах о возмещении вреда, причинённого травмами, ДТП или несчастными случаями.</p>
                                         <div className="btns">
                                             <div className="btn-style"><Link to="/">Получить консультацию</Link></div>
                                         </div>
@@ -54,8 +54,8 @@ class SimpleSlider2 extends Component {
                             <div className="container">
                                 <div className="row">
                                     <div className="col col-lg-8 slide-caption">
-                                        <h2>Справедливость — наша профессия.</h2>
-                                        <p>Мы защищаем интересы клиентов с уверенностью, уважением и знанием закона. Ваша победа — это наша цель.</p>
+                                        <h2>Начните бизнес без головной боли!</h2>
+                                        <p>Подбираем оптимальную форму собственности, оформляем документы и открываем компанию</p>
                                         <div className="btns">
                                             <div className="btn-style"><Link to="/">Записаться на встречу</Link></div>
                                         </div>
