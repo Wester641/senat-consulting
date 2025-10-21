@@ -6,9 +6,53 @@ import "slick-carousel/slick/slick-theme.css";
 import testimonialImg_1 from '../../images/testimonials/img-1.jpg';
 import testimonialImg_2 from '../../images/testimonials/img-2.jpg';
 import testimonialImg_3 from '../../images/testimonials/img-3.jpg';
+import { supabase } from '../../integrationSupabase/client';
 
 class Testimonial extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            testimonials: [],
+            loading: true
+        };
+    }
+
+    componentDidMount() {
+        this.fetchTestimonials();
+    }
+
+    async fetchTestimonials() {
+        try {
+            const { data, error } = await supabase
+                .from('comments')
+                .select('name, company_name, notes')
+                .eq('approve', true)
+                .order('created_at', { ascending: false });
+
+            if (error) {
+                console.error('Error fetching testimonials:', error);
+                this.setState({ loading: false });
+                return;
+            }
+
+            this.setState({ 
+                testimonials: data || [],
+                loading: false 
+            });
+        } catch (error) {
+            console.error('Error:', error);
+            this.setState({ loading: false });
+        }
+    }
+
+    getAvatarImage(index) {
+        const images = [testimonialImg_1, testimonialImg_2, testimonialImg_3];
+        return images[index % images.length];
+    }
+
     render() {
+        const { testimonials, loading } = this.state;
+
         const settings = {
             dots: true,
             infinite: true,
@@ -47,51 +91,57 @@ class Testimonial extends Component {
                 }
             ]
         };
+
+        if (loading) {
+            return (
+                <div className="testimonial-area section-padding">
+                    <div className="container">
+                        <div className="text-center">Loading testimonials...</div>
+                    </div>
+                </div>
+            );
+        }
+
+        if (testimonials.length === 0) {
+            return (
+                <div className="testimonial-area section-padding">
+                    <div className="container">
+                        <div className="text-center">No testimonials available</div>
+                    </div>
+                </div>
+            );
+        }
+
         return (
             <div className="testimonial-area section-padding">
                 <div className="container">
                     <div className="testimonial-active">
                     <Slider {...settings}>
-                        <div className="my-testimonial">
-                            <div className="inner-content">
-                                <div className="content">
-                                    <div className="image-box"><img src={testimonialImg_1} alt="" /></div>
-                                    <div className="quote-icon"><i className="fi flaticon-right-quote"></i></div>
-                                    <h4>David Millar</h4>
-                                    <div className="designation">CEO of American BDS</div>
-                                    <div className="text">The greatest discovery of all time is that a person can changes his futures by some merely changing his attitude & some life style.</div>
+                        {testimonials.map((testimonial, index) => (
+                            <div className="my-testimonial" key={index}>
+                                <div className="inner-content">
+                                    <div className="content">
+                                        <div className="image-box">
+                                            <img src={this.getAvatarImage(index)} alt="" />
+                                        </div>
+                                        <div className="quote-icon">
+                                            <i className="fi flaticon-right-quote"></i>
+                                        </div>
+                                        <h4>{testimonial.name}</h4>
+                                        <div className="designation">
+                                            {testimonial.company_name || 'Компания не указана'}
+                                        </div>
+                                        <div className="text">{testimonial.notes}</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="my-testimonial">
-                            <div className="inner-content">
-                                <div className="content">
-                                    <div className="image-box"><img src={testimonialImg_2} alt="" /></div>
-                                    <div className="quote-icon"><i className="fi flaticon-right-quote"></i></div>
-                                    <h4>Ketly William</h4>
-                                    <div className="designation">CEO, of details</div>
-                                    <div className="text">The greatest discovery of all time is that a person can changes his futures by some merely changing his attitude & some life style.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="my-testimonial">
-                            <div className="inner-content">
-                                <div className="content">
-                                    <div className="image-box"><img src={testimonialImg_3} alt="" /></div>
-                                    <div className="quote-icon"><i className="fi flaticon-right-quote"></i></div>
-                                    <h4>Aliza Anne</h4>
-                                    <div className="designation">CEO</div>
-                                    <div className="text">The greatest discovery of all time is that a person can changes his futures by some merely changing his attitude & some life style.</div>
-                                </div>
-                            </div>
-                        </div> 
+                        ))}
                     </Slider>
                     </div>
                 </div>
             </div>
-           
         );
     }
 }
 
-export default Testimonial;            
+export default Testimonial;

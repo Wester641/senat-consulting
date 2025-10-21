@@ -6,6 +6,7 @@ import Breadcumb from '../../components/breadcumb'
 
 // import Porfolio from '../../components/case'
 import FooterSection from '../../components/Footer'
+import Testimonial from '../../components/testimonial/index';
 import Testimonial2 from '../../components/testimonial/index2';
 
 
@@ -16,6 +17,7 @@ const CaseStadies = () => {
             <Navbar />
             <Breadcumb bdtitle={'Наши дела'} bdsub={'Отзыва'} />
             {/* <Porfolio/> */}
+            <Testimonial />
             <Testimonial2 />
             <FooterSection />
         </div>
