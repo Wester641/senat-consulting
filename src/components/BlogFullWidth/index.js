@@ -123,15 +123,32 @@ const BlogFullWidth = () => {
                                             style={{ marginBottom: '40px' }}
                                         >
                                             <div className="blog-img">
-                                                <div className="blog-s2" style={{ width: "60%" }}>
+                                                <div className="blog-s2" style={{ 
+                                                    width: "60%",
+                                                }}>
                                                     <img
                                                         src={post.image_url || noPhoto}
                                                         alt={post.title}
-                                                        style={{ width: '100%', height: 'auto' }}
+                                                        style={{ 
+                                                            width: '100%', 
+                                                            height: 'auto',
+                                                            border: '2px solid #ddd',
+                                                            borderRadius: '4px',
+                                                            boxSizing: 'border-box'
+                                                        }}
                                                     />
                                                 </div>
                                                 <ul className="post-meta">
-                                                    <li><img src={blog4} alt="" /></li>
+                                                    <li>
+                                                        <img 
+                                                            src={blog4} 
+                                                            alt="" 
+                                                            style={{
+                                                                border: '2px solid #ddd',
+                                                                borderRadius: '4px'
+                                                            }}
+                                                        />
+                                                    </li>
                                                     <li><Link to="/blog-single">By Aliza anne</Link></li>
                                                     <li className="clr">Суды и споры</li>
                                                     <li>{formatDate(post.created_at)}</li>
@@ -218,6 +235,22 @@ const BlogFullWidth = () => {
                     </div>
                 </div>
             </div>
+
+            <style jsx>{`
+                @media (min-width: 992px) {
+                    .blog-s2 {
+                        width: 60% !important;
+                        max-width: none !important;
+                    }
+                }
+                
+                @media (max-width: 991px) {
+                    .blog-s2 {
+                        width: 100% !important;
+                        max-width: 600px !important;
+                    }
+                }
+            `}</style>
         </div>
     )
 }
