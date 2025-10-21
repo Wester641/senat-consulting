@@ -1,0 +1,27 @@
+@media (min-width: 992px) {
+    .blog-s2 {
+        width: 60% !important;
+        max-width: none !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .blog-s2 {
+        width: 100% !important;
+        max-width: 600px !important;
+    }
+}
+
+.blog-content-2 h2 a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.blog-content-2 h2 a:hover {
+    border-bottom-color: #333;
+}

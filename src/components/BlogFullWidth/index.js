@@ -4,6 +4,8 @@ import { supabase } from '../../integrationSupabase/client';
 import blog4 from '../../images/blog-page/6.jpg'
 import noPhoto from '../../images/blog-page/no-photo.png'
 
+import './style.css';
+
 const BlogFullWidth = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -31,8 +33,8 @@ const BlogFullWidth = () => {
             setError(null);
             setCurrentPage(1);
         } catch (err) {
-            console.error('Ошибка при загрузке постов:', err);
-            setError('Не удалось загрузить посты');
+            console.error('Ошибка при загрузке новостей:', err);
+            setError('Не удалось загрузить новости');
             setPosts([]);
         } finally {
             setLoading(false);
@@ -85,7 +87,7 @@ const BlogFullWidth = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <p>Загрузка постов...</p>
+                            <p>Загрузка новостей...</p>
                         </div>
                     </div>
                 </div>
@@ -123,14 +125,14 @@ const BlogFullWidth = () => {
                                             style={{ marginBottom: '40px' }}
                                         >
                                             <div className="blog-img">
-                                                <div className="blog-s2" style={{ 
+                                                <div className="blog-s2" style={{
                                                     width: "60%",
                                                 }}>
                                                     <img
                                                         src={post.image_url || noPhoto}
                                                         alt={post.title}
-                                                        style={{ 
-                                                            width: '100%', 
+                                                        style={{
+                                                            width: '100%',
                                                             height: 'auto',
                                                             border: '2px solid #ddd',
                                                             borderRadius: '4px',
@@ -140,24 +142,33 @@ const BlogFullWidth = () => {
                                                 </div>
                                                 <ul className="post-meta">
                                                     <li>
-                                                        <img 
-                                                            src={blog4} 
-                                                            alt="" 
+                                                        <img
+                                                            src={blog4}
+                                                            alt=""
                                                             style={{
                                                                 border: '2px solid #ddd',
                                                                 borderRadius: '4px'
                                                             }}
                                                         />
                                                     </li>
-                                                    <li><Link to="/blog-single">By Aliza anne</Link></li>
-                                                    <li className="clr">Суды и споры</li>
+                                                    <li>By Senat Consulting</li>
                                                     <li>{formatDate(post.created_at)}</li>
                                                 </ul>
                                             </div>
                                             <div className="blog-content-2">
-                                                <h2>{post.title}</h2>
+                                                <h2>
+                                                    <Link
+                                                        to={`/blog-single-fullwidth/${post.id}`}
+                                                        style={{
+                                                            color: 'inherit',
+                                                            textDecoration: 'none',
+                                                            cursor: 'pointer'
+                                                        }}
+                                                    >
+                                                        {post.title}
+                                                    </Link>
+                                                </h2>
                                                 <p>{truncateText(post.content)}</p>
-                                                {/* <Link to={`/blog-single/${post.id}`}>читать далее..</Link> */}
                                             </div>
                                         </div>
                                     ))}
@@ -235,22 +246,6 @@ const BlogFullWidth = () => {
                     </div>
                 </div>
             </div>
-
-            <style jsx>{`
-                @media (min-width: 992px) {
-                    .blog-s2 {
-                        width: 60% !important;
-                        max-width: none !important;
-                    }
-                }
-                
-                @media (max-width: 991px) {
-                    .blog-s2 {
-                        width: 100% !important;
-                        max-width: 600px !important;
-                    }
-                }
-            `}</style>
         </div>
     )
 }

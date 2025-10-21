@@ -1,17 +1,99 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-import blog1 from '../../images/blog-page/1.jpg'
-import blog2 from '../../images/blog-details/1.jpg'
-import blog3 from '../../images/blog-details/author.jpg'
-import blog4 from '../../images/blog-page/6.jpg'
-import blog5 from '../../images/blog-details/comment/1.jpg'
-import blog6 from '../../images/blog-details/comment/2.jpg'
+import React, { useState, useEffect } from 'react';
+import { Link, useParams, useHistory } from 'react-router-dom';
+import { supabase } from '../../integrationSupabase/client';
+import blog4 from '../../images/blog-page/6.jpg';
+import noPhoto from '../../images/blog-page/no-photo.png';
 
+import './style.css';
 
 const BlogDetailFullwidth = () => {
+    const { id } = useParams();
+    const history = useHistory();
+    const [post, setPost] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    const SubmitHandler = (e) => {
-        e.preventDefault()
+    useEffect(() => {
+        fetchPost();
+    }, [id]);
+
+    const fetchPost = async () => {
+        try {
+            setLoading(true);
+            const { data, error } = await supabase
+                .from('posts')
+                .select('*')
+                .eq('id', id)
+                .single();
+
+            if (error) {
+                throw error;
+            }
+
+            if (!data) {
+                throw new Error('Пост не найден');
+            }
+
+            setPost(data);
+            setError(null);
+        } catch (err) {
+            console.error('Ошибка при загрузке поста:', err);
+            setError('Не удалось загрузить пост');
+            setPost(null);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('ru-RU', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    };
+
+    if (loading) {
+        return (
+            <div className="blog-page-area section-padding">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <p>Загрузка...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    if (error || !post) {
+        return (
+            <div className="blog-page-area section-padding">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <p style={{ color: 'red' }}>{error || 'Пост не найден'}</p>
+                            <button 
+                                onClick={() => history.push('/blog-fullwidth')}
+                                style={{
+                                    padding: '10px 20px',
+                                    backgroundColor: '#333',
+                                    color: '#fff',
+                                    border: 'none',
+                                    borderRadius: '4px',
+                                    cursor: 'pointer',
+                                    marginTop: '20px'
+                                }}
+                            >
+                                Вернуться к новостям
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
     }
 
     return (
@@ -21,212 +103,174 @@ const BlogDetailFullwidth = () => {
                     <div className="col-lg-12 col-md-12 col-12">
                         <div className="blog-left-bar">
                             <div className="blog-item">
-                                <div className="blog-img">
-                                    <div className="blog-s2">
-                                        <img src={blog1} alt="" />
-                                    </div>
-                                    <ul className="post-meta">
-                                        <li><img src={blog4} alt="" /></li>
-                                        <li><Link to="/blog-single">By Aliza anne</Link></li>
-                                        <li className="clr">Family Law</li>
-                                        <li> Oct 12,2018</li>
-                                    </ul>
-                                </div>
-                                <div className="blog-content-2">
-                                    <h2>What lawyer can do for you</h2>
-                                    <p>I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
-                                    <p> No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
-                                </div>
-                            </div>
-                            <div className="importent-section">
-                                <div className="importent-img">
-                                    <img src={blog2} alt="" />
-                                </div>
-                                <div className="importent-text">
-                                    <h2>The display is most important</h2>
-                                    <p>I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
-                                    <p>because it is pleasure, but because those who do not know how to pursue pleasure</p>
-                                </div>
-                            </div>
-                            <blockquote>“Those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.”
-                            </blockquote>
-                            <p>I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.</p>
-                            <div className="tag-share">
-                                <div className="tag">
-                                    <ul>
-                                        <li><Link to="/blog-single">Business</Link></li>
-                                        <li><Link to="/blog-single">Corporate</Link></li>
-                                        <li><Link to="/blog-single">Law</Link></li>
-                                    </ul>
-                                </div>
-                                <div className="share">
-                                    <ul>
-                                        <li><Link to="/blog-single"><i className="fa fa-facebook"></i></Link></li>
-                                        <li><Link to="/blog-single"><i className="fa fa-twitter"></i></Link></li>
-                                        <li><Link to="/blog-single"><i className="fa fa-linkedin"></i></Link></li>
-                                        <li><Link to="/blog-single"><i className="fa fa-instagram" aria-hidden="true"></i></Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="author-box">
-                                <div className="author-avatar">
-                                    <Link to="/blog-single" target="_blank"><img src={blog3} alt="" /></Link>
-                                </div>
-                                <div className="author-content">
-                                    <Link to="/blog-single" className="author-name">Alizabeth Anne</Link>
-                                    <p>I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,</p>
-                                    <div className="socials">
-                                        <ul className="social-lnk">
-                                            <li><Link to="/blog-single"><i aria-hidden="true" className="fa fa-twitter"></i></Link></li>
-                                            <li><Link to="/blog-single"><i aria-hidden="true" className="fa fa-facebook"></i></Link></li>
-                                            <li><Link to="/blog-single"><i className="fa fa-linkedin"></i></Link></li>
-                                            <li><Link to="/blog-single"><i className="fa fa-instagram" aria-hidden="true"></i></Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="more-posts">
-                                <div className="previous-post">
-                                    <Link to="/blog-single">
-                                        <span className="post-control-link"><i className="fa fa-long-arrow-left"></i>Previous post</span>
+                                <div style={{ marginBottom: '30px' }}>
+                                    <Link 
+                                        to="/blog-fullwidth"
+                                        style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            color: '#333',
+                                            textDecoration: 'none',
+                                            fontSize: '16px',
+                                            padding: '8px 16px',
+                                            border: '1px solid #ddd',
+                                            borderRadius: '4px',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.target.style.backgroundColor = '#f5f5f5';
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.target.style.backgroundColor = 'transparent';
+                                        }}
+                                    >
+                                        ← Вернуться к новостям
                                     </Link>
                                 </div>
-                                <div className="next-post">
-                                    <Link to="/blog-single">
-                                        <span className="post-control-link">Next post<i className="fa fa-long-arrow-right"></i></span>
+
+                                <div className="blog-img" style={{ marginBottom: '30px' }}>
+                                    <div className="blog-detail-img" style={{ 
+                                        width: "100%",
+                                        maxWidth: "800px",
+                                        margin: "0 auto"
+                                    }}>
+                                        <img
+                                            src={post.image_url || noPhoto}
+                                            alt={post.title}
+                                            style={{ 
+                                                width: '100%', 
+                                                height: 'auto',
+                                                border: '2px solid #ddd',
+                                                borderRadius: '4px',
+                                                boxSizing: 'border-box'
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="post-meta-container" style={{ 
+                                    marginBottom: '30px',
+                                    padding: '20px 0',
+                                    borderBottom: '1px solid #eee'
+                                }}>
+                                    <div style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        flexWrap: 'wrap',
+                                        gap: '20px',
+                                        justifyContent: 'flex-start'
+                                    }}>
+                                        <div style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            flexShrink: 0
+                                        }}>
+                                            <img 
+                                                src={blog4} 
+                                                alt="Автор" 
+                                                style={{
+                                                    width: '50px',
+                                                    height: '50px',
+                                                    borderRadius: '50%',
+                                                    border: '3px solid #c5a47e',
+                                                    objectFit: 'cover',
+                                                    marginRight: '12px'
+                                                }}
+                                            />
+                                            <span style={{
+                                                fontWeight: '600',
+                                                color: '#333',
+                                                fontSize: '16px'
+                                            }}>
+                                                Aliza Anne
+                                            </span>
+                                        </div>
+
+                                        <div style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            color: '#666',
+                                            fontSize: '14px'
+                                        }}>
+                                            <svg 
+                                                width="16" 
+                                                height="16" 
+                                                viewBox="0 0 24 24" 
+                                                fill="none" 
+                                                stroke="currentColor" 
+                                                strokeWidth="2"
+                                                style={{ marginRight: '8px' }}
+                                            >
+                                                <path d="M3 9h18V7H3v2zm12-5h-6V2H7v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2zm-4 14H7v-4h4v4zm0-6H7v-4h4v4zm6 6h-4v-4h4v4zm0-6h-4v-4h4v4z"/>
+                                            </svg>
+                                            {formatDate(post.created_at)}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="blog-content-detail">
+                                    <h1 style={{ 
+                                        fontSize: '32px',
+                                        fontWeight: 'bold',
+                                        marginBottom: '30px',
+                                        lineHeight: '1.3',
+                                        color: '#333'
+                                    }}>
+                                        {post.title}
+                                    </h1>
+                                    
+                                    <div style={{ 
+                                        fontSize: '16px',
+                                        lineHeight: '1.8',
+                                        color: '#555',
+                                        whiteSpace: 'pre-wrap',
+                                        wordWrap: 'break-word'
+                                    }}>
+                                        {post.content}
+                                    </div>
+                                </div>
+
+                                {post.additional_info && (
+                                    <div style={{
+                                        marginTop: '40px',
+                                        padding: '20px',
+                                        backgroundColor: '#f9f9f9',
+                                        borderLeft: '4px solid #c5a47e',
+                                        borderRadius: '4px'
+                                    }}>
+                                        <p style={{ 
+                                            margin: 0,
+                                            fontSize: '15px',
+                                            lineHeight: '1.7',
+                                            color: '#555'
+                                        }}>
+                                            {post.additional_info}
+                                        </p>
+                                    </div>
+                                )}
+
+                                <div style={{ marginTop: '50px', textAlign: 'center' }}>
+                                    <Link 
+                                        to="/blog-fullwidth"
+                                        style={{
+                                            display: 'inline-block',
+                                            padding: '12px 30px',
+                                            backgroundColor: '#333',
+                                            color: '#fff',
+                                            textDecoration: 'none',
+                                            borderRadius: '4px',
+                                            fontSize: '16px',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                        onMouseEnter={(e) => {
+                                            e.target.style.backgroundColor = '#c5a47e';
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.target.style.backgroundColor = '#333';
+                                        }}
+                                    >
+                                        Вернуться к списку новостей
                                     </Link>
-                                </div>
-                            </div>
-                            <div className="comments-area">
-                                <div className="comments-section">
-                                    <h3 className="comments-title">Comments</h3>
-                                    <ol className="comments">
-                                        <li className="comment even thread-even depth-1" id="comment-1">
-                                            <div id="div-comment-1">
-                                                <div className="comment-theme">
-                                                    <div className="comment-image"><img src={blog5} alt="" /></div>
-                                                </div>
-                                                <div className="comment-main-area">
-                                                    <div className="comment-wrapper">
-                                                        <div className="comments-meta">
-                                                            <div className="comments-reply">
-                                                                <Link className="comment-reply-link" to="/blog-single"><span className="comment-reply-link"><i className="fa fa-reply" aria-hidden="true"></i>Reply</span></Link>
-                                                            </div>
-                                                            <h4>John Abraham</h4>
-                                                            <span className="comments-date">says Oct 15, 2017 at 11:00</span>
-                                                        </div>
-                                                        <div className="comment-area-sub">
-                                                            <p>account of the system, and expound the actual teachings of the great explorer of the truth,</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <ul className="children">
-                                                <li className="comment comment-2">
-                                                    <div>
-                                                        <div className="comment-theme">
-                                                            <div className="comment-image"><img src={blog6} alt="" /></div>
-                                                        </div>
-                                                        <div className="comment-main-area">
-                                                            <div className="comment-wrapper">
-                                                                <div className="comments-meta">
-                                                                    <div className="comments-reply">
-                                                                        <Link className="comment-reply-link" to="/blog-single"><span className="comment-reply-link"><i className="fa fa-reply" aria-hidden="true"></i>Reply</span></Link>
-                                                                    </div>
-                                                                    <h4>Alizabeth Anne</h4>
-                                                                    <span className="comments-date">says Oct 15, 2017 at 11:00</span>
-                                                                </div>
-                                                                <div className="comment-area-sub">
-                                                                    <p>account of the system, and expound the actual teachings of the great explorer of the truth,</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <ul>
-                                                        <li className="comment">
-                                                            <div>
-                                                                <div className="comment-theme">
-                                                                    <div className="comment-image"><img src={blog5} alt="" /></div>
-                                                                </div>
-                                                                <div className="comment-main-area">
-                                                                    <div className="comment-wrapper">
-                                                                        <div className="comments-meta">
-                                                                            <div className="comments-reply">
-                                                                                <Link className="comment-reply-link" to="/blog-single"><span className="comment-reply-link"><i className="fa fa-reply" aria-hidden="true"></i>Reply</span></Link>
-                                                                            </div>
-                                                                            <h4>John Abraham</h4>
-                                                                            <span className="comments-date">says Oct 15, 2017 at 11:00</span>
-                                                                        </div>
-                                                                        <div className="comment-area-sub">
-                                                                            <p>account of the system, and expound the actual teachings of the great explorer of the truth,</p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li className="comment">
-                                            <div>
-                                                <div className="comment-theme">
-                                                    <div className="comment-image"><img src={blog6} alt="" /></div>
-                                                </div>
-                                                <div className="comment-main-area">
-                                                    <div className="comment-wrapper">
-                                                        <div className="comments-meta">
-                                                            <div className="comments-reply">
-                                                                <Link className="comment-reply-link" to="/blog-single"><span className="comment-reply-link"><i className="fa fa-reply" aria-hidden="true"></i>Reply</span></Link>
-                                                            </div>
-                                                            <h4>John Abraham</h4>
-                                                            <span className="comments-date">says Oct 15, 2017 at 11:00</span>
-                                                        </div>
-                                                        <div className="comment-area-sub">
-                                                            <p>account of the system, and expound the actual teachings of the great explorer of the truth,</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li className="comment comment-5">
-                                            <div>
-                                                <div className="comment-theme">
-                                                    <div className="comment-image"><img src={blog5} alt="" /></div>
-                                                </div>
-                                                <div className="comment-main-area">
-                                                    <div className="comment-wrapper">
-                                                        <div className="comments-meta">
-                                                            <div className="comments-reply">
-                                                                <Link className="comment-reply-link" to="/blog-single"><span className="comment-reply-link"><i className="fa fa-reply" aria-hidden="true"></i>Reply</span></Link>
-                                                            </div>
-                                                            <h4>Alizabeth Anne</h4>
-                                                            <span className="comments-date">says Oct 15, 2017 at 11:00</span>
-                                                        </div>
-                                                        <div className="comment-area-sub">
-                                                            <p>account of the system, and expound the actual teachings of the great explorer of the truth,</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ol>
-                                </div>
-                                <div className="comment-respond">
-                                    <h3 className="comment-reply-title">Leave a Comment</h3>
-                                    <form onSubmit={SubmitHandler} id="commentform" className="comment-form">
-                                        <div className="form-textarea">
-                                            <textarea id="comment" placeholder="Write Your Comments..."></textarea>
-                                        </div>
-                                        <div className="form-inputs">
-                                            <input placeholder="Website" type="url" />
-                                            <input placeholder="Name" type="text" />
-                                            <input placeholder="Email" type="email" />
-                                        </div>
-                                        <div className="form-submit">
-                                            <input id="submit" value="Reply" type="submit" />
-                                        </div>
-                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -234,8 +278,7 @@ const BlogDetailFullwidth = () => {
                 </div>
             </div>
         </div>
-    )
-
-}
+    );
+};
 
 export default BlogDetailFullwidth;

@@ -38,7 +38,7 @@ const AllRoute = () => {
           <Route path='/blog-list' component={BlogPageSidebar} />
           <Route path='/blog-fullwidth' component={BlogPageFullwidth} />
           <Route path='/blog-single' component={BlogSingleSidebar} />
-          <Route path='/blog-single-fullwidth' component={BlogDetailsFullwidth} />
+          <Route path='/blog-single-fullwidth/:id' component={BlogDetailsFullwidth} />
 
         </Switch>
       </Router>
