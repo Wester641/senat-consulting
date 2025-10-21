@@ -48,7 +48,38 @@ function ContactForm3() {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="contact-form form-style row">
+
+                <div className="col-12 col-sm-12">
+                    <textarea
+                        className="contact-textarea"
+                        placeholder="Сообщение"
+                        {...register('notes', {
+                            required: 'Сообщение обязательно',
+                            maxLength: {
+                                value: 1000,
+                                message: 'Сообщение не должно быть более 1000 символов'
+                            }
+                        })}
+                    ></textarea>
+                    {errors.notes && <span style={{ color: 'red', fontSize: '12px' }}>{errors.notes.message}</span>}
+                </div>
+
                 <div className="col-12 col-lg-12">
+                    <input
+                        type="text"
+                        placeholder="Название вашей компании"
+                        id="company_name"
+                        {...register('companyName', {
+                            maxLength: {
+                                value: 150,
+                                message: 'Название компании не должно быть более 150 символов'
+                            }
+                        })}
+                    />
+                    {errors.companyName && <span style={{ color: 'red', fontSize: '12px' }}>{errors.companyName.message}</span>}
+                </div>
+
+                <div className="col-6 col-lg-6">
                     <input
                         type="text"
                         placeholder="Ваше имя*"
@@ -72,7 +103,7 @@ function ContactForm3() {
                     {errors.name && <span style={{ color: 'red', fontSize: '12px' }}>{errors.name.message}</span>}
                 </div>
 
-                <div className="col col-lg-12">
+                <div className="col col-lg-6">
                     <input
                         type="tel"
                         placeholder="Номер телефона"
@@ -92,35 +123,7 @@ function ContactForm3() {
                     {errors.phoneNumber && <span style={{ color: 'red', fontSize: '12px' }}>{errors.phoneNumber.message}</span>}
                 </div>
 
-                <div className="col-12 col-lg-12">
-                    <input
-                        type="text"
-                        placeholder="Название вашей компании"
-                        id="company_name"
-                        {...register('companyName', {
-                            maxLength: {
-                                value: 150,
-                                message: 'Название компании не должно быть более 150 символов'
-                            }
-                        })}
-                    />
-                    {errors.companyName && <span style={{ color: 'red', fontSize: '12px' }}>{errors.companyName.message}</span>}
-                </div>
 
-                <div className="col-12 col-sm-12">
-                    <textarea
-                        className="contact-textarea"
-                        placeholder="Сообщение"
-                        {...register('notes', {
-                            required: 'Сообщение обязательно',
-                            maxLength: {
-                                value: 1000,
-                                message: 'Сообщение не должно быть более 1000 символов'
-                            }
-                        })}
-                    ></textarea>
-                    {errors.notes && <span style={{ color: 'red', fontSize: '12px' }}>{errors.notes.message}</span>}
-                </div>
 
                 <div className="col-12">
                     <button type="submit" className="theme-btn" disabled={isSubmitting}>
