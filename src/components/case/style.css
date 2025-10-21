@@ -51,7 +51,7 @@
       text-transform: capitalize;
   }
   .gallery-section .gallery-filters ul .current {
-      color: #d0a15e;
+      color: #ff7b00;
       text-decoration: none;
   }
   
@@ -179,7 +179,7 @@
 }
 
 .studies-item .overlay-text {
-    background: rgba(158,112,68,.95);
+    background: #0c5050;
     width: calc(100%);
     height: calc(100%);
     position: absolute;

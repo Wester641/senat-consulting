@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link , useLocation  } from 'react-router-dom'
+ import { NavLink } from 'react-router-dom'
 import MobileMenu from '../../components/MobileMenu'
 import logo from '../../images/logo/logo.png'
 
 import './style.css'
 
 const Header = () => {
-
+  const location = useLocation();
 
 
     return (
@@ -37,10 +38,10 @@ const Header = () => {
                         <div className="col-lg-8 d-none d-lg-block col-m">
                             <div className="main-menu">
                                 <nav className="nav_mobile_menu">
-                                    <ul>
-                                        <li className="active"><Link to="/">Главная</Link></li>
-                                        <li><Link to="/about">О компании</Link></li>
-                                        <li><Link to="/practice">Наши услуги <i className="fa fa-angle-down"></i></Link>
+                                    <ul>  
+                                        <li className={location.pathname === "/" ? "active" : ""}><Link to="/">Главная</Link></li>
+                                        <li className={location.pathname === "/about" ? "active" : ""}><Link to="/about">О компании</Link></li>
+                                        <li  className={location.pathname.startsWith("/practice") ? "active" : ""} ><Link to="/practice">Наши услуги <i className="fa fa-angle-down"></i></Link>
                                             <ul className="submenu">
                                                 <li><Link to="/practice-details">Суды и споры</Link></li>
                                                 <li><Link to="/practice-details">Регистрация бизнеса</Link></li>
@@ -49,11 +50,9 @@ const Header = () => {
                                                 <li><Link to="/practice-details">Организация проектов и фестивалей</Link></li>
                                             </ul>
                                         </li>
-                                        <li><Link to="/case-stadies">Отзывы</Link></li>
-                                        <li><Link to="/blog-fullwidth">Новости</Link>
-
-                                        </li>
-                                        <li><Link to="/contact">Контакты</Link></li>
+                                       <li className={location.pathname === "/case-stadies" ? "active" : ""}><Link to="/case-stadies">Отзывы</Link></li>
+                                       <li className={location.pathname === "/blog-fullwidth" ? "active" : ""}><Link to="/blog-fullwidth">Новости</Link></li>
+                                       <li className={location.pathname === "/contact" ? "active" : ""}><Link to="/contact">Контакты</Link></li>
 
                                     </ul>
 

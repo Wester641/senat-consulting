@@ -1,14 +1,14 @@
 @keyframes glow-pulse {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(158, 112, 68, 0.4),
-                0 0 20px rgba(208, 161, 94, 0.3),
-                0 0 30px rgba(197, 131, 55, 0.2);
+    box-shadow: 0 0 10px rgba(12, 80, 80, 0.4),
+                0 0 20px rgba(10, 61, 61, 0.3),
+                0 0 30px rgba(12, 80, 80, 0.2);
     opacity: 1;
   }
   50% {
-    box-shadow: 0 0 20px rgba(158, 112, 68, 0.7),
-                0 0 40px rgba(208, 161, 94, 0.6),
-                0 0 60px rgba(197, 131, 55, 0.5);
+    box-shadow: 0 0 20px rgba(12, 80, 80, 0.7),
+                0 0 40px rgba(10, 61, 61, 0.6),
+                0 0 60px rgba(12, 80, 80, 0.5);
     opacity: 1;
   }
 }
@@ -20,7 +20,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #d0a15e, #C58337);
+  background: linear-gradient(135deg, #0c5050, #0a3d3d);
   border: none;
   cursor: pointer;
   display: flex;
@@ -29,16 +29,16 @@
   animation: glow-pulse 1.5s ease-in-out infinite;
   z-index: 999;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 10px rgba(158, 112, 68, 0.4),
-              0 0 20px rgba(208, 161, 94, 0.3),
-              0 0 30px rgba(197, 131, 55, 0.2);
+  box-shadow: 0 0 10px rgba(12, 80, 80, 0.4),
+              0 0 20px rgba(10, 61, 61, 0.3),
+              0 0 30px rgba(12, 80, 80, 0.2);
 }
 
 .phone-button:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 25px rgba(158, 112, 68, 0.9),
-              0 0 50px rgba(208, 161, 94, 0.7),
-              0 0 75px rgba(197, 131, 55, 0.5);
+  box-shadow: 0 0 25px rgba(12, 80, 80, 0.9),
+              0 0 50px rgba(10, 61, 61, 0.7),
+              0 0 75px rgba(12, 80, 80, 0.5);
 }
 
 .phone-button:active {
