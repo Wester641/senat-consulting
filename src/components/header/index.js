@@ -22,7 +22,7 @@ const Header = () => {
                             </ul>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-12 d-flex justify-content-center">
-                            <div className="btn-style"><Link to="/">Бесплатная консультация</Link></div>
+                            <div className="btn-style"><NavLink to="/">Бесплатная консультация</NavLink></div>
                         </div>
                     </div>
                 </div>
@@ -32,27 +32,27 @@ const Header = () => {
                     <div className="row d-flex align-items-center justify-content-between py-2">
                         <div className="col-lg-3 col-md-10 col-sm-10 col-8 col-t ">
                             <div className="logo">
-                                <Link to="/"><img src={logo} alt="" /></Link>
+                                <NavLink to="/"><img src={logo} alt="" /></NavLink>
                             </div>
                         </div>
                         <div className="col-lg-8 d-none d-lg-block col-m">
                             <div className="main-menu">
                                 <nav className="nav_mobile_menu">
                                     <ul>  
-                                        <li className={location.pathname === "/" ? "active" : ""}><Link to="/">Главная</Link></li>
-                                        <li className={location.pathname === "/about" ? "active" : ""}><Link to="/about">О компании</Link></li>
-                                        <li  className={location.pathname.startsWith("/practice") ? "active" : ""} ><Link to="/practice">Наши услуги <i className="fa fa-angle-down"></i></Link>
+                                        <li className={location.pathname === "/" ? "active" : ""}><NavLink to="/">Главная</NavLink></li>
+                                        <li className={location.pathname === "/about" ? "active" : ""}><NavLink to="/about">О компании</NavLink></li>
+                                        <li  className={location.pathname.startsWith("/practice") ? "active" : ""} ><NavLink to="/practice">Наши услуги <i className="fa fa-angle-down"></i></NavLink>
                                             <ul className="submenu">
-                                                <li><Link to="/practice-details">Суды и споры</Link></li>
-                                                <li><Link to="/practice-details">Регистрация бизнеса</Link></li>
-                                                <li><Link to="/practice-details">Договоры</Link></li>
-                                                <li><Link to="/practice-details">Сопровождение бизнеса</Link></li>
-                                                <li><Link to="/practice-details">Организация проектов и фестивалей</Link></li>
+                                                <li><NavLink to="/practice-details">Суды и споры</NavLink></li>
+                                                <li><NavLink to="/practice-details">Регистрация бизнеса</NavLink></li>
+                                                <li><NavLink to="/practice-details">Договоры</NavLink></li>
+                                                <li><NavLink to="/practice-details">Сопровождение бизнеса</NavLink></li>
+                                                <li><NavLink to="/practice-details">Организация проектов и фестивалей</NavLink></li>
                                             </ul>
                                         </li>
-                                       <li className={location.pathname === "/case-stadies" ? "active" : ""}><Link to="/case-stadies">Отзывы</Link></li>
-                                       <li className={location.pathname === "/blog-fullwidth" ? "active" : ""}><Link to="/blog-fullwidth">Новости</Link></li>
-                                       <li className={location.pathname === "/contact" ? "active" : ""}><Link to="/contact">Контакты</Link></li>
+                                       <li className={location.pathname === "/case-stadies" ? "active" : ""}><NavLink to="/case-stadies">Отзывы</NavLink></li>
+                                       <li className={location.pathname === "/blog-fullwidth" ? "active" : ""}><NavLink to="/blog-fullwidth">Новости</NavLink></li>
+                                       <li className={location.pathname === "/contact" ? "active" : ""}><NavLink to="/contact">Контакты</NavLink></li>
 
                                     </ul>
 

@@ -384,6 +384,7 @@
 
 .main-menu nav ul li.active > a {
   border-bottom: 2px solid #fdffff;
+  color: #ff7b00;
 }
 
 .main-menu nav ul li a:hover {
