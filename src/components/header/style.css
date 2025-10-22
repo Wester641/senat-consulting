@@ -245,14 +245,12 @@
   /* border-radius: 5px; */
   background: #ff7b00;
   /* background: -webkit-linear-gradient(left, #9e7044, #d0a15e); */
-  border: 1px solid #d0a15e;
   position: relative;
   z-index: 11;
   transition: all 0.3s;
 }
 
 .btn-style a:hover {
-  background: -webkit-linear-gradient(left, #fbbc81, #c55f00);
   color: #fff;
 }
 .header-middle .btn-style a {
