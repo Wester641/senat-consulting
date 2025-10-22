@@ -12,7 +12,7 @@ const BlogDetailsFullwidth = () => {
     return(
        <div>
            <Navbar/>
-           <Breadcumb bdtitle={'Latest News'} bdsub={'Blog Single'}/>
+           <Breadcumb bdtitle={'Подробности новости'} bdsub={'Новости'}/>
            <BlogDetailFullwidth/>
            <FooterSection/>
        </div>
