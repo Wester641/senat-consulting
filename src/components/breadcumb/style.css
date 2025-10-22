@@ -44,11 +44,11 @@
 }
 
 .breadcumb-wrap ul li a:hover {
-    color: #d0a15e;
+    color: #ff7b00b8;
 }
 
 .breadcumb-wrap ul li:last-child {
-    color: #d0a15e;
+    color: #ff7b00;
 }
 
 .breadcumb-wrap ul li:after {

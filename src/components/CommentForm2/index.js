@@ -32,19 +32,19 @@ function ContactForm2() {
         const newError = {};
 
         if (formData.name === '') {
-            newError.name = "Please enter your name";
+            newError.name = "Пожалуйста, введите свое имя";
         }
         if (formData.email === '') {
-            newError.email = "Please enter your email";
+            newError.email = "Пожалуйста, введите свой адрес электронной почты";
         }
         if (formData.number === '') {
-            newError.number = "Please enter your number";
+            newError.number = "Пожалуйста, введите свой номер телефона";
         }
         if (formData.adress === '') {
-            newError.adress = "Please enter your address";
+            newError.adress = "Пожалуйста, введите свой адрес";
         }
         if (formData.notes === '') {
-            newError.notes = "Please enter your note";
+            newError.notes = "Пожалуйста, введите ваше сообщение";
         }
 
         if (Object.keys(newError).length > 0) {
@@ -119,7 +119,7 @@ function ContactForm2() {
                     <p style={{ color: 'red' }}>{error.notes ? error.notes : ''}</p>
                 </div>
                 <div className="col-12">
-                    <button type="submit" className="theme-btn">Appointment</button>
+                    <button type="submit" className="theme-btn">Отправить</button>
                 </div>
             </div>
         </form>

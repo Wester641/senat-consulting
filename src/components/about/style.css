@@ -87,7 +87,7 @@
 }
 .section-title span,.section-title-1 span  {
     font-size: 16px;
-    color: #d0a15e;
+    color: #837d74;
     font-weight: 600;
     text-transform: capitalize;
     margin-bottom: 10px;
@@ -108,7 +108,7 @@
     bottom: 0;
     width: 80px;
     height: 3px;
-    background: #d0a15e;
+    background: #ff7b00;
     border-radius: 20px;
 }
 .section-title-1 h2{
@@ -150,10 +150,10 @@
 }
 .about-style-2 .video-btn .fa-play:before {
   position: absolute;
-  border: 10px solid rgba(158,112,68,.4);
+  border: 10px solid rgba(255, 123, 0, 0.4);
   border-radius: 50%;
   font-size: 30px;
-  background: rgba(158,112,68,.7);
+  background: rgba(255, 123, 0, 0.7);
   animation: spineer 2s infinite;
   width: 70px;
   height: 70px;
@@ -167,9 +167,15 @@
 .about-style-2 .video-btn button:focus{
   outline: none;
 }
+
+.company-title {
+    font-size: 15px;
+    display: inline;
+}
+
 @-webkit-keyframes spineer {
   0% {
-    -webkit-box-shadow: 0 0 0 0 #d0a15e;
+    -webkit-box-shadow: 0 0 0 0 #ff9500;
   }
   70% {
     -webkit-box-shadow: 0 0 0 20px rgba(250,92,93,.0);

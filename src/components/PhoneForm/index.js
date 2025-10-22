@@ -1,5 +1,5 @@
 import React from 'react';
-import Gallery_1 from '../../images/phoneIcon/phone-call-svgrepo-com.svg';
+import Gallery_1 from '../../images/phoneIcon/Phone.svg';
 import './style.css';
 
 const PhoneButton = () => {

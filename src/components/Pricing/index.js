@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import fe1 from '../../images/icon/10.png';
+import fe1 from '../../images/icon/9.png';
 import fe2 from '../../images/icon/2.png';
-import fe3 from '../../images/icon/7.png';
+import fe3 from '../../images/icon/1.png';
 
 import './style.css';
 

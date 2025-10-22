@@ -115,8 +115,8 @@
 
 .slick-dots li.slick-active button:before {
   opacity: 1;
-  color: #d0a15e;
-  border: 1px solid #d0a15e;
+  color: #ff9500;
+  border: 1px solid #ff7b00;
   border-radius: 100%;
 }
 .slick-dots li button:hover:before,

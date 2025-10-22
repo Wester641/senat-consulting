@@ -6,7 +6,6 @@ import Breadcumb from '../../components/breadcumb'
 import AboutSection from '../../components/about'
 import PracticeArea from '../../components/PracticeArea'
 import Testimonial from '../../components/testimonial'
-import TeamSection from '../../components/Team'
 import FooterSection from '../../components/Footer'
 
 
@@ -18,7 +17,6 @@ const AboutPage = () => {
            <AboutSection/>
            <PracticeArea/>
            <Testimonial/>
-           <TeamSection/>
            <FooterSection/>
        </div>
     )

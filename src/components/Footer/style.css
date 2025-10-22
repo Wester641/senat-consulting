@@ -1,5 +1,7 @@
 .footer-area {
     background: #231b0e;
+ /* background: #0a3d3d; */
+
 }
 
 .footer-top {
@@ -41,7 +43,7 @@
     border-radius: 50%;
 }
 .footer-link ul li a:hover{
-  color:#d0a15e;
+  color:#ff7b00;
 }
 .footer-link {
     margin-bottom: 30px;
@@ -68,7 +70,7 @@
     border-radius: 50%;
 }
 .footer-practice ul li a:hover{
-  color:#d0a15e;
+  color:#ff7b00;
 }
 
 .footer-top .newsletter-widget form {
@@ -114,7 +116,7 @@
     font-size: 16px;
 }
 .footer-bottom-content span a{
-  color:#d0a15e; 
+  color:#ff7b00; 
 }
 .footer-bottom-content ul {
     justify-content: flex-end;
