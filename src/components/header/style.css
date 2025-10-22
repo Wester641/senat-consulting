@@ -382,10 +382,12 @@
   color: #d0a15e;
 }
 
-.main-menu nav ul li.active > a {
-  border-bottom: 2px solid #fdffff;
+.main-menu li a.active {
+  border-bottom: 2px solid #ff7b00;
+  color: #ff7b00;
 }
 
-.main-menu nav ul li a:hover {
+
+.main-menu li a:hover {
   color: #ff7b00;
 }
