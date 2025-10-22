@@ -3,9 +3,9 @@ import React from 'react';
 import pr1 from '../../images/icon/4.png'
 import pr2 from '../../images/icon/5.png'
 import pr3 from '../../images/icon/6.png'
-import pr4 from '../../images/icon/8.png'
-import pr5 from '../../images/icon/9.png'
-import pr6 from '../../images/icon/10.png'
+import pr4 from '../../images/icon/7.png'
+import pr5 from '../../images/icon/8.png'
+import pr6 from '../../images/icon/9.png'
 
 import './style.css'
 

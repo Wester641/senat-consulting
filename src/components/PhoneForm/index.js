@@ -1,24 +1,35 @@
 import React from 'react';
-import Gallery_1 from '../../images/phoneIcon/phone-call-svgrepo-com.svg';
 import './style.css';
 
 const PhoneButton = () => {
   const handleClick = () => {
     window.open('https://t.me/Dettroid', '_blank');
   };
-
+  
   return (
-    <button 
+    <button
       className="phone-button"
       onClick={handleClick}
       title="Написать нам"
       aria-label="Контакт"
     >
-      <img 
-        src={Gallery_1}
-        alt="phone"
-        className="phone-icon"
-      />
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        width="40" 
+        height="40" 
+        viewBox="0 0 24 24" 
+        fill="none" 
+        stroke="#ff7b00" 
+        strokeWidth="1.5" 
+        strokeLinecap="round" 
+        strokeLinejoin="round" 
+        className="lucide lucide-phone-call-icon lucide-phone-call"
+        transform="scale(-1, 1)"
+      >
+        <path d="M11 2a9 9 0 0 1 9 9" />
+        <path d="M11 6a5 5 0 0 1 5 5" />
+        <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2 18 18 0 0 1-18-18 2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+      </svg>
     </button>
   );
 };
