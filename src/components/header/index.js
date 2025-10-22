@@ -18,7 +18,7 @@ const Header = () => {
                         <div className="col-md-9 col-sm-12 col-12 col-lg-9 d-flex align-items-center">
                             <ul className="d-flex account_login-area">
                                 <li><i className="fa fa-clock-o" aria-hidden="true"></i>Пн - Пт : 9.00 - 19.00</li>
-                                <li><i className="fa fa-map-marker"></i>ул. Айни 85, Бишкек, Кыргызстан</li>
+                                <li><i className="fa fa-map-marker"></i>г. Бишкек, ул. Ибраимова,103/1а Первый этаж, Бишкек</li>
                             </ul>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-12 d-flex justify-content-center">

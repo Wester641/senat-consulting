@@ -167,6 +167,13 @@
 .about-style-2 .video-btn button:focus{
   outline: none;
 }
+
+.company-title {
+    /* font-style: normal; */
+    font-size: 15px;
+    display: inline;
+}
+
 @-webkit-keyframes spineer {
   0% {
     -webkit-box-shadow: 0 0 0 0 #ff9500;
