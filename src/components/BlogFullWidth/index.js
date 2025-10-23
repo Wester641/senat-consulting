@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { supabase } from '../../integrationSupabase/client';
-import blog4 from '../../images/blog-page/6.jpg'
+import defaultImage from '../../images/da7ed7b0-5f66-4f97-a610-51100d3b9fd2.jpg'
 import noPhoto from '../../images/blog-page/no-photo.png'
 
 import './style.css';
@@ -143,10 +143,10 @@ const BlogFullWidth = () => {
                                                 <ul className="post-meta">
                                                     <li>
                                                         <img
-                                                            src={blog4}
+                                                            src={defaultImage}
                                                             alt=""
                                                             style={{
-                                                                border: '2px solid #ddd',
+                                                                // border: '2px solid #ddd',
                                                                 borderRadius: '4px'
                                                             }}
                                                         />
