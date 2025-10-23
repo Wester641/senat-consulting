@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { supabase } from '../../integrationSupabase/client';
-import blog4 from '../../images/blog-page/6.jpg';
+import blog4 from '../../images/da7ed7b0-5f66-4f97-a610-51100d3b9fd2.jpg';
 import noPhoto from '../../images/blog-page/no-photo.png';
 
 import './style.css';
@@ -172,7 +172,7 @@ const BlogDetailFullwidth = () => {
                                                     width: '50px',
                                                     height: '50px',
                                                     borderRadius: '50%',
-                                                    border: '3px solid #c5a47e',
+                                                    // border: '3px solid #c5a47e',
                                                     objectFit: 'cover',
                                                     marginRight: '12px'
                                                 }}
@@ -182,7 +182,7 @@ const BlogDetailFullwidth = () => {
                                                 color: '#333',
                                                 fontSize: '16px'
                                             }}>
-                                                Aliza Anne
+                                                By Senat Consulting
                                             </span>
                                         </div>
 
