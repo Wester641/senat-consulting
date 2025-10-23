@@ -19,7 +19,7 @@ const CaseStadies = () => {
     return (
         <div>
             <Navbar />
-            <Breadcumb bdtitle={'Наши дела'} bdsub={'Отзыва'} />
+            <Breadcumb bdtitle={'Наши дела'} bdsub={'Отзывы'} />
             {/* <Porfolio/> */}
             <Testimonial />
             <Testimonial2 />
