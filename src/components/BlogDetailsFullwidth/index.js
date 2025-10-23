@@ -75,7 +75,7 @@ const BlogDetailFullwidth = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <p style={{ color: 'red' }}>{error || 'Пост не найден'}</p>
-                            <button 
+                            <button
                                 onClick={() => history.push('/blog-fullwidth')}
                                 style={{
                                     padding: '10px 20px',
@@ -104,7 +104,7 @@ const BlogDetailFullwidth = () => {
                         <div className="blog-left-bar">
                             <div className="blog-item">
                                 <div style={{ marginBottom: '30px' }}>
-                                    <Link 
+                                    <Link
                                         to="/blog-fullwidth"
                                         style={{
                                             display: 'inline-flex',
@@ -129,7 +129,7 @@ const BlogDetailFullwidth = () => {
                                 </div>
 
                                 <div className="blog-img" style={{ marginBottom: '30px' }}>
-                                    <div className="blog-detail-img" style={{ 
+                                    <div className="blog-detail-img" style={{
                                         width: "100%",
                                         maxWidth: "800px",
                                         margin: "0 auto"
@@ -137,8 +137,8 @@ const BlogDetailFullwidth = () => {
                                         <img
                                             src={post.image_url || noPhoto}
                                             alt={post.title}
-                                            style={{ 
-                                                width: '100%', 
+                                            style={{
+                                                width: '100%',
                                                 height: 'auto',
                                                 border: '2px solid #ddd',
                                                 borderRadius: '4px',
@@ -148,7 +148,7 @@ const BlogDetailFullwidth = () => {
                                     </div>
                                 </div>
 
-                                <div className="post-meta-container" style={{ 
+                                <div className="post-meta-container" style={{
                                     marginBottom: '30px',
                                     padding: '20px 0',
                                     borderBottom: '1px solid #eee'
@@ -165,9 +165,9 @@ const BlogDetailFullwidth = () => {
                                             alignItems: 'center',
                                             flexShrink: 0
                                         }}>
-                                            <img 
-                                                src={blog4} 
-                                                alt="Автор" 
+                                            <img
+                                                src={blog4}
+                                                alt="Автор"
                                                 style={{
                                                     width: '50px',
                                                     height: '50px',
@@ -192,16 +192,16 @@ const BlogDetailFullwidth = () => {
                                             color: '#666',
                                             fontSize: '14px'
                                         }}>
-                                            <svg 
-                                                width="16" 
-                                                height="16" 
-                                                viewBox="0 0 24 24" 
-                                                fill="none" 
-                                                stroke="currentColor" 
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
                                                 strokeWidth="2"
                                                 style={{ marginRight: '8px' }}
                                             >
-                                                <path d="M3 9h18V7H3v2zm12-5h-6V2H7v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2zm-4 14H7v-4h4v4zm0-6H7v-4h4v4zm6 6h-4v-4h4v4zm0-6h-4v-4h4v4z"/>
+                                                <path d="M3 9h18V7H3v2zm12-5h-6V2H7v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2zm-4 14H7v-4h4v4zm0-6H7v-4h4v4zm6 6h-4v-4h4v4zm0-6h-4v-4h4v4z" />
                                             </svg>
                                             {formatDate(post.created_at)}
                                         </div>
@@ -209,7 +209,7 @@ const BlogDetailFullwidth = () => {
                                 </div>
 
                                 <div className="blog-content-detail">
-                                    <h1 style={{ 
+                                    <h1 style={{
                                         fontSize: '32px',
                                         fontWeight: 'bold',
                                         marginBottom: '30px',
@@ -218,8 +218,8 @@ const BlogDetailFullwidth = () => {
                                     }}>
                                         {post.title}
                                     </h1>
-                                    
-                                    <div style={{ 
+
+                                    <div style={{
                                         fontSize: '16px',
                                         lineHeight: '1.8',
                                         color: '#555',
@@ -238,7 +238,7 @@ const BlogDetailFullwidth = () => {
                                         borderLeft: '4px solid #c5a47e',
                                         borderRadius: '4px'
                                     }}>
-                                        <p style={{ 
+                                        <p style={{
                                             margin: 0,
                                             fontSize: '15px',
                                             lineHeight: '1.7',
@@ -250,7 +250,7 @@ const BlogDetailFullwidth = () => {
                                 )}
 
                                 <div style={{ marginTop: '50px', textAlign: 'center' }}>
-                                    <Link 
+                                    <Link
                                         to="/blog-fullwidth"
                                         style={{
                                             display: 'inline-block',

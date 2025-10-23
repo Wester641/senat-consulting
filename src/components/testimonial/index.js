@@ -3,9 +3,6 @@ import Slider from "react-slick";
 import './style.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import testimonialImg_1 from '../../images/testimonials/img-1.jpg';
-import testimonialImg_2 from '../../images/testimonials/img-2.jpg';
-import testimonialImg_3 from '../../images/testimonials/img-3.jpg';
 import { supabase } from '../../integrationSupabase/client';
 import defaultUser from "../../images/da7ed7b0-5f66-4f97-a610-51100d3b9fd2.jpg"
 

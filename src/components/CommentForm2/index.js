@@ -1,8 +1,24 @@
 
 import React from 'react';
+import { useEffect } from 'react';
 import { useState } from 'react';
 
 function ContactForm2() {
+
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+            window.scrollTo({
+                top: 200,
+                left: 0,
+                behavior: "smooth",
+            }
+            );
+        }, 500);
+    }, []);
+
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',

@@ -1,4 +1,4 @@
-import React from  'react';
+import React from 'react';
 
 // components
 import Navbar from '../../components/Navbar'
@@ -7,18 +7,23 @@ import AboutSection from '../../components/about'
 import PracticeArea from '../../components/PracticeArea'
 import Testimonial from '../../components/testimonial'
 import FooterSection from '../../components/Footer'
+import { useEffect } from 'react';
 
 
 const AboutPage = () => {
-    return(
-       <div className="about-layout">
-           <Navbar/>
-           <Breadcumb bdtitle={'О нас'} bdsub={'О компании'}/>
-           <AboutSection/>
-           <PracticeArea/>
-           <Testimonial/>
-           <FooterSection/>
-       </div>
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    return (
+        <div className="about-layout">
+            <Navbar />
+            <Breadcumb bdtitle={'О нас'} bdsub={'О компании'} />
+            <AboutSection />
+            <PracticeArea />
+            <Testimonial />
+            <FooterSection />
+        </div>
     )
 }
 

@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import ContactForm from '../CommentForm';
 import './style.css';
 
-const ContactSection = () => {
 
+const ContactSection = forwardRef((props, ref) => {
     return (
-        <div className="contact-area section-padding">
+        <div className="contact-area section-padding" ref={ref}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-5">
                         <div className="contact-text">
                             <h2>Хотите связаться с нами?</h2>
                             <p>
-                                Если у вас есть вопросы, требуется юридическая консультация 
+                                Если у вас есть вопросы, требуется юридическая консультация
                                 или вы хотите обсудить ваше дело — заполните форму, и мы свяжемся с вами в ближайшее время.
                             </p>
                             <div className="contact-sub">
@@ -55,6 +55,6 @@ const ContactSection = () => {
             </div>
         </div>
     );
-};
+});
 
 export default ContactSection;

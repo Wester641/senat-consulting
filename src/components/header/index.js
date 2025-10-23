@@ -1,17 +1,19 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import MobileMenu from "../../components/MobileMenu";
 import logo from "../../images/logo/logo.png";
 
+
 import "./style.css";
 
+
 const Header = () => {
-    const location = useLocation();
+
 
     return (
         <header>
-            <div className="header-top-1 d-none d-lg-block" >
+            <div className="header-top-1 d-none d-lg-block">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-9 col-sm-12 col-12 col-lg-9 d-flex align-items-center">
@@ -21,7 +23,7 @@ const Header = () => {
                             </ul>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-12 d-flex justify-content-center">
-                            <div className="btn-style"><Link to="/">Бесплатная консультация</Link></div>
+                            <div className="btn-style" ><Link to="/contact" >Бесплатная консультация</Link></div>
                         </div>
                     </div>
                 </div>
@@ -133,8 +135,8 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-        </header>
-    );
-};
+        </header >
+    )
+}
 
 export default Header;

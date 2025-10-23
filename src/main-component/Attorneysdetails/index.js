@@ -1,4 +1,4 @@
-import React from  'react';
+import React from 'react';
 
 // components
 import Navbar from '../../components/Navbar'
@@ -6,16 +6,20 @@ import Breadcumb from '../../components/breadcumb'
 
 import AttorneysDetails from '../../components/AttorneysDetails'
 import FooterSection from '../../components/Footer'
+import { useEffect } from 'react';
 
 
 const Attorneysdetails = () => {
-    return(
-       <div>
-           <Navbar/>
-           <Breadcumb bdtitle={'Our Attorneys'} bdsub={'Attorneys Single'}/>
-           <AttorneysDetails/>
-           <FooterSection/>
-       </div>
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    return (
+        <div>
+            <Navbar />
+            <Breadcumb bdtitle={'Our Attorneys'} bdsub={'Attorneys Single'} />
+            <AttorneysDetails />
+            <FooterSection />
+        </div>
     )
 }
 

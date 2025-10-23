@@ -8,10 +8,14 @@ import Breadcumb from '../../components/breadcumb'
 import FooterSection from '../../components/Footer'
 import Testimonial from '../../components/testimonial/index';
 import Testimonial2 from '../../components/testimonial/index2';
+import { useEffect } from 'react';
 
 
 
 const CaseStadies = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div>
             <Navbar />

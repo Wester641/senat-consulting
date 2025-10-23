@@ -2,8 +2,10 @@ import React from 'react';
 import ContactForm2 from '../CommentForm2';
 import address from '../../images/about/address.jpg';
 import './style.css';
+import { forwardRef } from 'react';
 
-const Contactpage = () => {
+const Contactpage = forwardRef((props, ref) => {
+
     return (
         <div className="contact-page-area section-padding">
             <div className="container">
@@ -28,7 +30,7 @@ const Contactpage = () => {
                         </div>
                     </div>
                     <div className="col-lg-7 col-md-12">
-                        <div className="contact-area contact-area-2 contact-area-3">
+                        <div ref={ref} className="contact-area contact-area-2 contact-area-3">
                             <h2>Форма быстрого контакта</h2>
                             <ContactForm2 />
                         </div>
@@ -38,25 +40,25 @@ const Contactpage = () => {
                     <div className="col col-xs-12">
                         <div className="contact-map">
                             <div className="map-links">
-                                <a 
-                                    href="http://2gis.kg/bishkek/firm/70000001101156993/center/74.61802482604982,42.879077532561865/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap" 
-                                    target="_blank" 
+                                <a
+                                    href="http://2gis.kg/bishkek/firm/70000001101156993/center/74.61802482604982,42.879077532561865/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap"
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className="map-link-btn"
                                 >
                                     Посмотреть на карте Бишкека
                                 </a>
-                                
-                                <a 
-                                    href="http://2gis.kg/bishkek/center/74.61802,42.878519/zoom/16/routeTab/rsType/bus/to/74.61802,42.878519╎Intellect IT & Business College?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route" 
-                                    target="_blank" 
+
+                                <a
+                                    href="http://2gis.kg/bishkek/center/74.61802,42.878519/zoom/16/routeTab/rsType/bus/to/74.61802,42.878519╎Intellect IT & Business College?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route"
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className="map-link-btn route-btn"
                                 >
                                     Найти проезд до Intellect IT & Business College - Senat Consulting
                                 </a>
                             </div>
-                            
+
                             <h3>Улица Ибраимова, 103/1а, Бишкек</h3>
                             <a
                                 href="https://2gis.kg/bishkek/geo/70030076493877457/74.618063%2C42.878776?m=74.618691%2C42.878209%2F18.24"
@@ -71,7 +73,7 @@ const Contactpage = () => {
             </div>
         </div>
     )
-}
+})
 
 
 export default Contactpage;

@@ -4,10 +4,18 @@ import { Link } from 'react-router-dom'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
+export const ScrollFunction = () => {
+    window.scroll({
+        top: 4800,
+        left: 0,
+        behavior: "smooth",
+    });
+};
 
 class SimpleSlider2 extends Component {
-    render() {
+
+
+    render({ onClick } = this.props) {
         var settings = {
             dots: true,
             arrows: true,
@@ -29,7 +37,7 @@ class SimpleSlider2 extends Component {
                                         <h2>Не остановимся, пока не выиграем!</h2>
                                         <p>Мы готовим позицию, защищаем ваши интересы и говорим на языке закона.</p>
                                         <div className="btns">
-                                            <div className="btn-style"><Link to="/">Связаться с нами</Link></div>
+                                            <div className="btn-style"><Link onClick={onClick}>Связаться с нами</Link></div>
                                         </div>
                                     </div>
                                 </div>
@@ -43,7 +51,7 @@ class SimpleSlider2 extends Component {
                                         <h2>Ваше здоровье — наш приоритет</h2>
                                         <p> Оказываем правовую помощь в делах о возмещении вреда, причинённого травмами, ДТП или несчастными случаями.</p>
                                         <div className="btns">
-                                            <div className="btn-style"><Link to="/">Получить консультацию</Link></div>
+                                            <div className="btn-style"><Link onClick={onClick}>Получить консультацию</Link></div>
                                         </div>
                                     </div>
                                 </div>
@@ -57,7 +65,7 @@ class SimpleSlider2 extends Component {
                                         <h2>Начните бизнес без головной боли!</h2>
                                         <p>Подбираем оптимальную форму собственности, оформляем документы и открываем компанию</p>
                                         <div className="btns">
-                                            <div className="btn-style"><Link to="/">Записаться на встречу</Link></div>
+                                            <div className="btn-style"><Link onClick={onClick}>Записаться на встречу</Link></div>
                                         </div>
                                     </div>
                                 </div>
