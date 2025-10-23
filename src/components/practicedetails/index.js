@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import pr_1 from '../../images/practice/2.jpg';
-import pr_2 from '../../images/practice/3.jpg';
-import pr_3 from '../../images/practice/4.jpg';
 
 class PracticDetails extends Component {
 
     render() {
+        const { bottomImage,  details1,   details2 , mainImage , h1 , h5 } = this.props;
         return (
             <div className="practice-details-area section-padding">
                 <div className="container">
@@ -36,12 +35,11 @@ class PracticDetails extends Component {
                                         </div>
                                         <div className="practice-section">
                                             <ul>
-                                                <li><Link to="/practice-details">Суды и споры</Link></li>
-                                                <li><Link to="/practice-details">Регистрация бизнеса</Link></li>
-                                                <li><Link to="/practice-details">Договоры</Link></li>
-                                                <li><Link to="/practice-details">Сопровождение бизнеса</Link></li>
-                                                <li><Link to="/practice-details">Организация проектов и фестивалей</Link></li>
-                                                <li><Link to="/practice-details">Личные травмы</Link></li>
+                                                <li><Link to="/practice-details/1">Суды и споры</Link></li>
+                                                <li><Link to="/practice-details/2">Регистрация бизнеса</Link></li>
+                                                <li><Link to="/practice-details/3">Договоры</Link></li>
+                                                <li><Link to="/practice-details/4">Сопровождение бизнеса</Link></li>
+                                                <li><Link to="/practice-details/5">Организация проектов и фестивалей</Link></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -51,28 +49,22 @@ class PracticDetails extends Component {
 
                         <div className="col-lg-8 col-12">
                             <div className="practice-section-img">
-                                <img src={pr_2} alt=""/>
+                                <img src={mainImage} alt=""/>
                             </div>
                             <div className="practice-section-text">
-                                <h2>Суды и споры</h2>
-                                <h5>«Не остановимся, пока не выиграем!»</h5>
+                                <h2>{h1}</h2>
+                                <h5>{h5}</h5>
                                 <p>
-                                    Мы готовим позицию, защищаем ваши интересы и говорим на языке закона.
-                                    Наша команда тщательно анализирует каждую деталь дела, чтобы добиться
-                                    наилучшего результата для клиента. Мы представляем интересы в судах
-                                    всех инстанций и обеспечиваем комплексную юридическую поддержку.
+                                  {details1}
                                 </p>
                                 <p>
-                                    Наша цель — не просто выиграть процесс, а найти оптимальное решение
-                                    вашей правовой проблемы. Мы помогаем урегулировать споры, снизить
-                                    риски и защитить репутацию. Работая с нами, вы можете быть уверены,
-                                    что ваши интересы под надежной защитой.
+                                    {details2}
                                 </p>
                             </div>
 
                             <div className="organigation-area">
                                 <div className="organaigation-img">
-                                    <img src={pr_3} alt=""/>
+                                     <img src={bottomImage} alt=""/>
                                 </div>
                                 <div className="organigation-text">
                                     <h2>Наши направления работы</h2>
