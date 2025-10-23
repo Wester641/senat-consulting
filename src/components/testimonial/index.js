@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
 import './style.css'
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import testimonialImg_1 from '../../images/testimonials/img-1.jpg';
 import testimonialImg_2 from '../../images/testimonials/img-2.jpg';
 import testimonialImg_3 from '../../images/testimonials/img-3.jpg';
 import { supabase } from '../../integrationSupabase/client';
+import defaultUser from "../../images/da7ed7b0-5f66-4f97-a610-51100d3b9fd2.jpg"
 
 class Testimonial extends Component {
     constructor(props) {
@@ -35,9 +36,9 @@ class Testimonial extends Component {
                 return;
             }
 
-            this.setState({ 
+            this.setState({
                 testimonials: data || [],
-                loading: false 
+                loading: false
             });
         } catch (error) {
             console.error('Error:', error);
@@ -45,10 +46,10 @@ class Testimonial extends Component {
         }
     }
 
-    getAvatarImage(index) {
-        const images = [testimonialImg_1, testimonialImg_2, testimonialImg_3];
-        return images[index % images.length];
-    }
+    // getAvatarImage(index) {
+    //     const images = [testimonialImg_1, testimonialImg_2, testimonialImg_3];
+    //     return images[index % images.length];
+    // }
 
     render() {
         const { testimonials, loading } = this.state;
@@ -59,35 +60,35 @@ class Testimonial extends Component {
             speed: 1200,
             slidesToShow: 2,
             arrows: false,
-            margin:50,
-            autoplay:true,
+            margin: 50,
+            autoplay: true,
             slidesToScroll: 1,
             centerPadding: 30,
             focusOnSelect: false,
             responsive: [
                 {
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                  }
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
                 },
                 {
-                  breakpoint: 600,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                  }
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 2,
+                        initialSlide: 2
+                    }
                 },
                 {
-                  breakpoint: 480,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                  }
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
                 }
             ]
         };
@@ -116,27 +117,28 @@ class Testimonial extends Component {
             <div className="testimonial-area section-padding">
                 <div className="container">
                     <div className="testimonial-active">
-                    <Slider {...settings}>
-                        {testimonials.map((testimonial, index) => (
-                            <div className="my-testimonial" key={index}>
-                                <div className="inner-content">
-                                    <div className="content">
-                                        <div className="image-box">
-                                            <img src={this.getAvatarImage(index)} alt="" />
-                                        </div>
-                                        <div className="quote-icon">
-                                            <i className="fi flaticon-right-quote"></i>
-                                        </div>
-                                        <h4>{testimonial.name}</h4>
-                                        <div className="designation">
-                                            {testimonial.company_name || 'Компания не указана'}
-                                        </div>
+                        <Slider {...settings}>
+                            {testimonials.map((testimonial, index) => (
+                                <div className="my-testimonial" key={index}>
+                                    <div className="inner-content">
                                         <div className="text">{testimonial.notes}</div>
+                                        <div className="content">
+                                            <div className="image-box">
+                                                <img src={defaultUser} alt="aksd" />
+                                            </div>
+                                            <div className="quote-icon">
+                                                <i className="fi flaticon-right-quote"></i>
+                                            </div>
+                                            <h4>{testimonial.name}</h4>
+                                            <div className="designation">
+                                                {testimonial.company_name || 'Компания не указана'}
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </Slider>
+                            ))}
+                        </Slider>
                     </div>
                 </div>
             </div>
