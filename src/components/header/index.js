@@ -64,23 +64,23 @@ const Header = () => {
                                             </NavLink>
                                             <ul className="submenu">
                                                 <li>
-                                                    <NavLink to="/practice-details">Суды и споры</NavLink>
+                                                    <NavLink to="/practice-details/1">Суды и споры</NavLink>
                                                 </li>
                                                 <li>
-                                                    <NavLink to="/practice-details">
+                                                    <NavLink to="/practice-details/2">
                                                         Регистрация бизнеса
                                                     </NavLink>
                                                 </li>
                                                 <li>
-                                                    <NavLink to="/practice-details">Договоры</NavLink>
+                                                    <NavLink to="/practice-details/3">Договоры</NavLink>
                                                 </li>
                                                 <li>
-                                                    <NavLink to="/practice-details">
+                                                    <NavLink to="/practice-details/4">
                                                         Сопровождение бизнеса
                                                     </NavLink>
                                                 </li>
                                                 <li>
-                                                    <NavLink to="/practice-details">
+                                                    <NavLink to="/practice-details/5">
                                                         Организация проектов и фестивалей
                                                     </NavLink>
                                                 </li>
