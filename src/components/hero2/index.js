@@ -48,8 +48,8 @@ class SimpleSlider2 extends Component {
                             <div className="container">
                                 <div className="row">
                                     <div className="col col-lg-8 slide-caption">
-                                        <h2>Ваше здоровье — наш приоритет</h2>
-                                        <p> Оказываем правовую помощь в делах о возмещении вреда, причинённого травмами, ДТП или несчастными случаями.</p>
+                                        <h2>Вы строите — мы страхуем риски</h2>
+                                        <p> Абонентское сопровождение позволяет освободиться от найма штатного юриста и получить команду экспертов сразу</p>
                                         <div className="btns">
                                             <div className="btn-style"><Link onClick={onClick}>Получить консультацию</Link></div>
                                         </div>
