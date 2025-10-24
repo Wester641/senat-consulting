@@ -134,9 +134,16 @@
     left: 14px;
     top: 14px;
     width: 95%;
-    height: 95%;
+    height: 96%;
     background: rgba(0,0,0,.40);
     content: "";
+}
+@media (max-width: 768px) {
+  .about-style-1 .about-img:before,
+  .about-style-2 .about-img:before {
+    width: 97%;
+    height: 97%;
+  }
 }
 .about-style-2 .video-btn {
   position: absolute;
