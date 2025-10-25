@@ -1,11 +1,10 @@
-import React from 'react';
-import ContactForm2 from '../CommentForm2';
-import address from '../../images/about/address.jpg';
-import './style.css';
-import { forwardRef } from 'react';
+import React from "react";
+import ContactForm2 from "../CommentForm2";
+import address from "../../images/about/address.jpg";
+import "./style.css";
+import { forwardRef } from "react";
 
 const Contactpage = forwardRef((props, ref) => {
-
     return (
         <div className="contact-page-area section-padding">
             <div className="container">
@@ -13,7 +12,14 @@ const Contactpage = forwardRef((props, ref) => {
                     <div className="col-lg-5 col-md-12">
                         <div className="contact-page-item">
                             <h2>Наши контакты</h2>
-                            <p>Мы предоставляем профессиональные юридические услуги для физических лиц и организаций. Наша команда опытных юристов готова помочь вам с консультациями, подготовкой документов и представлением интересов в суде. Свяжитесь с нами любым удобным способом и получите квалифицированную помощь в решении ваших правовых вопросов.</p>
+                            <p>
+                                Мы предоставляем профессиональные юридические услуги для
+                                физических лиц и организаций. Наша команда опытных юристов
+                                готова помочь вам с консультациями, подготовкой документов и
+                                представлением интересов в суде. Свяжитесь с нами любым удобным
+                                способом и получите квалифицированную помощь в решении ваших
+                                правовых вопросов.
+                            </p>
                             <div className="adress">
                                 <h3>Адрес</h3>
                                 <span>г. Бишкек, ул. Ибраимова,103/1а Первый этаж</span>
@@ -30,7 +36,10 @@ const Contactpage = forwardRef((props, ref) => {
                         </div>
                     </div>
                     <div className="col-lg-7 col-md-12">
-                        <div ref={ref} className="contact-area contact-area-2 contact-area-3">
+                        <div
+                            ref={ref}
+                            className="contact-area contact-area-2 contact-area-3"
+                        >
                             <h2>Форма быстрого контакта</h2>
                             <ContactForm2 />
                         </div>
@@ -55,7 +64,8 @@ const Contactpage = forwardRef((props, ref) => {
                                     rel="noopener noreferrer"
                                     className="map-link-btn route-btn"
                                 >
-                                    Найти проезд до Intellect IT & Business College - Senat Consulting
+                                    Найти проезд до Intellect IT & Business College - Senat
+                                    Consulting
                                 </a>
                             </div>
 
@@ -72,8 +82,7 @@ const Contactpage = forwardRef((props, ref) => {
                 </div>
             </div>
         </div>
-    )
-})
-
+    );
+});
 
 export default Contactpage;

@@ -387,7 +387,11 @@
   color: #ff7b00;
 }
 
-
 .main-menu li a:hover {
   color: #ff7b00;
+}
+
+.language-switcher {
+  position: absolute !important;
+  right: -100px !important;
 }
