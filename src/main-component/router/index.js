@@ -30,7 +30,7 @@ const AllRoute = () => {
           <Route path='/case-stadies' component={CaseStadies} />
           <Route path='/Attorneys' component={Attorneys} />
           <Route path='/case-stadies-details' component={CaseStadiesDetails} />
-          <Route path='/practice-details' component={PracticeDetails} />
+          <Route path='/practice-details/:id' component={PracticeDetails} />
           <Route path='/Attorneys-single' component={Attorneysdetails} />
           <Route path='/contact' component={ContactPage} />
           <Route path='/faq' component={FAQPage} />
