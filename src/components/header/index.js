@@ -81,28 +81,28 @@ const Header = () => {
                       </NavLink>
                       <ul className="submenu">
                         <li>
-                          <NavLink to="/practice-details">
+                          <NavLink to="/practice-details/1">
                             {t("navSubServices1")}
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/practice-details">
+                          <NavLink to="/practice-details/2">
                             {t("navSubServices2")}
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/practice-details">
+                          <NavLink to="/practice-details/3">
                             {" "}
                             {t("navSubServices3")}
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/practice-details">
+                          <NavLink to="/practice-details/4">
                             {t("navSubServices4")}
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/practice-details">
+                          <NavLink to="/practice-details/5">
                             {t("navSubServices5")}
                           </NavLink>
                         </li>
