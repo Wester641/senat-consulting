@@ -9,7 +9,7 @@ import { useEffect } from "react";
 
 import { practices } from "../../utils/practices";
 import { useParams } from "react-router-dom";
-import PracticDetails from "../../components/PracticeDetails";
+import PracticDetails from "../../components/practicedetails";
 
 const PracticeDetailsPage = () => {
   useEffect(() => {
