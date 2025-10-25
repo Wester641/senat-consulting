@@ -1,12 +1,12 @@
 import React from 'react';
 
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import './style.css'
 
 const Breadcumb = (props) => {
 
-    return(
+    return (
         <div className="breadcumb-area">
             <div className="container">
                 <div className="row">
@@ -22,8 +22,8 @@ const Breadcumb = (props) => {
                 </div>
             </div>
         </div>
-     )
-        
+    )
+
 }
 
 export default Breadcumb;

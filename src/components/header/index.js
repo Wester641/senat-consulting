@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import MobileMenu from "../../components/MobileMenu";
@@ -7,6 +8,8 @@ import logo from "../../images/logo/logo.png";
 import "./style.css";
 
 const Header = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <header>
       <div className="header-top-1 d-none d-lg-block">
@@ -15,18 +18,18 @@ const Header = () => {
             <div className="col-md-9 col-sm-12 col-12 col-lg-9 d-flex align-items-center">
               <ul className="d-flex account_login-area">
                 <li>
-                  <i className="fa fa-clock-o" aria-hidden="true"></i>Пн - Пт :
-                  9.00 - 19.00
+                  <i className="fa fa-clock-o" aria-hidden="true"></i>
+                  {t("contact.hoursLabel")} {t("contact.hours")}
                 </li>
                 <li>
-                  <i className="fa fa-map-marker"></i>г. Бишкек, ул.
-                  Ибраимова,103/1а Первый этаж, Бишкек{" "}
+                  <i className="fa fa-map-marker"></i>
+                  {t("contact.address")}
                 </li>
               </ul>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-12 d-flex justify-content-center">
               <div className="btn-style">
-                <Link to="/contact">Бесплатная консультация</Link>
+                <Link to="/contact">{t("contact.title")}</Link>
               </div>
             </div>
           </div>
@@ -46,9 +49,19 @@ const Header = () => {
               <div className="main-menu">
                 <nav className="nav_mobile_menu">
                   <ul>
+                    <li className="language-switcher">
+                      <select
+                        value={i18n.language}
+                        onChange={(e) => i18n.changeLanguage(e.target.value)}
+                      >
+                        <option value="ru">RU</option>
+                        <option value="kg">KG</option>
+                        <option value="en">EN</option>
+                      </select>
+                    </li>
                     <li>
                       <NavLink to="/" exact activeClassName="active">
-                        Главная
+                        {t("navHome")}
                       </NavLink>
                     </li>
                     <li>
@@ -56,7 +69,7 @@ const Header = () => {
                         to="/about"
                         className={({ isActive }) => (isActive ? "active" : "")}
                       >
-                        О компании
+                        {t("navAbout")}
                       </NavLink>
                     </li>
                     <li className="has-submenu">
@@ -64,30 +77,33 @@ const Header = () => {
                         to="/practice"
                         className={({ isActive }) => (isActive ? "active" : "")}
                       >
-                        Наши услуги <i className="fa fa-angle-down"></i>
+                        {t("navServices")} <i className="fa fa-angle-down"></i>
                       </NavLink>
                       <ul className="submenu">
                         <li>
-                          <NavLink to="/practice-details/1">
-                            Суды и споры
+                          <NavLink to="/practice-details">
+                            {t("navSubServices1")}
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/practice-details/2">
-                            Регистрация бизнеса
+                          <NavLink to="/practice-details">
+                            {t("navSubServices2")}
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/practice-details/3">Договоры</NavLink>
-                        </li>
-                        <li>
-                          <NavLink to="/practice-details/4">
-                            Сопровождение бизнеса
+                          <NavLink to="/practice-details">
+                            {" "}
+                            {t("navSubServices3")}
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink to="/practice-details/5">
-                            Организация проектов и фестивалей
+                          <NavLink to="/practice-details">
+                            {t("navSubServices4")}
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/practice-details">
+                            {t("navSubServices5")}
                           </NavLink>
                         </li>
                       </ul>
@@ -97,7 +113,7 @@ const Header = () => {
                         to="/case-stadies"
                         className={({ isActive }) => (isActive ? "active" : "")}
                       >
-                        Отзывы
+                        {t("navComments")}
                       </NavLink>
                     </li>
                     <li>
@@ -105,7 +121,7 @@ const Header = () => {
                         to="/blog-fullwidth"
                         className={({ isActive }) => (isActive ? "active" : "")}
                       >
-                        Новости
+                        {t("navBlog")}
                       </NavLink>
                     </li>
                     <li>
@@ -113,13 +129,21 @@ const Header = () => {
                         to="/contact"
                         className={({ isActive }) => (isActive ? "active" : "")}
                       >
-                        Контакты
+                        {t("navContact")}
                       </NavLink>
                     </li>
                   </ul>
                 </nav>
               </div>
             </div>
+            {/* <nav>
+                            <button onClick={() => i18n.changeLanguage('en')}>EN</button>
+                            <button onClick={() => i18n.changeLanguage('ru')}>RU</button>
+                            <button onClick={() => i18n.changeLanguage('kg')}>KG</button>
+
+                            <h1>{t('welcome')}</h1>
+                            <a href="/contact">{t('contact')}</a>
+                        </nav> */}
             {/* <div className="col-lg-1 col-md-1 col-sm-1 col-1 search">
                             <ul>
                                 <li><Link to="/"><i className="fa fa-search"></i></Link>
