@@ -8,7 +8,7 @@ import PracticePage from '../PracticePage'
 import CaseStadies from '../CaseStadies'
 import Attorneys from '../Attorneys'
 import CaseStadiesDetails from '../Casedetails'
-import PracticeDetails from '../PracticeDetails'
+import PracticeDetailsPage from '../PracticeDetailsPage'
 import Attorneysdetails from '../Attorneysdetails'
 import ContactPage from '../ContactPage'
 import FAQPage from '../FAQPage'
@@ -30,7 +30,7 @@ const AllRoute = () => {
           <Route path='/case-stadies' component={CaseStadies} />
           <Route path='/Attorneys' component={Attorneys} />
           <Route path='/case-stadies-details' component={CaseStadiesDetails} />
-          <Route path='/practice-details/:id' component={PracticeDetails} />
+          <Route path='/practice-details/:id' component={PracticeDetailsPage} />
           <Route path='/Attorneys-single' component={Attorneysdetails} />
           <Route path='/contact' component={ContactPage} />
           <Route path='/faq' component={FAQPage} />

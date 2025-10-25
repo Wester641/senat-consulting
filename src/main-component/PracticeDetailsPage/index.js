@@ -4,14 +4,14 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import Breadcumb from "../../components/breadcumb";
 
-import PracticDetails from "../../components/Practicedetails";
 import FooterSection from "../../components/Footer";
 import { useEffect } from "react";
 
 import { practices } from "../../utils/practices";
 import { useParams } from "react-router-dom";
+import PracticDetails from "../../components/PracticeDetails";
 
-const PracticeDetails = () => {
+const PracticeDetailsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -36,4 +36,4 @@ const PracticeDetails = () => {
   );
 };
 
-export default PracticeDetails;
+export default PracticeDetailsPage;
