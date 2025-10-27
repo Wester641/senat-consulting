@@ -395,3 +395,17 @@
   position: absolute !important;
   right: -100px !important;
 }
+
+
+.language-switcher select {
+  background-color: #ded532; 
+  color: #fff;              
+  border: none;             
+  padding: 5px 10px;         
+  border-radius: 4px;       
+  font-size: 14px;
+  outline: none;           
+}
+
+
+

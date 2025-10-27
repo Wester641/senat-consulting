@@ -8,6 +8,17 @@ import Gallery_4 from "../../images/studies/4.jpg";
 import Gallery_5 from "../../images/studies/5.jpg";
 import Gallery_6 from "../../images/studies/6.jpg";
 
+import { portfolioProps } from "../../utils/Props";
+
+const galleryImages = {
+  Gallery_1,
+  Gallery_2,
+  Gallery_3,
+  Gallery_4,
+  Gallery_5,
+  Gallery_6,
+};
+
 class Portfolio extends Component {
   state = {
     activeFilter: "all",
@@ -24,8 +35,10 @@ class Portfolio extends Component {
 
   render() {
     const { activeFilter } = this.state;
-    const isVisible = (filters) =>
-      activeFilter === "all" || filters.includes(activeFilter);
+    const { sectionTitle, filters, items } = portfolioProps;
+
+    const isVisible = (itemFilters) =>
+      activeFilter === "all" || itemFilters.includes(activeFilter);
 
     return (
       <section
@@ -37,7 +50,7 @@ class Portfolio extends Component {
             <div className="col col-xs-12 sortable-gallery">
               <div className="gallery-filters">
                 <div className="section-title-1 text-center">
-                  <h2>Наши последние дела</h2>
+                  <h2>{sectionTitle}</h2>
                 </div>
                 <ul>
                   <li>
@@ -46,7 +59,7 @@ class Portfolio extends Component {
                       className={activeFilter === "all" ? "current" : ""}
                       onClick={(e) => this.setFilter("all", e)}
                     >
-                      Все
+                      {filters.all}
                     </Link>
                   </li>
                   <li>
@@ -55,7 +68,7 @@ class Portfolio extends Component {
                       className={activeFilter === "family" ? "current" : ""}
                       onClick={(e) => this.setFilter("family", e)}
                     >
-                      Семейные дела
+                      {filters.family}
                     </Link>
                   </li>
                   <li>
@@ -64,7 +77,7 @@ class Portfolio extends Component {
                       className={activeFilter === "real" ? "current" : ""}
                       onClick={(e) => this.setFilter("real", e)}
                     >
-                      Суды
+                      {filters.real}
                     </Link>
                   </li>
                   <li>
@@ -73,145 +86,110 @@ class Portfolio extends Component {
                       className={activeFilter === "business" ? "current" : ""}
                       onClick={(e) => this.setFilter("business", e)}
                     >
-                      Бизнес
+                      {filters.business}
                     </Link>
                   </li>
                 </ul>
               </div>
 
               <div className="gallery-container gallery-fancybox masonry-gallery payra-masonary">
-                {isVisible(["real"]) && (
+
+                {isVisible(items[0].filters) && (
                   <div className="grid active">
                     <div className="studies-item">
                       <div className="studies-single">
-                        <img
-                          src={Gallery_1}
-                          className="img img-responsive"
-                          alt=""
-                        />
+                        <img src={galleryImages[items[0].image]} alt="" className="img img-responsive"/>
                       </div>
                       <div className="overlay-text">
                         <div className="text-inner">
-                          <p className="sub">
-                            «Не остановимся, пока не выиграем!»
-                          </p>
-                          <h3>Суды и споры</h3>
+                          <p className="sub">{items[0].subtitle}</p>
+                          <h3>{items[0].title}</h3>
                         </div>
                       </div>
                     </div>
                   </div>
                 )}
 
-                {isVisible(["business"]) && (
+                {isVisible(items[1].filters) && (
                   <div className="grid active">
                     <div className="studies-item">
                       <div className="studies-single">
-                        <img
-                          src={Gallery_2}
-                          className="img img-responsive"
-                          alt=""
-                        />
+                        <img src={galleryImages[items[1].image]} alt="" className="img img-responsive"/>
                       </div>
                       <div className="overlay-text">
                         <div className="text-inner">
-                          <p className="sub">
-                            «Начните бизнес без головной боли!»
-                          </p>
-                          <h3>Договоры</h3>
+                          <p className="sub">{items[1].subtitle}</p>
+                          <h3>{items[1].title}</h3>
                         </div>
                       </div>
                     </div>
                   </div>
                 )}
 
-                {isVisible(["business"]) && (
+                {isVisible(items[2].filters) && (
                   <div className="grid active">
                     <div className="studies-item">
                       <div className="studies-single">
-                        <img
-                          src={Gallery_6}
-                          alt=""
-                          className="img img-responsive"
-                        />
+                        <img src={galleryImages[items[2].image]} alt="" className="img img-responsive"/>
                       </div>
                       <div className="overlay-text">
                         <div className="text-inner">
-                          <p className="sub">
-                            «Создайте свой бизнес — мы поможем!»
-                          </p>
-                          <h3>Регистрация компании</h3>
+                          <p className="sub">{items[2].subtitle}</p>
+                          <h3>{items[2].title}</h3>
                         </div>
                       </div>
                     </div>
                   </div>
                 )}
 
-                {isVisible(["real", "family"]) && (
+                {isVisible(items[3].filters) && (
                   <div className="grid active">
                     <div className="studies-item">
                       <div className="studies-single">
-                        <img
-                          src={Gallery_5}
-                          alt=""
-                          className="img img-responsive"
-                        />
+                        <img src={galleryImages[items[3].image]} alt="" className="img img-responsive"/>
                       </div>
                       <div className="overlay-text">
                         <div className="text-inner">
-                          <p className="sub">
-                            «Ваше здоровье — наш приоритет.»
-                          </p>
-                          <h3>Личная травма</h3>
+                          <p className="sub">{items[3].subtitle}</p>
+                          <h3>{items[3].title}</h3>
                         </div>
                       </div>
                     </div>
                   </div>
                 )}
 
-                {isVisible(["business", "real"]) && (
+                {isVisible(items[4].filters) && (
                   <div className="grid active">
                     <div className="studies-item">
                       <div className="studies-single">
-                        <img
-                          src={Gallery_3}
-                          alt=""
-                          className="img img-responsive"
-                        />
+                        <img src={galleryImages[items[4].image]} alt="" className="img img-responsive"/>
                       </div>
                       <div className="overlay-text">
                         <div className="text-inner">
-                          <p className="sub">
-                            «Вы строите — мы страхуем риски.»
-                          </p>
-                          <h3>Сопровождение бизнеса</h3>
+                          <p className="sub">{items[4].subtitle}</p>
+                          <h3>{items[4].title}</h3>
                         </div>
                       </div>
                     </div>
                   </div>
                 )}
 
-                {isVisible(["business", "family"]) && (
+                {isVisible(items[5].filters) && (
                   <div className="grid active">
                     <div className="studies-item">
                       <div className="studies-single">
-                        <img
-                          src={Gallery_4}
-                          alt=""
-                          className="img img-responsive"
-                        />
+                        <img src={galleryImages[items[5].image]} alt="" className="img img-responsive"/>
                       </div>
                       <div className="overlay-text">
                         <div className="text-inner">
-                          <p className="sub">
-                            Поможем выиграть тендер и провести мероприятие на
-                            высшем уровне.
-                          </p>
-                          <h3>Организация проектов и фестивалей</h3>
+                          <p className="sub">{items[5].subtitle}</p>
+                          <h3>{items[5].title}</h3>
                         </div>
                       </div>
                     </div>
                   </div>
                 )}
+
               </div>
             </div>
           </div>

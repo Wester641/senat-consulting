@@ -5,8 +5,10 @@ import fe2 from '../../images/icon/2.png'
 import fe3 from '../../images/icon/3.png'
 
 import './style.css'
+import { featuresProps } from '../../utils/Props';
 
-const Features = () => {
+
+const Features = ( ) => {
 
     return(
         <div className="features-area ">
@@ -18,8 +20,8 @@ const Features = () => {
                                 <i className="fi"><img src={fe1} alt=""/></i>
                             </div>
                             <div className="features-content">
-                                <p>Забронируйте свою</p>
-                                <h3>Встречу</h3>
+                                <p>{featuresProps.title1}</p>
+                                <h3>{featuresProps.text1}</h3>
                             </div>
                         </div>
                     </div>
@@ -29,8 +31,8 @@ const Features = () => {
                                 <i className="fi"><img src={fe2} alt=""/></i>
                             </div>
                             <div className="features-content">
-                                <p>Получите бесплатно</p>
-                                <h3>Советы эксперта</h3>
+                                <p>{featuresProps.title2}</p>
+                                <h3>{featuresProps.text2}</h3>
                             </div>
                         </div>
                     </div>
@@ -40,8 +42,8 @@ const Features = () => {
                                 <i className="fi"><img src={fe3} alt=""/></i>
                             </div>
                             <div className="features-content">
-                                <p>Легко начать</p>
-                                <h3>С нами</h3>
+                                <p>{featuresProps.title3}</p>
+                                <h3>{featuresProps.text3}</h3>
                             </div>
                         </div>
                     </div>
