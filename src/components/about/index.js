@@ -3,10 +3,13 @@ import VideoModal from '../ModalVideo'
 import { Link } from 'react-router-dom'
 import abimg1 from '../../images/about/img-2.png'
 import abimg2 from '../../images/about/img-1.png'
+import { useTranslation } from "react-i18next";
 
 import './style.css'
 
 const AboutSection = () => {
+const { t } = useTranslation();
+    
 
     return (
         <div className="about-style-2">
@@ -21,15 +24,15 @@ const AboutSection = () => {
                     <div className="col-lg-6 col-12">
                         <div className="about-content">
                             <div className="section-title">
-                                <h2>О нас</h2>
+                               <h2>{t("aboutSection.title")}</h2>
                             </div>
                             <p>
-                                <h1 className="company-title">Senat Consulting — юридическая и консалтинговая компания </h1>
-                                объединяющая опытных юристов и специалистов по организации проектов. Мы внимательно изучаем каждый кейс, разрабатываем стратегию и доводим дело до результата — от переговоров и подготовки документов до судебных решений.
+                                <h1 className="company-title">{t("aboutSection.companyName")}</h1>
+                                {t("aboutSection.companyDescription")}
                             </p>
-                            <p>Мы работаем по принципу оплаты только за результат: никаких предоплат и скрытых сборов. Наши специалисты глубоко понимают юридические процессы, включая участие в подготовке и анализе нормативных актов, что позволяет находить оптимальные решения для клиентов.</p>
+                            <p>{t("aboutSection.workingPrinciple")}</p>
                             <div className="btns">
-                                <div className="btn-style"><Link to={"/about"}  > Подробнее о нас…</Link></div>
+                                <div className="btn-style"><Link to={"/about"}  >{t("aboutSection.learnMore")}</Link></div>
                             </div>
                             <div className="signature">
                                 <img src={abimg2} alt="" />

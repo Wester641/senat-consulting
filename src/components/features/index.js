@@ -3,10 +3,14 @@ import React from 'react';
 import fe1 from '../../images/icon/1.png'
 import fe2 from '../../images/icon/2.png'
 import fe3 from '../../images/icon/3.png'
+import { useTranslation } from "react-i18next";
+
 
 import './style.css'
 
 const Features = () => {
+const { t } = useTranslation();
+    
 
     return(
         <div className="features-area ">
@@ -18,8 +22,8 @@ const Features = () => {
                                 <i className="fi"><img src={fe1} alt=""/></i>
                             </div>
                             <div className="features-content">
-                                <p>Забронируйте свою</p>
-                                <h3>Встречу</h3>
+                              <p>{t("features.bookMeetingTitle")}</p>
+                              <h3>{t("features.bookMeetingText")}</h3>
                             </div>
                         </div>
                     </div>
@@ -29,8 +33,8 @@ const Features = () => {
                                 <i className="fi"><img src={fe2} alt=""/></i>
                             </div>
                             <div className="features-content">
-                                <p>Получите бесплатно</p>
-                                <h3>Советы эксперта</h3>
+                               <p>{t("features.getAdviceTitle")}</p>
+                               <h3>{t("features.getAdviceText")}</h3>
                             </div>
                         </div>
                     </div>
@@ -40,8 +44,8 @@ const Features = () => {
                                 <i className="fi"><img src={fe3} alt=""/></i>
                             </div>
                             <div className="features-content">
-                                <p>Легко начать</p>
-                                <h3>С нами</h3>
+                                  <p>{t("features.easyStartTitle")}</p>
+                                  <h3>{t("features.easyStartText")}</h3>
                             </div>
                         </div>
                     </div>
