@@ -13,10 +13,11 @@ import ContactSection from '../../components/ContactSection'
 import FooterSection from '../../components/Footer'
 import PhoneButton from '../../components/PhoneForm'
 import { useRef } from "react";
+import { useTranslation } from 'react-i18next';
 
 
 const Homepage2 = () => {
-
+const {t} = useTranslation()
     const targetRef = useRef(null);
 
     const handleScrollToTop = () => {
@@ -29,7 +30,7 @@ const Homepage2 = () => {
             <Features />
             <AboutSection />
             <PracticeArea subclass={'practice-area-2'} />
-            <Porfolio />
+            <Porfolio props={t} />
             <Testimonial />
             <ContactSection ref={targetRef} />
             <FooterSection />

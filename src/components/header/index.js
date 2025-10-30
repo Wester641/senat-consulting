@@ -19,17 +19,17 @@ const Header = () => {
               <ul className="d-flex account_login-area">
                 <li>
                   <i className="fa fa-clock-o" aria-hidden="true"></i>
-                  {t("contact.hoursLabel")} {t("contact.hours")}
+                  {t("contactHours.hoursLabel")} {t("contactHours.hours")}
                 </li>
                 <li>
                   <i className="fa fa-map-marker"></i>
-                  {t("contact.address")}
+                  {t("contactHours.address")}
                 </li>
               </ul>
             </div>
             <div className="col-lg-3 col-md-3 col-sm-12 d-flex justify-content-center">
               <div className="btn-style">
-                <Link to="/contact">{t("contact.title")}</Link>
+                <Link to="/contact">{t("contactHours.title")}</Link>
               </div>
             </div>
           </div>

@@ -25,10 +25,99 @@
     "text": "Subscription support allows you to avoid hiring an in-house lawyer and get a team of experts immediately",
     "btn": "Get a consultation"
   },
-  "contact": {
+  "contactSection": {
+    "title": "Want to contact us?",
+    "text": "If you have questions, need legal advice, or want to discuss your case — fill out the form, and we will contact you shortly.",
+    "addressLabel": "Our address",
+    "address": "Bishkek, Ibraimova St., 103/1a, First floor",
+    "phoneLabel": "Phone",
+    "phone": "+996 (707) 967-711",
+    "emailLabel": "Email",
+    "email": "guljamal.muni@gmail.com"
+  },
+  "contactHours": {
     "title": "Free consultation",
     "address": "Bishkek, Ibraimova St., 103/1a, First floor, Bishkek",
-    "hoursLabel": "Mon - Fri :",
-    "hours": "9.00 - 19.00"
-  }
+    "hoursLabel": "Mon - Fri:",
+    "hours": "9:00 - 19:00"
+  },
+  "newsletter": {
+    "title": "Subscribe to news",
+    "text": "Subscribe to our newsletter to receive up-to-date legal news and advice from our experts.",
+    "placeholder": "Your email *"
+  },
+
+  "practiceArea": {
+    "sectionTitle": "How we can help you?",
+    "legalText": "We won’t stop until we win! We prepare your case, defend your interests, and speak the language of the law.",
+    "legalTitle": "Legal Disputes and Litigation",
+    "personalInjuryTitle": "Personal Injury",
+    "personalInjuryText": "«Your health is our priority.» We provide legal assistance in cases of compensation for harm caused by injuries, accidents, or incidents.",
+    "businessSetupTitle": "Starting a Business",
+    "businessSetupText": "«Start your business without headaches!» We select the optimal legal form, prepare documents, and open the company",
+    "contractsTitle": "Contracts",
+    "contractsText": "«So your word carries weight.» We draft contracts that protect your interests",
+    "tendersTitle": "Tenders and Events",
+    "tendersText": "We help win tenders and organize events at the highest level",
+    "insuranceTitle": "Risk Insurance",
+    "insuranceText": "«You build — we insure the risks.» Subscription support allows you to avoid hiring an in-house lawyer and get a team of experts immediately"
+  },
+
+  "aboutSection": {
+    "title": "About us",
+    "companyName": "Senat Consulting — a legal and consulting company",
+    "companyDescription": "uniting experienced lawyers and project organization specialists. We carefully study each case, develop a strategy, and bring the matter to a result — from negotiations and document preparation to court decisions.",
+    "workingPrinciple": "We work on a pay-for-results principle: no prepayments or hidden fees. Our specialists deeply understand legal processes, including participation in the preparation and analysis of regulatory acts, which allows us to find optimal solutions for clients.",
+    "learnMore": "More about us…"
+  },
+
+  "features": {
+    "bookMeetingTitle": "Book your",
+    "bookMeetingText": "Meeting",
+    "getAdviceTitle": "Get for free",
+    "getAdviceText": "Expert advice",
+    "easyStartTitle": "Start effortlessly",
+    "easyStartText": "With our help"
+  },
+
+  "portfolio": {
+    "title": "Our recent cases",
+    "allTitle": "All",
+    "familyTitle": "Family cases",
+    "courtTitle": "Courts",
+    "businessTitle": "Business",
+
+    "case1Title": "«We won't stop until we win!»",
+    "case1Subtitle": "Courts and disputes",
+
+    "case2Title": "«Start your business without headaches!»",
+    "case3Title": "«Create your business — we'll help!»",
+    "case3Subtitle": "Company registration",
+
+    "case4Title": "«Your health is our priority.»",
+    "case5Title": "«You build — we insure the risks.»",
+    "case6Title": "We help win tenders and organize events at the highest level."
+  },
+
+  "contactForm": {
+    "namePlaceholder": "Your name",
+    "phonePlaceholder": "Phone number",
+    "emailPlaceholder": "Your email",
+    "eventPlaceholder": "Select a service",
+    "event1": "Courts and disputes",
+    "event2": "Business registration",
+    "event3": "Contracts",
+    "event4": "Business support",
+    "event5": "Project and festival organization",
+    "commentsPlaceholder": "Describe your situation or ask a question",
+    "submitButton": "Book now",
+
+    "errorName": "Please enter your name",
+    "errorEmail": "Please enter your email address",
+    "errorNumber": "Please enter your phone number",
+    "errorEvents": "Please select a service"
+  },
+
+  "footerPrivacy": "Privacy Policy",
+  "footerRights": "All rights reserved"
 }
