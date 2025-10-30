@@ -48,7 +48,9 @@
   },
 
   "practiceArea": {
-    "sectionTitle": "How we can help you",
+    "sectionTitle": "How we can help you?",
+    "legalText": "We won’t stop until we win! We prepare your case, defend your interests, and speak the language of the law.",
+    "legalTitle": "Legal Disputes and Litigation",
     "personalInjuryTitle": "Personal Injury",
     "personalInjuryText": "«Your health is our priority.» We provide legal assistance in cases of compensation for harm caused by injuries, accidents, or incidents.",
     "businessSetupTitle": "Starting a Business",
@@ -98,23 +100,23 @@
   },
 
   "contactForm": {
-  "namePlaceholder": "Your name",
-  "phonePlaceholder": "Phone number",
-  "emailPlaceholder": "Your email",
-  "eventPlaceholder": "Select a service",
-  "event1": "Courts and disputes",
-  "event2": "Business registration",
-  "event3": "Contracts",
-  "event4": "Business support",
-  "event5": "Project and festival organization",
-  "commentsPlaceholder": "Describe your situation or ask a question",
-  "submitButton": "Book now",
+    "namePlaceholder": "Your name",
+    "phonePlaceholder": "Phone number",
+    "emailPlaceholder": "Your email",
+    "eventPlaceholder": "Select a service",
+    "event1": "Courts and disputes",
+    "event2": "Business registration",
+    "event3": "Contracts",
+    "event4": "Business support",
+    "event5": "Project and festival organization",
+    "commentsPlaceholder": "Describe your situation or ask a question",
+    "submitButton": "Book now",
 
-  "errorName": "Please enter your name",
-  "errorEmail": "Please enter your email address",
-  "errorNumber": "Please enter your phone number",
-  "errorEvents": "Please select a service"
-},
+    "errorName": "Please enter your name",
+    "errorEmail": "Please enter your email address",
+    "errorNumber": "Please enter your phone number",
+    "errorEvents": "Please select a service"
+  },
 
   "footerPrivacy": "Privacy Policy",
   "footerRights": "All rights reserved"

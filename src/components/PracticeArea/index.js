@@ -36,8 +36,8 @@ const PracticeArea = (props) => {
                   </i>
                 </div>
                 <div className="practice-content">
-                  <h2>{t("navSubServices1")}</h2>
-                  <p>{t("practiceArea.personalInjuryText")}</p>
+                  <h2>{t("practiceArea.legalTitle")}</h2>
+                  <p>{t("practiceArea.legalText")}</p>
                 </div>
               </div>
             </div>
