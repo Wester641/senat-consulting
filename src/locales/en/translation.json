@@ -57,8 +57,8 @@
     "businessSetupText": "«Start your business without headaches!» We select the optimal legal form, prepare documents, and open the company",
     "contractsTitle": "Contracts",
     "contractsText": "«So your word carries weight.» We draft contracts that protect your interests",
-    "tendersTitle": "Tenders and Events",
-    "tendersText": "We help win tenders and organize events at the highest level",
+    "tendersTitle": "Project and Event Organization",
+    "tendersText": "We help organize events, conferences, and forums at the highest level — from legal support to full organizational management.",
     "insuranceTitle": "Risk Insurance",
     "insuranceText": "«You build — we insure the risks.» Subscription support allows you to avoid hiring an in-house lawyer and get a team of experts immediately"
   },
@@ -96,7 +96,7 @@
 
     "case4Title": "«Your health is our priority.»",
     "case5Title": "«You build — we insure the risks.»",
-    "case6Title": "We help win tenders and organize events at the highest level."
+    "case6Title": "We’ll help organize your event and provide top-level legal support."
   },
 
   "contactForm": {
