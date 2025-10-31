@@ -19,7 +19,7 @@ class SimpleSlider2 extends Component {
     const settings = {
       dots: true,
       arrows: true,
-      speed: 1200,
+      speed: 3300,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
@@ -51,8 +51,8 @@ class SimpleSlider2 extends Component {
               <div className="container">
                 <div className="row">
                   <div className="col col-lg-8 slide-caption">
-                    <h2>{t("slide3.title")}</h2>
-                    <p>{t("slide3.text")}</p>
+                    <h2>{t("slide2.title")}</h2>
+                    <p>{t("slide2.text")}</p>
                     <div className="btns">
                       <div className="btn-style">
                         <Link onClick={onClick}>{t("slide3.btn")}</Link>
