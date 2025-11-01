@@ -973,6 +973,16 @@
   .hero-style-3 .slide-caption p {
     font-size: 15px;
     margin-bottom: 20px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 767px) {
+    .hero-style-1 .slide-caption h2,
+    .hero-style-2 .slide-caption h2,
+    .hero-style-3 .slide-caption h2 {
+      font-size: 22px;
+      line-height: 25px;
+    }
   }
   .header-top li {
     display: inline-block;
@@ -1275,8 +1285,10 @@
   .hero.hero-style-1 .slide-caption h2,
   .hero.hero-style-2 .slide-caption h2,
   .hero.hero-style-3 .slide-caption h2 {
-    font-size: 26px;
-    line-height: 47px;
+    font-size: 21px;
+    line-height: 40px;
+    /* border: 1px solid red; */
+    width: 56%;
     margin: 10px 3px 20px;
   }
   .col-m {
