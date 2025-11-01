@@ -1,13 +1,15 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { Collapse, CardBody, Card } from "reactstrap";
 import { Link } from "react-router-dom";
 
 import PerfectScrollbar from "react-perfect-scrollbar";
+import "react-perfect-scrollbar/dist/css/styles.css";
+
+import { useTranslation } from "react-i18next";
 
 import "./style.css";
 import address from "../../images/about/mobileaddress.jpg";
 
-import "react-perfect-scrollbar/dist/css/styles.css";
 const menus = [
   {
     id: 1,
@@ -69,98 +71,97 @@ const menus = [
   },
 ];
 
-class MobileMenu extends Component {
-  state = {
-    isMenuShow: false,
-    isOpen: 0,
+const MobileMenu = () => {
+  const [isMenuShow, setIsMenuShow] = useState(false);
+  const [isOpenId, setIsOpenId] = useState(0);
+
+  const { i18n } = useTranslation();
+
+  const menuHandler = () => {
+    setIsMenuShow(!isMenuShow);
   };
 
-  menuHandler = () => {
-    this.setState({
-      isMenuShow: !this.state.isMenuShow,
-    });
+  const toggleOpen = (id) => {
+    setIsOpenId(id === isOpenId ? 0 : id);
   };
 
-  setIsOpen = (id) => () => {
-    this.setState({
-      isOpen: id === this.state.isOpen ? 0 : id,
-    });
-  };
-
-  render() {
-    const { isMenuShow, isOpen } = this.state;
-
-    return (
-      <div>
-        <PerfectScrollbar>
-          <div className={`mobileMenu ${isMenuShow ? "show" : ""}`}>
-            <ul className="responsivemenu">
-              {menus.map((item) => {
-                return (
-                  <li key={item.id}>
-                    {item.submenu ? (
-                      <p onClick={this.setIsOpen(item.id)}>
-                        {item.title}
-                        {item.submenu ? (
-                          <i
-                            className="fa fa-angle-down"
-                            aria-hidden="true"
-                          ></i>
-                        ) : (
-                          ""
-                        )}
-                      </p>
-                    ) : (
-                      <Link to={item.link}>{item.title}</Link>
-                    )}
-                    {item.submenu ? (
-                      <Collapse isOpen={item.id === isOpen}>
-                        <Card>
-                          <CardBody>
-                            <ul>
-                              {item.submenu.map((submenu) => (
-                                <li key={submenu.id}>
-                                  <Link className="active" to={submenu.link}>
-                                    {submenu.title}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </CardBody>
-                        </Card>
-                      </Collapse>
-                    ) : (
-                      ""
-                    )}
-                  </li>
-                );
-              })}
-              <div className="mobile-map-container">
-                <h3 className="map-address-title">
-                  Улица Ибраимова, 103/1а, Бишкек
-                </h3>
-                <a
-                  href="https://2gis.kg/bishkek/geo/70030076493877457/74.618063%2C42.878776?m=74.618691%2C42.878209%2F18.24"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="map-link"
-                >
-                  <img
-                    src={address}
-                    alt="Адрес компании - Улица Ибраимова, 103/1а, Бишкек"
-                    className="map-image"
-                  />
-                </a>
-              </div>
-            </ul>
+  return (
+    <div>
+      <PerfectScrollbar>
+        <div className={`mobileMenu ${isMenuShow ? "show" : ""}`}>
+          <ul className="responsivemenu">
+            {menus.map((item) => {
+              return (
+                <li key={item.id}>
+                  {item.submenu ? (
+                    <p onClick={() => toggleOpen(item.id)}>
+                      {item.title}
+                      {item.submenu ? (
+                        <i className="fa fa-angle-down" aria-hidden="true"></i>
+                      ) : (
+                        ""
+                      )}
+                    </p>
+                  ) : (
+                    <Link to={item.link}>{item.title}</Link>
+                  )}
+                  {item.submenu ? (
+                    <Collapse isOpen={item.id === isOpenId}>
+                      <Card>
+                        <CardBody>
+                          <ul>
+                            {item.submenu.map((submenu) => (
+                              <li key={submenu.id}>
+                                <Link className="active" to={submenu.link}>
+                                  {submenu.title}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </CardBody>
+                      </Card>
+                    </Collapse>
+                  ) : (
+                    ""
+                  )}
+                </li>
+              );
+            })}
+            <div className="mobile-map-container">
+              <h3 className="map-address-title">
+                Улица Ибраимова, 103/1а, Бишкек
+              </h3>
+              <a
+                href="https://2gis.kg/bishkek/geo/70030076493877457/74.618063%2C42.878776?m=74.618691%2C42.878209%2F18.24"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="map-link"
+              >
+                <img
+                  src={address}
+                  alt="Адрес компании - Улица Ибраимова, 103/1а, Бишкек"
+                  className="map-image"
+                />
+              </a>
+            </div>
+          </ul>
+          <div className="language-switcher-mobile">
+            <select
+              value={i18n.language}
+              onChange={(e) => i18n.changeLanguage(e.target.value)}
+            >
+              <option value="ru">RU</option>
+              <option value="kg">KG</option>
+              <option value="en">EN</option>
+            </select>
           </div>
-        </PerfectScrollbar>
-        <div className="showmenu" onClick={this.menuHandler}>
-          <i className="fa fa-bars" aria-hidden="true"></i>
         </div>
+      </PerfectScrollbar>
+      <div className="showmenu" onClick={menuHandler}>
+        <i className="fa fa-bars" aria-hidden="true"></i>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default MobileMenu;
