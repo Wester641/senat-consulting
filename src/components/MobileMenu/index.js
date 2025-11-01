@@ -29,27 +29,27 @@ const menus = [
       {
         id: 1,
         title: "Суды и споры",
-        link: "/practice-details",
+        link: "/practice-details/1",
       },
       {
         id: 2,
         title: "Регистрация бизнеса",
-        link: "/practice-details",
+        link: "/practice-details/2",
       },
       {
         id: 3,
         title: "Договоры",
-        link: "/practice-details",
+        link: "/practice-details/3",
       },
       {
         id: 4,
         title: "Сопровождение бизнеса",
-        link: "/practice-details",
+        link: "/practice-details/4",
       },
       {
         id: 5,
         title: "Организация проектов и фестивалей",
-        link: "/practice-details",
+        link: "/practice-details/5",
       },
     ],
   },
