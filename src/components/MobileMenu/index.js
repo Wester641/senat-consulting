@@ -10,72 +10,71 @@ import { useTranslation } from "react-i18next";
 import "./style.css";
 import address from "../../images/about/mobileaddress.jpg";
 
-const menus = [
-  {
-    id: 1,
-    title: "Главная",
-    link: "/",
-  },
-  {
-    id: 2,
-    title: "О компании",
-    link: "/about",
-  },
-  {
-    id: 3,
-    title: "Наши услуги",
-    link: "/practice",
-    submenu: [
-      {
-        id: 1,
-        title: "Суды и споры",
-        link: "/practice-details/1",
-      },
-      {
-        id: 2,
-        title: "Регистрация бизнеса",
-        link: "/practice-details/2",
-      },
-      {
-        id: 3,
-        title: "Договоры",
-        link: "/practice-details/3",
-      },
-      {
-        id: 4,
-        title: "Сопровождение бизнеса",
-        link: "/practice-details/4",
-      },
-      {
-        id: 5,
-        title: "Организация проектов и фестивалей",
-        link: "/practice-details/5",
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "Отзывы",
-    link: "/case-stadies",
-  },
-
-  {
-    id: 5,
-    title: "Новости",
-    link: "/blog-fullwidth",
-  },
-  {
-    id: 6,
-    title: "Контакты",
-    link: "/contact",
-  },
-];
-
 const MobileMenu = () => {
+  const { i18n, t } = useTranslation();
+
+  const menus = [
+    {
+      id: 1,
+      title: t("navHome"),
+      link: "/",
+    },
+    {
+      id: 2,
+      title: t("navAbout"),
+      link: "/about",
+    },
+    {
+      id: 3,
+      title: t("navServices"),
+      link: "/practice",
+      submenu: [
+        {
+          id: 1,
+          title: t("navSubServices1"),
+          link: "/practice-details/1",
+        },
+        {
+          id: 2,
+          title: t("navSubServices2"),
+          link: "/practice-details/2",
+        },
+        {
+          id: 3,
+          title: t("navSubServices3"),
+          link: "/practice-details/3",
+        },
+        {
+          id: 4,
+          title: t("navSubServices4"),
+          link: "/practice-details/4",
+        },
+        {
+          id: 5,
+          title: t("navSubServices5"),
+          link: "/practice-details/5",
+        },
+      ],
+    },
+    {
+      id: 4,
+      title: t("navComments"),
+      link: "/case-stadies",
+    },
+
+    {
+      id: 5,
+      title: t("navBlog"),
+      link: "/blog-fullwidth",
+    },
+    {
+      id: 6,
+      title: t("navContact"),
+      link: "/contact",
+    },
+  ];
   const [isMenuShow, setIsMenuShow] = useState(false);
   const [isOpenId, setIsOpenId] = useState(0);
-
-  const { i18n } = useTranslation();
 
   const menuHandler = () => {
     setIsMenuShow(!isMenuShow);
@@ -128,9 +127,7 @@ const MobileMenu = () => {
               );
             })}
             <div className="mobile-map-container">
-              <h3 className="map-address-title">
-                Улица Ибраимова, 103/1а, Бишкек
-              </h3>
+              <h3 className="map-address-title">{t("contactHours.address")}</h3>
               <a
                 href="https://2gis.kg/bishkek/geo/70030076493877457/74.618063%2C42.878776?m=74.618691%2C42.878209%2F18.24"
                 target="_blank"
