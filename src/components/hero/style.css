@@ -48,32 +48,16 @@
 
 @media (max-width: 767px) {
   .slide1 {
-    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/v1761908521/modern-private-office-room-interior-with-laptop-t-2025-01-07-12-16-12-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_joi3od.jpg")
-      80% center/cover no-repeat local;
+    background-position: 77% center/cover no-repeat local;
   }
   .slide2 {
-    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/v1761908517/indoors-2025-01-09-05-52-55-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_r2tysd.jpg")
-      80% center / cover no-repeat local;
+    background-position: 80% center/cover no-repeat local;
   }
   .slide3 {
     background: url("https://res.cloudinary.com/dgi7dckle/image/upload/v1761908516/vintage-books-on-bookshelves-in-old-library-educa-2025-03-06-16-00-47-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_umtlxt.jpg")
-      85% center / cover no-repeat local;
+      67% center / cover no-repeat local;
   }
 }
-/* @media (min-width: 1400px) {
-  .slide1 {
-    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/v1761908521/modern-private-office-room-interior-with-laptop-t-2025-01-07-12-16-12-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_joi3od.jpg")
-      30% center/cover no-repeat local;
-  }
-  .slide2 {
-    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/v1761908517/indoors-2025-01-09-05-52-55-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_r2tysd.jpg")
-      30% center / cover no-repeat local;
-  }
-  .slide3 {
-    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/v1761908516/vintage-books-on-bookshelves-in-old-library-educa-2025-03-06-16-00-47-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_umtlxt.jpg")
-      35% center / cover no-repeat local;
-  }
-} */
 
 .hero .slide .slider-bg {
   display: none;
@@ -90,7 +74,6 @@
   justify-content: center;
   flex-direction: column;
 }
-
 .slick-prev,
 .slick-next {
   width: 50px;
@@ -174,6 +157,7 @@
   font-weight: 300;
   margin-bottom: 40px;
 }
+
 .hero-style-1 .slide-caption p span,
 .hero-style-2 .slide-caption p span,
 .hero-style-3 .slide-caption p span {
