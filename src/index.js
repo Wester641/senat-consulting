@@ -2,7 +2,7 @@ import "./i18n";
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./main-component/App/App";
+import App from "./pages/App/App";
 import * as serviceWorker from "./serviceWorker";
 import "./css/font-awesome.min.css";
 import "./css/responsive.css";
