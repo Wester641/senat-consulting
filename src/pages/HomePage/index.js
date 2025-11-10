@@ -11,6 +11,8 @@ import Testimonial from "../../components/testimonial";
 import ContactSection from "../../components/ContactSection";
 import FooterSection from "../../components/Footer";
 import PhoneButton from "../../components/PhoneForm";
+import UpcomingEvent from "../../components/UpcomingEvents";
+import Rewards from "../../components/Rewards";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import SimpleSlider from "../../components/hero";
@@ -31,9 +33,11 @@ const HomePage = () => {
       <PracticeArea />
       <Porfolio props={t} />
       <Testimonial />
+      <Rewards />
       <ContactSection ref={targetRef} />
       <FooterSection />
       <PhoneButton />
+      <UpcomingEvent />
     </div>
   );
 };
