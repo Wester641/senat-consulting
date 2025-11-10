@@ -1,3 +1,185 @@
+.events-section {
+    margin-bottom: 60px;
+}
+
+.events-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.events-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.events-divider {
+    width: 80px;
+    height: 3px;
+    background-color: #333;
+    margin: 0 auto;
+}
+
+.events-video-container {
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 30%;
+    max-height: 700px;
+}
+
+.events-video-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.events-video {
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    display: block;
+    object-fit: contain;
+}
+
+.events-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    pointer-events: none;
+}
+
+.events-video-container:hover .events-play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.events-play-icon {
+    width: 0;
+    height: 0;
+    border-left: 25px solid #333;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    margin-left: 5px;
+    transition: border-left-color 0.3s ease;
+}
+
+.events-video-container:hover .events-play-icon {
+    border-left-color: #000;
+}
+
+.events-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.events-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.events-modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.events-modal-video {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 8px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.pagination-button {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.pagination-button:hover:not(:disabled) {
+    background-color: #f5f5f5;
+    border-color: #999;
+}
+
+.pagination-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.pagination-page {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+.pagination-page.active {
+    border: 2px solid #333;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+.pagination-page:hover:not(.active) {
+    background-color: #f5f5f5;
+    border-color: #999;
+}
+
+.pagination-info {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
 @media (min-width: 992px) {
     .blog-s2 {
         width: 60% !important;
@@ -9,6 +191,45 @@
     .blog-s2 {
         width: 100% !important;
         max-width: 600px !important;
+    }
+
+    .events-title {
+        font-size: 28px;
+    }
+
+    .events-play-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .events-play-icon {
+        border-left: 20px solid #333;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+    }
+
+    .events-video-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .events-section {
+        margin-bottom: 40px;
+    }
+
+    .events-title {
+        font-size: 24px;
+    }
+
+    .pagination {
+        gap: 5px;
+    }
+
+    .pagination-button,
+    .pagination-page {
+        padding: 6px 10px;
+        font-size: 14px;
     }
 }
 
