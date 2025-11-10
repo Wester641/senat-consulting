@@ -15,7 +15,47 @@ import img11 from "../../images/rewards/11.jpeg"
 import img12 from "../../images/rewards/12.jpeg"
 
 class Rewards extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isModalOpen: false,
+            currentImage: null
+        };
+    }
+
+    openModal = (image) => {
+        this.setState({
+            isModalOpen: true,
+            currentImage: image
+        });
+        document.body.style.overflow = 'hidden';
+    }
+
+    closeModal = () => {
+        this.setState({
+            isModalOpen: false,
+            currentImage: null
+        });
+        document.body.style.overflow = 'auto';
+    }
+
+    handleKeyDown = (event) => {
+        if (event.key === 'Escape') {
+            this.closeModal();
+        }
+    }
+
+    componentDidMount() {
+        document.addEventListener('keydown', this.handleKeyDown);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('keydown', this.handleKeyDown);
+    }
+
     render() {
+        const { isModalOpen, currentImage } = this.state;
+
         const settings = {
             dots: false,
             infinite: true,
@@ -78,12 +118,33 @@ class Rewards extends Component {
                                             src={reward.img} 
                                             alt="Награда"
                                             className="reward-image"
+                                            onClick={() => this.openModal(reward.img)}
+                                            style={{ cursor: 'pointer' }}
                                         />
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </Slider>
+
+                    {isModalOpen && (
+                        <div className="modal-overlay" onClick={this.closeModal}>
+                            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                                <button 
+                                    className="modal-close"
+                                    onClick={this.closeModal}
+                                    aria-label="Закрыть"
+                                >
+                                    ×
+                                </button>
+                                <img 
+                                    src={currentImage} 
+                                    alt="Награда"
+                                    className="modal-image"
+                                />
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         );
