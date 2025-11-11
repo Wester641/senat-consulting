@@ -1,0 +1,50 @@
+.counter-area {
+    background: url("../../images/counter/1.jpg") center center/cover no-repeat local;
+    position: relative;
+    background-attachment: fixed;
+}
+.counter-area:before{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.counter-area .counter-grids .grid {
+    width: 48%;
+    float: left;
+    padding: 50px 0px 40px;
+    margin-right: 5px;
+    background: rgba(255, 255, 255, .2);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.counter-area .counter-grids .grid p {
+    font-size: 18px;
+    font-weight: normal;
+    color: #ddd;
+    padding-top: 15px;
+    margin-bottom: 0;
+}
+
+.counter-area .counter-grids {
+    overflow: hidden;
+    padding: 125px 0 95px;
+    position: relative;
+}
+.counter-area .odometer.odometer-auto-theme,
+.counter-area .odometer.odometer-theme-default {
+    line-height: 0.8em;
+}
+
+.counter-area .counter-grids .grid h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    line-height: 10px;
+}
