@@ -54,7 +54,7 @@ const Header = () => {
                         value={i18n.language}
                         onChange={(e) => i18n.changeLanguage(e.target.value)}
                       >
-                        <option value="ru">RU</option>
+                        <option value="ru">Ru</option>
                         <option value="kg">KG</option>
                         <option value="en">EN</option>
                       </select>
