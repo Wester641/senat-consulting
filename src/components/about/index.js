@@ -31,16 +31,12 @@ const AboutSection = () => {
                 </h1>
                 {t("aboutSection.companyDescription")}
               </p>
-              <p>{t("aboutSection.workingPrinciple")}</p>
               <div className="btns">
                 <div className="btn-style">
                   <Link to={"/personal-detail"}>
                     {t("aboutSection.learnMore")}
                   </Link>
                 </div>
-              </div>
-              <div className="signature">
-                <img src={abimg2} alt="" />
               </div>
             </div>
           </div>

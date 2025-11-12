@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import pr_1 from "../../images/practice/2.jpg";
+
 const PracticDetails = ({
   bottomImage,
   details1,
@@ -10,10 +12,7 @@ const PracticDetails = ({
   h1,
   h5,
 }) => {
-  // class PracticDetails extends Component {
-
-  //   render() {
-  // const { bottomImage, details1, details2, mainImage, h1, h5 } = this.props;
+  const { t } = useTranslation();
   return (
     <div className="practice-details-area section-padding">
       <div className="container">
@@ -27,11 +26,11 @@ const PracticDetails = ({
                   </div>
                   <div className="field-content">
                     <h3>
-                      <span>8</span> лет опыта в этой сфере
+                      <span>8</span> {t("servicesPage.expire")}
                     </h3>
                     <div className="btns">
                       <div className="btn-style">
-                        <Link to="/contact">Связаться с нами</Link>
+                        <Link to="/contact">{t("servicesPage.contactButton")}</Link>
                       </div>
                     </div>
                   </div>
@@ -40,29 +39,33 @@ const PracticDetails = ({
               <div className="col-lg-12 col-md-6 col-12">
                 <div className="practice-catagory-item">
                   <div className="widget-title">
-                    <h3 className="text-left">Категории</h3>
+                    <h3 className="text-left">{t("servicesPage.category")}</h3>
                   </div>
                   <div className="practice-section">
                     <ul>
                       <li>
-                        <Link to="/practice-details/1">Суды и споры</Link>
-                      </li>
-                      <li>
-                        <Link to="/practice-details/2">
-                          Регистрация бизнеса
+                        <Link to="/practice-details/1">
+                          {t("navSubServices1")}
                         </Link>
                       </li>
                       <li>
-                        <Link to="/practice-details/3">Договоры</Link>
+                        <Link to="/practice-details/2">
+                          {t("navSubServices2")}
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/practice-details/3">
+                          {t("navSubServices3")}
+                        </Link>
                       </li>
                       <li>
                         <Link to="/practice-details/4">
-                          Сопровождение бизнеса
+                          {t("navSubServices4")}
                         </Link>
                       </li>
                       <li>
                         <Link to="/practice-details/5">
-                          Организация проектов и фестивалей
+                          {t("navSubServices5")}
                         </Link>
                       </li>
                     </ul>
@@ -88,26 +91,26 @@ const PracticDetails = ({
                 <img src={bottomImage} alt="" />
               </div>
               <div className="organigation-text">
-                <h2>Наши направления работы</h2>
+                <h2>{t("servicesPage.subtitle")}</h2>
                 <span>
                   <i className="fa fa-check-square-o" aria-hidden="true"></i>{" "}
-                  Суды и споры
+                  {t("navSubServices1")}
                 </span>
                 <span>
                   <i className="fa fa-check-square-o" aria-hidden="true"></i>{" "}
-                  Регистрация бизнеса
+                  {t("navSubServices2")}
                 </span>
                 <span>
                   <i className="fa fa-check-square-o" aria-hidden="true"></i>{" "}
-                  Договоры
+                  {t("navSubServices3")}
                 </span>
                 <span>
                   <i className="fa fa-check-square-o" aria-hidden="true"></i>{" "}
-                  Сопровождение бизнеса
+                  {t("navSubServices4")}
                 </span>
                 <span>
                   <i className="fa fa-check-square-o" aria-hidden="true"></i>{" "}
-                  Организация проектов и фестивалей
+                  {t("navSubServices5")}
                 </span>
               </div>
             </div>

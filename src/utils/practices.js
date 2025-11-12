@@ -5,71 +5,61 @@ import img3 from "../images/studies/3.jpg";
 import img4 from "../images/studies/4.jpg";
 import img6 from "../images/studies/6.jpg";
 
-export const practices = [
+export const practices = (t) => [
   {
     id: 1,
-    title: "Суды и споры",
+    title: t("practiceDetails.courtsAndDisputes.title"),
     mainImage: img1,
-    details1:
-      "Мы представляем интересы клиентов в судах всех инстанций — от районных до кассационных и надзорных инстанций. Оказываем помощь при подготовке исковых заявлений, возражений, апелляций и кассаций, проводим комплексную судебно-правовую экспертизу документов.",
-    details2:
-      "Ведём полную подготовку к судебным заседаниям: сбор доказательств, подготовка свидетелей, взаимодействие с экспертами и представление интересов в исполнительном производстве. Также предлагаем стратегическое консультирование по минимизации рисков и подготовке к возможным спорам.",
-    bdtitle: "Суды и споры",
-    bdsub: "Услуги",
+    details1: t("practiceDetails.courtsAndDisputes.details1"),
+    details2: t("practiceDetails.courtsAndDisputes.details2"),
+    bdtitle: t("practiceDetails.courtsAndDisputes.breadcrumbTitle"),
+    bdsub: t("practiceDetails.courtsAndDisputes.breadcrumbSub"),
     bottomImage: img23,
-    h1: "Суды и споры",
-    h5: "«Мы идём до конца ради клиента»",
+    h1: t("practiceDetails.courtsAndDisputes.h1"),
+    h5: t("practiceDetails.courtsAndDisputes.h5"),
   },
   {
     id: 2,
-    title: "Регистрация бизнеса",
+    title: t("practiceDetails.businessRegistration.title"),
     mainImage: img6,
-    details1:
-      "Помогаем открыть компанию, оформить учредительные документы и наладить юридическое сопровождение бизнеса с нуля. Осуществляем анализ бизнес-модели для выбора оптимальной правовой формы (ООО, ИП, АО и т.д.) и помогаем с регистрацией в государственных органах.",
-    details2:
-      "Оказываем услуги по подготовке пакета документов, регистрации в налоговых органах, постановке на учёт в фондах, получению лицензий и разрешений. Консультируем по налоговой оптимизации, выбору системы налогообложения и формированию корпоративных процедур.",
-    bdtitle: "Регистрация бизнеса",
-    bdsub: "Регистрация",
-    h1: "Регистрация бизнеса",
-    h5: "«Ваш бизнес — наша ответственность»",
+    details1: t("practiceDetails.businessRegistration.details1"),
+    details2: t("practiceDetails.businessRegistration.details2"),
+    bdtitle: t("practiceDetails.businessRegistration.breadcrumbTitle"),
+    bdsub: t("practiceDetails.businessRegistration.breadcrumbSub"),
+    h1: t("practiceDetails.businessRegistration.h1"),
+    h5: t("practiceDetails.businessRegistration.h5"),
   },
   {
     id: 3,
-    title: "Договоры",
+    title: t("practiceDetails.contracts.title"),
     mainImage: img2,
-    details1:
-      "Разрабатываем и проверяем договоры любой сложности: поставки, подряда, аренды, агентские и коммерческие соглашения. Проводим юридическую экспертизу условий, проверку рисков и подготовку дополнительных соглашений и гарантийных механизмов.",
-    details2:
-      "Предоставляем индивидуальную проработку условий, включающую пункты о ответственности, форс-мажоре, конфиденциальности и порядке разрешения споров. Помогаем согласовать текст с контрагентами и консультируем по исполнению и изменению договорных обязательств.",
-    bdtitle: "Договоры",
-    bdsub: "Договор",
-    h1: "Договоры",
-    h5: "«Точность и надёжность в каждом договоре»",
+    details1: t("practiceDetails.contracts.details1"),
+    details2: t("practiceDetails.contracts.details2"),
+    bdtitle: t("practiceDetails.contracts.breadcrumbTitle"),
+    bdsub: t("practiceDetails.contracts.breadcrumbSub"),
+    h1: t("practiceDetails.contracts.h1"),
+    h5: t("practiceDetails.contracts.h5"),
   },
   {
     id: 4,
-    title: "Сопровождение бизнеса",
+    title: t("practiceDetails.businessSupport.title"),
     mainImage: img3,
-    details1:
-      "Предоставляем комплексное юридическое сопровождение деятельности компании: кадровые вопросы, корпоративная документация, взаимодействие с контролирующими органами. Обеспечиваем правовую поддержку для ежедневной деятельности и стратегических решений.",
-    details2:
-      "Осуществляем абонентское сопровождение, подготовку локальных актов, договоров и процедур, а также проведение аудитов на предмет соблюдения законодательства. Помогаем внедрять внутренние регламенты и проводить обучение сотрудников по правовым вопросам.",
-    bdtitle: "Сопровождение бизнеса",
-    bdsub: "Сопровождение",
-    h1: "Сопровождение бизнеса",
-    h5: "«Поддерживаем бизнес на каждом шаге»",
+    details1: t("practiceDetails.businessSupport.details1"),
+    details2: t("practiceDetails.businessSupport.details2"),
+    bdtitle: t("practiceDetails.businessSupport.breadcrumbTitle"),
+    bdsub: t("practiceDetails.businessSupport.breadcrumbSub"),
+    h1: t("practiceDetails.businessSupport.h1"),
+    h5: t("practiceDetails.businessSupport.h5"),
   },
   {
     id: 5,
-    title: "Организация проектов и фестивалей",
+    title: t("practiceDetails.projectsAndFestivals.title"),
     mainImage: img4,
-    details1:
-      "Юридическая поддержка при организации мероприятий: подготовка договоров с подрядчиками, артистами и партнёрами, оформление прав на контент и работу с интеллектуальной собственностью. Помогаем минимизировать риски, связанные с ответственностью организаторов.",
-    details2:
-      "Сопровождаем процесс получения разрешительной документации, даём рекомендации по страхованию мероприятий и составлению регламентов безопасности. Оказываем поддержку в спорах с подрядчиками, по вопросам авторских прав и при взаимодействии с государственными органами.",
-    bdtitle: "Организация проектов и фестивалей",
-    bdsub: "Организация",
-    h1: "Организация проектов и фестивалей",
-    h5: "«Организуем безопасные и успешные мероприятия»",
+    details1: t("practiceDetails.projectsAndFestivals.details1"),
+    details2: t("practiceDetails.projectsAndFestivals.details2"),
+    bdtitle: t("practiceDetails.projectsAndFestivals.breadcrumbTitle"),
+    bdsub: t("practiceDetails.projectsAndFestivals.breadcrumbSub"),
+    h1: t("practiceDetails.projectsAndFestivals.h1"),
+    h5: t("practiceDetails.projectsAndFestivals.h5"),
   },
 ];

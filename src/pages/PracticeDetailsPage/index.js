@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 // components
 import Navbar from "../../components/Navbar";
@@ -12,12 +13,18 @@ import { useParams } from "react-router-dom";
 import PracticDetails from "../../components/practicedetails";
 
 const PracticeDetailsPage = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const { id } = useParams();
-  const service = practices.find((p) => p.id === Number(id));
+  const practicesData = practices(t);
+  const service = practicesData.find((p) => p.id === Number(id));
+
+  if (!service) {
+    return <div>Услуга не найдена</div>;
+  }
 
   return (
     <div>

@@ -67,7 +67,6 @@
     "title": "About us",
     "companyName": "Senat Consulting — a legal and consulting company",
     "companyDescription": "uniting experienced lawyers and project organization specialists. We carefully study each case, develop a strategy, and bring the matter to a result — from negotiations and document preparation to court decisions.",
-    "workingPrinciple": "We work on a pay-for-results principle: no prepayments or hidden fees. Our specialists deeply understand legal processes, including participation in the preparation and analysis of regulatory acts, which allows us to find optimal solutions for clients.",
     "learnMore": "More about us…"
   },
 
@@ -118,6 +117,160 @@
     "errorEvents": "Please select a service"
   },
 
+  "pages": {
+    "pageHome": "Home",
+    "AboutPageTitle": "About Us",
+    "AboutPageSubTitle": "About the Company",
+    "ServicesPageTitle": "Our Services",
+    "CommentsPageTitle": "Our Projects",
+    "CommentsPageSubTitle": "Reviews",
+    "BlogPageTitle": "Latest News",
+    "BlogPageSubTitle": "News",
+    "ContactPageTitle": "Our Contacts",
+    "ContactPageSubTitle": "Contacts"
+  },
+
   "footerPrivacy": "Privacy Policy",
-  "footerRights": "All rights reserved"
+  "footerRights": "All Rights Reserved",
+
+  "practiceDetails": {
+    "courtsAndDisputes": {
+      "title": "Courts and Disputes",
+      "breadcrumbTitle": "Courts and Disputes",
+      "breadcrumbSub": "Services",
+      "h1": "Courts and Disputes",
+      "h5": "\"We go all the way for our clients\"",
+      "details1": "We represent clients' interests in courts of all instances - from district courts to cassation and supervisory authorities. We assist in preparing statements of claim, objections, appeals, and cassation complaints, and conduct comprehensive legal examination of documents.",
+      "details2": "We provide full preparation for court hearings: evidence collection, witness preparation, interaction with experts, and representation in enforcement proceedings. We also offer strategic consulting on risk minimization and preparation for potential disputes."
+    },
+    "businessRegistration": {
+      "title": "Business Registration",
+      "breadcrumbTitle": "Business Registration",
+      "breadcrumbSub": "Registration",
+      "h1": "Business Registration",
+      "h5": "\"Your business is our responsibility\"",
+      "details1": "We help incorporate companies, prepare founding documents, and establish legal support for businesses from scratch. We analyze business models to select the optimal legal form (LLC, Sole Proprietorship, JSC, etc.) and assist with registration in government authorities.",
+      "details2": "We provide services for preparing document packages, registration with tax authorities, registration with funds, obtaining licenses and permits. We consult on tax optimization, selection of taxation systems, and development of corporate procedures."
+    },
+    "contracts": {
+      "title": "Contracts",
+      "breadcrumbTitle": "Contracts",
+      "breadcrumbSub": "Contracts",
+      "h1": "Contracts",
+      "h5": "\"Accuracy and reliability in every contract\"",
+      "details1": "We develop and review contracts of any complexity: supply, contract work, lease, agency, and commercial agreements. We conduct legal examination of terms, risk assessment, and preparation of additional agreements and guarantee mechanisms.",
+      "details2": "We provide individual term development, including clauses on liability, force majeure, confidentiality, and dispute resolution procedures. We help coordinate text with counterparties and consult on performance and amendment of contractual obligations."
+    },
+    "businessSupport": {
+      "title": "Business Support",
+      "breadcrumbTitle": "Business Support",
+      "breadcrumbSub": "Support",
+      "h1": "Business Support",
+      "h5": "\"We support business at every step\"",
+      "details1": "We provide comprehensive legal support for company activities: HR matters, corporate documentation, interaction with regulatory authorities. We ensure legal support for daily operations and strategic decisions.",
+      "details2": "We provide subscription-based support, preparation of local acts, contracts and procedures, as well as compliance audits. We help implement internal regulations and conduct employee training on legal matters."
+    },
+    "projectsAndFestivals": {
+      "title": "Project and Festival Organization",
+      "breadcrumbTitle": "Project and Festival Organization",
+      "breadcrumbSub": "Organization",
+      "h1": "Project and Festival Organization",
+      "h5": "\"We organize safe and successful events\"",
+      "details1": "Legal support for event organization: preparing contracts with contractors, artists, and partners, formalizing content rights and intellectual property work. We help minimize risks associated with organizer liability.",
+      "details2": "We support the process of obtaining permits, provide recommendations on event insurance and development of safety regulations. We provide support in disputes with contractors, on copyright issues, and when interacting with government authorities."
+    }
+  },
+
+  "servicesPage": {
+    "expire": " years of experience in this field",
+    "subtitle": "Our areas of work",
+    "contactButton": "Contact us",
+    "category": "Categories"
+  },
+
+  "pricingPage": {
+    "sectionTitle": "Our Services and Prices",
+    "currency": "KGS",
+    "perMonth": "/month",
+    "orderButton": "Order",
+    "starterPlan": {
+      "title": "Starter Plan",
+      "price": "5000",
+      "description": "Consultation on basic legal issues, preparation of standard documents, and support for simple cases."
+    },
+    "basicPlan": {
+      "title": "Basic Plan",
+      "price": "7000",
+      "description": "Extended legal support, including document preparation, representation in first-instance courts, and dispute consultations."
+    },
+    "advancedPlan": {
+      "title": "Advanced Plan",
+      "price": "10000",
+      "description": "Full legal package: protection of interests in complex cases, court appeals, comprehensive support for businesses and private clients."
+    }
+  },
+
+  "CommentForm3": {
+    "formTitle": "You can leave your feedback",
+    "messagePlaceholder": "Message",
+    "messageRequired": "Message is required",
+    "messageMaxLength": "Message must not exceed 1000 characters",
+    "companyPlaceholder": "Your company name",
+    "companyMaxLength": "Company name must not exceed 150 characters",
+    "namePlaceholder": "Your name*",
+    "nameRequired": "Name is required",
+    "nameMinLength": "Name must be at least 2 characters",
+    "nameMaxLength": "Name must not exceed 100 characters",
+    "namePattern": "Name can only contain letters, spaces, and hyphens",
+    "phonePlaceholder": "Phone number",
+    "phoneRequired": "Phone number is required",
+    "phonePattern": "Invalid phone format",
+    "phoneMinLength": "Phone must be at least 10 characters",
+    "submitButton": "Submit",
+    "submitting": "Submitting...",
+    "sending": "Submitting...",
+    "success": "Message sent successfully!",
+    "error": "Sending error:"
+  },
+
+  "BlogPage": {
+    "pageTitle": "Upcoming Events",
+    "pageSubTitle": "News and Articles",
+    "loading": "Loading news...",
+    "error": "Retry",
+    "noPosts": "No posts found",
+    "Page": "Page",
+    "of": "of"
+  },
+
+  "ContactPage": {
+    "contactsTitle": "Our Contacts",
+    "contactsDescription": "We provide professional legal services for individuals and organizations. Our team of experienced lawyers is ready to assist you with consultations, document preparation, and representation in court. Contact us in any convenient way and receive qualified help in resolving your legal issues.",
+    "addressLabel": "Address",
+    "address": "Bishkek, 103/1a Ibraimova St., First Floor",
+    "phoneLabel": "Phone Number",
+    "phone1": "+996 (707) 967-711",
+    "phone2": "+996 (707) 967-711",
+    "emailLabel": "Email",
+    "email": "guljamal.muni@gmail.com",
+    "formTitle": "Quick Contact Form",
+    "viewOnMap": "View on Bishkek Map",
+    "findRoute": "Find route to Intellect IT & Business College - Senat Consulting",
+    "mapAddress": "103/1a Ibraimova St., Bishkek",
+    "addressAlt": "Address"
+  },
+  
+  "CommentForm2": {
+    "namePlaceholder": "Your name*",
+    "emailPlaceholder": "Your email address",
+    "phonePlaceholder": "Phone number",
+    "addressPlaceholder": "Your address",
+    "messagePlaceholder": "Message",
+    "submitButton": "Submit",
+    "errorName": "Please enter your name",
+    "errorEmail": "Please enter your email address",
+    "errorNumber": "Please enter your phone number",
+    "errorAddress": "Please enter your address",
+    "errorMessage": "Please enter your message"
+  }
 }

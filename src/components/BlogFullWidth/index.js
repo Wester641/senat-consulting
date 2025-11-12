@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom'
+import { useTranslation } from "react-i18next";
 import { supabase } from '../../integrationSupabase/client';
 import defaultImage from '../../images/da7ed7b0-5f66-4f97-a610-51100d3b9fd2.jpg'
 import noPhoto from '../../images/blog-page/no-photo.png'
@@ -8,6 +9,7 @@ import video from '../../images/blog-page/video.mp4'
 import './style.css';
 
 const BlogFullWidth = () => {
+    const { t } = useTranslation();
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -132,7 +134,7 @@ const BlogFullWidth = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
-                            <p>Загрузка новостей...</p>
+                            <p>{t("BlogPage.loading")}</p>
                         </div>
                     </div>
                 </div>
@@ -147,7 +149,7 @@ const BlogFullWidth = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <p style={{ color: 'red' }}>{error}</p>
-                            <button onClick={fetchPosts}>Повторить попытку</button>
+                            <button onClick={fetchPosts}>{t("BlogPage.error")}</button>
                         </div>
                     </div>
                 </div>
@@ -162,7 +164,7 @@ const BlogFullWidth = () => {
                     <div className="col-lg-12">
                         <div className="events-header">
                             <h2 className="events-title">
-                                Ближайшие События
+                                {t("BlogPage.pageTitle")}
                             </h2>
                             <div className="events-divider"></div>
                         </div>
@@ -203,7 +205,7 @@ const BlogFullWidth = () => {
 
                 <div className="events-header">
                     <h2 className="events-title">
-                        Новости и Статьи
+                        {t("BlogPage.pageSubTitle")}
                     </h2>
                     <div className="events-divider"></div>
                 </div>
@@ -264,7 +266,7 @@ const BlogFullWidth = () => {
                                             disabled={currentPage === 1}
                                             className="pagination-button"
                                         >
-                                            ← Назад
+                                            ←
                                         </button>
 
                                         {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
@@ -282,16 +284,16 @@ const BlogFullWidth = () => {
                                             disabled={currentPage === totalPages}
                                             className="pagination-button"
                                         >
-                                            Далее →
+                                            →
                                         </button>
                                     </div>
 
                                     <div className="pagination-info">
-                                        Страница {currentPage} из {totalPages}
+                                        {t("BlogPage.Page")} {currentPage} {t("BlogPage.of")} {totalPages}
                                     </div>
                                 </>
                             ) : (
-                                <p>Постов не найдено</p>
+                                <p>{t("BlogPage.noPosts")}</p>
                             )}
                         </div>
                     </div>
