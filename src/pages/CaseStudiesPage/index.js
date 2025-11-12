@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 // components
 import Navbar from '../../components/Navbar'
@@ -13,13 +14,14 @@ import { useEffect } from 'react';
 
 
 const CaseStudiesPage = () => {
+    const { t } = useTranslation();
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
     return (
         <div>
             <Navbar />
-            <Breadcumb bdtitle={'Наши дела'} bdsub={'Отзывы'} />
+            <Breadcumb bdtitle={t('pages.CommentsPageTitle')} bdsub={t('pages.CommentsPageSubTitle')} />
             {/* <Porfolio/> */}
             <Testimonial />
             <Testimonial2 />

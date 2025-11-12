@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 // components
 import Navbar from '../../components/Navbar'
@@ -11,6 +12,8 @@ import { useEffect } from 'react';
 
 
 const AboutPage = () => {
+    const { t } = useTranslation();
+    
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -18,7 +21,7 @@ const AboutPage = () => {
     return (
         <div className="about-layout">
             <Navbar />
-            <Breadcumb bdtitle={'О нас'} bdsub={'О компании'} />
+            <Breadcumb bdtitle={t('pages.AboutPageTitle')} bdsub={t('pages.AboutPageSubTitle')} />
             <AboutSection />
             <PracticeArea />
             <Testimonial />

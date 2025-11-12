@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 import fe1 from '../../images/icon/9.png';
 import fe2 from '../../images/icon/2.png';
@@ -8,6 +9,7 @@ import fe3 from '../../images/icon/1.png';
 import './style.css';
 
 const PricingSection = (props) => {
+    const { t } = useTranslation();
 
     return (
         <div className="pricing-section section-padding">
@@ -15,7 +17,7 @@ const PricingSection = (props) => {
                 <div className="row">
                     <div className="col col-xs-12">
                         <div className="section-title-1 text-center">
-                            <h2>Наши услуги и цены</h2>
+                            <h2>{t('pricingPage.sectionTitle')}</h2>
                         </div>
                     </div>
                 </div>
@@ -25,14 +27,14 @@ const PricingSection = (props) => {
                         <div className="pricing-item">
                             <div className="pricing-header">
                                 <div className="circuler-price">
-                                    <i className="fi flaticon-courthouse"><img src={fe1} alt="Начальный план" /></i>
+                                    <i className="fi flaticon-courthouse"><img src={fe1} alt={t('pricingPage.starterPlan.title')} /></i>
                                 </div>
-                                <p>Начальный план</p>
+                                <p>{t('pricingPage.starterPlan.title')}</p>
                             </div>
                             <div className="pricing-body">
-                                <h2><sup>сом</sup>5000<span>/мес</span></h2>
-                                <p>Консультация по базовым юридическим вопросам, подготовка стандартных документов и поддержка при несложных делах.</p>
-                                <Link to="/practice" className="theme-btn">Заказать</Link>
+                                <h2><sup>{t('pricingPage.currency')}</sup>{t('pricingPage.starterPlan.price')}<span>{t('pricingPage.perMonth')}</span></h2>
+                                <p>{t('pricingPage.starterPlan.description')}</p>
+                                <Link to="/practice" className="theme-btn">{t('pricingPage.orderButton')}</Link>
                             </div>
                         </div>
                     </div>
@@ -42,14 +44,14 @@ const PricingSection = (props) => {
                         <div className="pricing-item">
                             <div className="pricing-header">
                                 <div className="circuler-price">
-                                    <i className="fi flaticon-courthouse"><img src={fe3} alt="Базовый план" /></i>
+                                    <i className="fi flaticon-courthouse"><img src={fe3} alt={t('pricingPage.basicPlan.title')} /></i>
                                 </div>
-                                <p>Базовый план</p>
+                                <p>{t('pricingPage.basicPlan.title')}</p>
                             </div>
                             <div className="pricing-body">
-                                <h2><sup>сом</sup>7000<span>/мес</span></h2>
-                                <p>Расширенная юридическая поддержка, включая подготовку документов, представительство в судах первой инстанции и консультации по спорам.</p>
-                                <Link to="/practice" className="theme-btn">Заказать</Link>
+                                <h2><sup>{t('pricingPage.currency')}</sup>{t('pricingPage.basicPlan.price')}<span>{t('pricingPage.perMonth')}</span></h2>
+                                <p>{t('pricingPage.basicPlan.description')}</p>
+                                <Link to="/practice" className="theme-btn">{t('pricingPage.orderButton')}</Link>
                             </div>
                         </div>
                     </div>
@@ -59,14 +61,14 @@ const PricingSection = (props) => {
                         <div className="pricing-item">
                             <div className="pricing-header">
                                 <div className="circuler-price">
-                                    <i className="fi flaticon-courthouse"><img src={fe2} alt="Продвинутый план" /></i>
+                                    <i className="fi flaticon-courthouse"><img src={fe2} alt={t('pricingPage.advancedPlan.title')} /></i>
                                 </div>
-                                <p>Продвинутый план</p>
+                                <p>{t('pricingPage.advancedPlan.title')}</p>
                             </div>
                             <div className="pricing-body">
-                                <h2><sup>сом</sup>10000<span>/мес</span></h2>
-                                <p>Полный юридический пакет: защита интересов в сложных делах, судебные апелляции, комплексное сопровождение бизнеса и частных клиентов.</p>
-                                <Link to="/practice" className="theme-btn">Заказать</Link>
+                                <h2><sup>{t('pricingPage.currency')}</sup>{t('pricingPage.advancedPlan.price')}<span>{t('pricingPage.perMonth')}</span></h2>
+                                <p>{t('pricingPage.advancedPlan.description')}</p>
+                                <Link to="/practice" className="theme-btn">{t('pricingPage.orderButton')}</Link>
                             </div>
                         </div>
                     </div>

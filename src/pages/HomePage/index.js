@@ -30,10 +30,10 @@ const HomePage = () => {
       <SimpleSlider onClick={handleScrollToTop}/>
       <Features />
       <AboutSection />
+      <Rewards />
       <PracticeArea />
       <Porfolio props={t} />
       <Testimonial />
-      <Rewards />
       <ContactSection ref={targetRef} />
       <FooterSection />
       <PhoneButton />

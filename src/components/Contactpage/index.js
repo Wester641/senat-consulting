@@ -3,35 +3,33 @@ import ContactForm2 from "../CommentForm2";
 import address from "../../images/about/address.jpg";
 import "./style.css";
 import { forwardRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const Contactpage = forwardRef((props, ref) => {
+    const { t } = useTranslation();
+    
     return (
         <div className="contact-page-area section-padding">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-5 col-md-12">
                         <div className="contact-page-item">
-                            <h2>Наши контакты</h2>
+                            <h2>{t("ContactPage.contactsTitle")}</h2>
                             <p>
-                                Мы предоставляем профессиональные юридические услуги для
-                                физических лиц и организаций. Наша команда опытных юристов
-                                готова помочь вам с консультациями, подготовкой документов и
-                                представлением интересов в суде. Свяжитесь с нами любым удобным
-                                способом и получите квалифицированную помощь в решении ваших
-                                правовых вопросов.
+                                {t("ContactPage.contactsDescription")}
                             </p>
                             <div className="adress">
-                                <h3>Адрес</h3>
-                                <span>г. Бишкек, ул. Ибраимова,103/1а Первый этаж</span>
+                                <h3>{t("ContactPage.addressLabel")}</h3>
+                                <span>{t("ContactPage.address")}</span>
                             </div>
                             <div className="phone">
-                                <h3>Номер телефона</h3>
-                                <span>+996 (707) 967-711</span>
-                                <span>+996 (707) 967-711</span>
+                                <h3>{t("ContactPage.phoneLabel")}</h3>
+                                <span>{t("ContactPage.phone1")}</span>
+                                <span>{t("ContactPage.phone2")}</span>
                             </div>
                             <div className="email">
-                                <h3>Электронная Почта</h3>
-                                <span>guljamal.muni@gmail.com</span>
+                                <h3>{t("ContactPage.emailLabel")}</h3>
+                                <span>{t("ContactPage.email")}</span>
                             </div>
                         </div>
                     </div>
@@ -40,7 +38,7 @@ const Contactpage = forwardRef((props, ref) => {
                             ref={ref}
                             className="contact-area contact-area-2 contact-area-3"
                         >
-                            <h2>Форма быстрого контакта</h2>
+                            <h2>{t("ContactPage.formTitle")}</h2>
                             <ContactForm2 />
                         </div>
                     </div>
@@ -55,7 +53,7 @@ const Contactpage = forwardRef((props, ref) => {
                                     rel="noopener noreferrer"
                                     className="map-link-btn"
                                 >
-                                    Посмотреть на карте Бишкека
+                                    {t("ContactPage.viewOnMap")}
                                 </a>
 
                                 <a
@@ -64,18 +62,17 @@ const Contactpage = forwardRef((props, ref) => {
                                     rel="noopener noreferrer"
                                     className="map-link-btn route-btn"
                                 >
-                                    Найти проезд до Intellect IT & Business College - Senat
-                                    Consulting
+                                    {t("ContactPage.findRoute")}
                                 </a>
                             </div>
 
-                            <h3>Улица Ибраимова, 103/1а, Бишкек</h3>
+                            <h3>{t("ContactPage.mapAddress")}</h3>
                             <a
                                 href="https://2gis.kg/bishkek/geo/70030076493877457/74.618063%2C42.878776?m=74.618691%2C42.878209%2F18.24"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <img src={address} width="100%" height="500px" alt="Адрес" />
+                                <img src={address} width="100%" height="500px" alt={t("ContactPage.addressAlt")} />
                             </a>
                         </div>
                     </div>
