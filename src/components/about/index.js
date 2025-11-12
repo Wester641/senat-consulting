@@ -31,7 +31,6 @@ const AboutSection = () => {
                 </h1>
                 {t("aboutSection.companyDescription")}
               </p>
-              <p>{t("aboutSection.workingPrinciple")}</p>
               <div className="btns">
                 <div className="btn-style">
                   <Link to={"/personal-detail"}>
