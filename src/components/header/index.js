@@ -77,24 +77,24 @@ const Header = () => {
                   <ul>
                     <li className="language-switcher">
                       <div className="language-switcher-modern" ref={langDropdownRef}>
-                        <button 
+                        <button
                           className="lang-button-modern"
                           onClick={() => setIsLangOpen(!isLangOpen)}
                         >
                           <span className="lang-flag">{currentLanguage.flag}</span>
                           <span className="lang-code-modern">{currentLanguage.code.toUpperCase()}</span>
-                          <svg 
+                          <svg
                             className={`lang-chevron ${isLangOpen ? 'open' : ''}`}
-                            width="12" 
-                            height="12" 
-                            viewBox="0 0 12 12" 
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
                             fill="none"
                           >
-                            <path 
-                              d="M2 4L6 8L10 4" 
-                              stroke="currentColor" 
-                              strokeWidth="2" 
-                              strokeLinecap="round" 
+                            <path
+                              d="M2 4L6 8L10 4"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
                               strokeLinejoin="round"
                             />
                           </svg>
@@ -112,11 +112,11 @@ const Header = () => {
                                 <span className="lang-name-modern">{lang.name}</span>
                                 {i18n.language === lang.code && (
                                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="lang-check-icon">
-                                    <path 
-                                      d="M13 4L6 11L3 8" 
-                                      stroke="#ff7b00" 
-                                      strokeWidth="2" 
-                                      strokeLinecap="round" 
+                                    <path
+                                      d="M13 4L6 11L3 8"
+                                      stroke="#ff7b00"
+                                      strokeWidth="2"
+                                      strokeLinecap="round"
                                       strokeLinejoin="round"
                                     />
                                   </svg>
