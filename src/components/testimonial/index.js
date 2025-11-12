@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { supabase } from '../../integrationSupabase/client';
 import defaultUser from "../../images/da7ed7b0-5f66-4f97-a610-51100d3b9fd2.jpg"
+import video1 from "../../images/background/2.mp4";
 
 class Testimonial extends Component {
     constructor(props) {
@@ -42,11 +43,6 @@ class Testimonial extends Component {
             this.setState({ loading: false });
         }
     }
-
-    // getAvatarImage(index) {
-    //     const images = [testimonialImg_1, testimonialImg_2, testimonialImg_3];
-    //     return images[index % images.length];
-    // }
 
     render() {
         const { testimonials, loading } = this.state;
@@ -93,6 +89,12 @@ class Testimonial extends Component {
         if (loading) {
             return (
                 <div className="testimonial-area section-padding">
+                    <div className="video-background">
+                        <video autoPlay loop muted playsInline>
+                            <source src={video1} type="video/mp4" />
+                        </video>
+                        <div className="video-overlay"></div>
+                    </div>
                     <div className="container">
                         <div className="text-center">Loading testimonials...</div>
                     </div>
@@ -103,6 +105,12 @@ class Testimonial extends Component {
         if (testimonials.length === 0) {
             return (
                 <div className="testimonial-area section-padding">
+                    <div className="video-background">
+                        <video autoPlay loop muted playsInline>
+                            <source src={video1} type="video/mp4" />
+                        </video>
+                        <div className="video-overlay"></div>
+                    </div>
                     <div className="container">
                         <div className="text-center">No testimonials available</div>
                     </div>
@@ -112,6 +120,13 @@ class Testimonial extends Component {
 
         return (
             <div className="testimonial-area section-padding">
+                <div className="video-background">
+                    <video autoPlay loop muted playsInline>
+                        <source src={video1} type="video/mp4" />
+                    </video>
+                    <div className="video-overlay"></div>
+                </div>
+
                 <div className="container">
                     <div className="testimonial-active">
                         <Slider {...settings}>

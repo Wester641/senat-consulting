@@ -206,17 +206,6 @@ const BlogDetailFullwidth = () => {
                                                 fontSize: "14px",
                                             }}
                                         >
-                                            <svg
-                                                width="16"
-                                                height="16"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                strokeWidth="2"
-                                                style={{ marginRight: "8px" }}
-                                            >
-                                                <path d="M3 9h18V7H3v2zm12-5h-6V2H7v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2h-2v2zm-4 14H7v-4h4v4zm0-6H7v-4h4v4zm6 6h-4v-4h4v4zm0-6h-4v-4h4v4z" />
-                                            </svg>
                                             {formatDate(post.created_at)}
                                         </div>
                                     </div>

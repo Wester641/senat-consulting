@@ -6,6 +6,7 @@ import pr3 from "../../images/icon/6.png";
 import pr4 from "../../images/icon/7.png";
 import pr5 from "../../images/icon/8.png";
 import pr6 from "../../images/icon/9.png";
+import video1 from "../../images/background/2.mp4";
 
 import { useTranslation } from "react-i18next";
 
@@ -16,6 +17,13 @@ const PracticeArea = (props) => {
 
   return (
     <div className={`practice-area  ptb-100-70 ${props.subclass}`}>
+      <div className="video-background">
+        <video autoPlay loop muted playsInline>
+          <source src={video1} type="video/mp4" />
+        </video>
+        <div className="video-overlay"></div>
+      </div>
+
       <div className="container">
         <div className="col-12">
           <div className="section-title-1 text-center">

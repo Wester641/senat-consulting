@@ -91,23 +91,23 @@ const PracticDetails = ({
                 <h2>Наши направления работы</h2>
                 <span>
                   <i className="fa fa-check-square-o" aria-hidden="true"></i>{" "}
-                  Обжалование решений прокуратуры и суда
+                  Суды и споры
                 </span>
                 <span>
                   <i className="fa fa-check-square-o" aria-hidden="true"></i>{" "}
-                  Подготовка уголовно-процессуальных документов
+                  Регистрация бизнеса
                 </span>
                 <span>
                   <i className="fa fa-check-square-o" aria-hidden="true"></i>{" "}
-                  Жилищные и долевые споры
+                  Договоры
                 </span>
                 <span>
                   <i className="fa fa-check-square-o" aria-hidden="true"></i>{" "}
-                  Представление интересов в судах всех инстанций
+                  Сопровождение бизнеса
                 </span>
                 <span>
                   <i className="fa fa-check-square-o" aria-hidden="true"></i>{" "}
-                  Досудебное урегулирование и медиация
+                  Организация проектов и фестивалей
                 </span>
               </div>
             </div>
