@@ -105,28 +105,31 @@ const UpcomingEvent = () => {
               </svg>
             </button>
           </div>
-        </div>
+        </div >
       )}
 
-      {showModal && (
-        <div className="events-modal" onClick={handleCloseModal}>
-          <button 
-            className="events-modal-close"
-            onClick={handleCloseModal}
-          >
-            ×
-          </button>
-          <video
-            ref={modalVideoRef}
-            src={video}
-            controls
-            autoPlay
-            muted={false}
-            className="events-modal-video"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
+      {
+        showModal && (
+          <div className="events-modal" onClick={handleCloseModal}>
+            <button
+              className="events-modal-close"
+              onClick={handleCloseModal}
+            >
+              ×
+            </button>
+            <video
+              ref={modalVideoRef}
+              src={video}
+              controls
+              autoPlay
+              muted={false}
+              className="events-modal-video"
+              onClick={(e) => e.stopPropagation()}
+            />
+
+          </div>
+        )
+      }
     </>
   );
 };

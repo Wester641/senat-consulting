@@ -1,18 +1,18 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './style.css'
 import BlogSidebar from '../BlogSidebar'
 import VideoModal from '../ModalVideo'
 import blog1 from '../../images/blog-page/1.jpg'
-import blog2 from '../../images/blog-page/2.jpg'
-import blog3 from '../../images/blog-page/3.jpg'
-import blog5 from '../../images/blog-page/4.jpg'
-import blog4 from '../../images/blog-page/6.jpg'
+import blog2 from '../../images/blog-page/1.jpg'
+import blog3 from '../../images/blog-page/1.jpg'
+import blog5 from '../../images/blog-page/1.jpg'
+import blog4 from '../../images/blog-page/1.jpg'
 
 
 const BlogList = () => {
 
-    return(
+    return (
         <div className="blog-page-area section-padding">
             <div className="container">
                 <div className="row">
@@ -21,10 +21,10 @@ const BlogList = () => {
                             <div className="blog-item">
                                 <div className="blog-img">
                                     <div className="blog-s2">
-                                        <img src={blog1} alt=""/>
+                                        <img src={blog1} alt="" />
                                     </div>
                                     <ul className="post-meta">
-                                        <li><img src={blog4} alt=""/></li>
+                                        <li><img src={blog4} alt="" /></li>
                                         <li><Link to="/blog-single">By Aliza anne</Link></li>
                                         <li className="clr">Family Law</li>
                                         <li> Oct 12,2018</li>
@@ -39,10 +39,10 @@ const BlogList = () => {
                             <div className="blog-item">
                                 <div className="blog-img">
                                     <div className="blog-s2">
-                                        <img src={blog2} alt=""/>
+                                        <img src={blog2} alt="" />
                                     </div>
                                     <ul className="post-meta">
-                                        <li><img src={blog4} alt=""/></li>
+                                        <li><img src={blog4} alt="" /></li>
                                         <li><Link to="/blog-single">By Aliza anne</Link></li>
                                         <li className="clr">Family Law</li>
                                         <li> Oct 12,2018</li>
@@ -57,13 +57,13 @@ const BlogList = () => {
                             <div className="blog-item">
                                 <div className="blog-img">
                                     <div className="blog-s2 video-holder">
-                                        <img src={blog3} alt=""/>
+                                        <img src={blog3} alt="" />
                                         <div className="video-btn">
-                                            <VideoModal/>
+                                            <VideoModal />
                                         </div>
                                     </div>
                                     <ul className="post-meta">
-                                        <li><img src={blog4} alt=""/></li>
+                                        <li><img src={blog4} alt="" /></li>
                                         <li><Link to="/blog-single">By Aliza anne</Link></li>
                                         <li className="clr">Family Law</li>
                                         <li> Oct 12,2018</li>
@@ -80,7 +80,7 @@ const BlogList = () => {
                                     <div className="blog-s2">
                                         <div className="blog-content-3">
                                             <ul className="post-meta">
-                                                <li><img src={blog4} alt=""/></li>
+                                                <li><img src={blog4} alt="" /></li>
                                                 <li><Link to="/blog-single">By Aliza anne</Link></li>
                                                 <li className="clr">Family Law</li>
                                                 <li> Oct 12,2018</li>
@@ -95,10 +95,10 @@ const BlogList = () => {
                             <div className="blog-item">
                                 <div className="blog-img">
                                     <div className="blog-s2">
-                                        <img src={blog5} alt=""/>
+                                        <img src={blog5} alt="" />
                                     </div>
                                     <ul className="post-meta">
-                                        <li><img src={blog4} alt=""/></li>
+                                        <li><img src={blog4} alt="" /></li>
                                         <li><Link to="/blog-single">By Aliza anne</Link></li>
                                         <li className="clr">Family Law</li>
                                         <li> Oct 12,2018</li>
@@ -125,13 +125,13 @@ const BlogList = () => {
                         </div>
                     </div>
                     <div className="col-lg-4 col-12">
-                        <BlogSidebar/>
+                        <BlogSidebar />
                     </div>
                 </div>
             </div>
         </div>
-     )
-        
+    )
+
 }
 
 export default BlogList;

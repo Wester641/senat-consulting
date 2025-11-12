@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import team_1 from '../../images/team/1.jpg';
-import team_2 from '../../images/team/2.jpg';
-import team_3 from '../../images/team/3.jpg';
-import team_4 from '../../images/team/4.jpg';
-import team_5 from '../../images/team/5.jpg';
-import team_6 from '../../images/team/6.jpg';
+import team_2 from '../../images/team/1.jpg';
+import team_3 from '../../images/team/1.jpg';
+import team_4 from '../../images/team/1.jpg';
+import team_5 from '../../images/team/1.jpg';
+import team_6 from '../../images/team/1.jpg';
 
 class TeamSection2 extends Component {
     render() {
@@ -26,7 +26,7 @@ class TeamSection2 extends Component {
                                 <div className="col-lg-4 col-md-6 col-12">
                                     <div className="team-single">
                                         <div className="team-img">
-                                            <img src={team_1} alt=""/>
+                                            <img src={team_1} alt="" />
                                             <div className="social-1st">
                                                 <ul>
                                                     <li><Link to="/"><i className="fa fa-facebook" aria-hidden="true"></i></Link></li>
@@ -44,7 +44,7 @@ class TeamSection2 extends Component {
                                 <div className="col-lg-4 col-md-6 col-12">
                                     <div className="team-single">
                                         <div className="team-img">
-                                            <img src={team_2} alt=""/>
+                                            <img src={team_2} alt="" />
                                             <div className="social-1st">
                                                 <ul>
                                                     <li><Link to="/"><i className="fa fa-facebook" aria-hidden="true"></i></Link></li>
@@ -62,7 +62,7 @@ class TeamSection2 extends Component {
                                 <div className="col-lg-4 col-md-6 col-12">
                                     <div className="team-single">
                                         <div className="team-img">
-                                             <img src={team_3} alt=""/>
+                                            <img src={team_3} alt="" />
                                             <div className="social-1st">
                                                 <ul>
                                                     <li><Link to="/"><i className="fa fa-facebook" aria-hidden="true"></i></Link></li>
@@ -84,7 +84,7 @@ class TeamSection2 extends Component {
                                 <div className="col-lg-4 col-md-6 col-12">
                                     <div className="team-single">
                                         <div className="team-img">
-                                            <img src={team_4} alt=""/>
+                                            <img src={team_4} alt="" />
                                             <div className="social-1st">
                                                 <ul>
                                                     <li><Link to="/"><i className="fa fa-facebook" aria-hidden="true"></i></Link></li>
@@ -102,7 +102,7 @@ class TeamSection2 extends Component {
                                 <div className="col-lg-4 col-md-6 col-12">
                                     <div className="team-single">
                                         <div className="team-img">
-                                            <img src={team_5} alt=""/>
+                                            <img src={team_5} alt="" />
                                             <div className="social-1st">
                                                 <ul>
                                                     <li><Link to="/"><i className="fa fa-facebook" aria-hidden="true"></i></Link></li>
@@ -120,7 +120,7 @@ class TeamSection2 extends Component {
                                 <div className="col-lg-4 col-md-6 col-12">
                                     <div className="team-single">
                                         <div className="team-img">
-                                            <img src={team_6} alt=""/>
+                                            <img src={team_6} alt="" />
                                             <div className="social-1st">
                                                 <ul>
                                                     <li><Link to="/"><i className="fa fa-facebook" aria-hidden="true"></i></Link></li>
@@ -137,10 +137,10 @@ class TeamSection2 extends Component {
                                 </div>
                             </div>
                         </div>
-                    <div className="btn-style"><Link to="/Attorneys">See All Attorneys</Link></div>
+                        <div className="btn-style"><Link to="/Attorneys">See All Attorneys</Link></div>
+                    </div>
                 </div>
             </div>
-        </div>
         );
     }
 }

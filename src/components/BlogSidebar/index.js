@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import ins1 from '../../images/instragram/1.jpg'
-import ins2 from '../../images/instragram/2.jpg'
-import ins3 from '../../images/instragram/3.jpg'
-import ins4 from '../../images/instragram/4.jpg'
-import ins5 from '../../images/instragram/5.jpg'
-import ins6 from '../../images/instragram/6.jpg'
+import ins2 from '../../images/instragram/1.jpg'
+import ins3 from '../../images/instragram/1.jpg'
+import ins4 from '../../images/instragram/1.jpg'
+import ins5 from '../../images/instragram/1.jpg'
+import ins6 from '../../images/instragram/1.jpg'
 
 
 import rp1 from '../../images/case-studies-details/1.jpg'

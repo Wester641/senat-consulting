@@ -27,7 +27,7 @@ const HomePage = () => {
   return (
     <div>
       <Navbar2 />
-      <SimpleSlider onClick={handleScrollToTop}/>
+      <SimpleSlider onClick={handleScrollToTop} />
       <Features />
       <AboutSection />
       <Rewards />

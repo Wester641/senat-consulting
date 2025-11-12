@@ -2,7 +2,6 @@ import React from "react";
 import VideoModal from "../ModalVideo";
 import { Link } from "react-router-dom";
 import abimg1 from "../../images/about/img-2.png";
-import abimg2 from "../../images/about/img-1.png";
 import { useTranslation } from "react-i18next";
 
 import "./style.css";

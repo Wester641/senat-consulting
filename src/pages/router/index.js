@@ -6,7 +6,6 @@ import HomePage from "../HomePage";
 import AboutPage from "../AboutPage";
 import PracticePage from "../PracticePage";
 import CaseStudiesPage from "../CaseStudiesPage";
-import AttorneysPage from "../AttorneysPage";
 import CaseDetailsPage from "../CaseDetailsPage";
 import PracticeDetailsPage from "../PracticeDetailsPage";
 import ContactPage from "../ContactPage";
@@ -27,7 +26,6 @@ const AllRoute = () => {
           <Route path="/about" component={AboutPage} />
           <Route path="/practice" component={PracticePage} />
           <Route path="/case-stadies" component={CaseStudiesPage} />
-          <Route path="/Attorneys" component={AttorneysPage} />
           <Route path="/case-stadies-details" component={CaseDetailsPage} />
           <Route path="/practice-details/:id" component={PracticeDetailsPage} />
           <Route path="/personal-detail" component={PersonalDetailPage} />
