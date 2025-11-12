@@ -1,8 +1,8 @@
 .floating-video {
   position: fixed;
-  top: 120px;
+  top: 150px;
   right: 16px;
-  z-index: 50;
+  z-index: 9999;
   width: 280px;
   background-color: #000;
   border-radius: 8px;
@@ -142,7 +142,7 @@
   .events-modal {
     padding: 10px;
   }
-  
+
   .events-modal-close {
     top: 10px;
     right: 10px;
