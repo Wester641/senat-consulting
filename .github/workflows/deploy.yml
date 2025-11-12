@@ -30,6 +30,19 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
             cd /opt/project
+            docker compose down || true
+
             git pull origin main || true
-            docker compose build
+
+            docker compose build --no-cache
+
             docker compose up -d
+
+            docker compose ps
+
+            docker image prune -f
+
+            echo "✅ Deploy completed successfully!"
+            echo "📊 Container status:"
+            docker compose logs --tail=50 legal-backend
+            
