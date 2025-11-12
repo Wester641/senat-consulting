@@ -76,14 +76,56 @@ const Header = () => {
                 <nav className="nav_mobile_menu">
                   <ul>
                     <li className="language-switcher">
-                      <select
-                        value={i18n.language}
-                        onChange={(e) => i18n.changeLanguage(e.target.value)}
-                      >
-                        <option value="ru">Ru</option>
-                        <option value="kg">KG</option>
-                        <option value="en">EN</option>
-                      </select>
+                      <div className="language-switcher-modern" ref={langDropdownRef}>
+                        <button 
+                          className="lang-button-modern"
+                          onClick={() => setIsLangOpen(!isLangOpen)}
+                        >
+                          <span className="lang-flag">{currentLanguage.flag}</span>
+                          <span className="lang-code-modern">{currentLanguage.code.toUpperCase()}</span>
+                          <svg 
+                            className={`lang-chevron ${isLangOpen ? 'open' : ''}`}
+                            width="12" 
+                            height="12" 
+                            viewBox="0 0 12 12" 
+                            fill="none"
+                          >
+                            <path 
+                              d="M2 4L6 8L10 4" 
+                              stroke="currentColor" 
+                              strokeWidth="2" 
+                              strokeLinecap="round" 
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </button>
+
+                        {isLangOpen && (
+                          <div className="lang-dropdown-modern">
+                            {languages.map((lang) => (
+                              <button
+                                key={lang.code}
+                                className={`lang-option-modern ${i18n.language === lang.code ? 'active' : ''}`}
+                                onClick={() => handleLanguageChange(lang.code)}
+                              >
+                                <span className="lang-flag">{lang.flag}</span>
+                                <span className="lang-name-modern">{lang.name}</span>
+                                {i18n.language === lang.code && (
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="lang-check-icon">
+                                    <path 
+                                      d="M13 4L6 11L3 8" 
+                                      stroke="#ff7b00" 
+                                      strokeWidth="2" 
+                                      strokeLinecap="round" 
+                                      strokeLinejoin="round"
+                                    />
+                                  </svg>
+                                )}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     </li>
                     <li>
                       <NavLink to="/" exact activeClassName="active">
