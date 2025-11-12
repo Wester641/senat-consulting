@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom'
 import { supabase } from '../../integrationSupabase/client';
 import defaultImage from '../../images/da7ed7b0-5f66-4f97-a610-51100d3b9fd2.jpg'
 import noPhoto from '../../images/blog-page/no-photo.png'
+import video from '../../images/blog-page/video.mp4'
 
 import './style.css';
 
@@ -11,10 +12,34 @@ const BlogFullWidth = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
+    const [modalOpen, setModalOpen] = useState(false);
     const itemsPerPage = 10;
+
+    const videoRef = useRef(null);
+    const modalVideoRef = useRef(null);
 
     useEffect(() => {
         fetchPosts();
+    }, []);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (videoRef.current) {
+                const rect = videoRef.current.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+                if (isVisible && videoRef.current.paused) {
+                    videoRef.current.play().catch(err => console.log('Autoplay prevented:', err));
+                } else if (!isVisible && !videoRef.current.paused) {
+                    videoRef.current.pause();
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const fetchPosts = async () => {
@@ -55,6 +80,26 @@ const BlogFullWidth = () => {
             return text.substring(0, maxLength) + '...';
         }
         return text;
+    };
+
+    const openModal = () => {
+        setModalOpen(true);
+        if (videoRef.current) {
+            videoRef.current.pause();
+        }
+        setTimeout(() => {
+            if (modalVideoRef.current) {
+                modalVideoRef.current.play();
+            }
+        }, 100);
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+        if (modalVideoRef.current) {
+            modalVideoRef.current.pause();
+            modalVideoRef.current.currentTime = 0;
+        }
     };
 
     const totalPages = Math.ceil(posts.length / itemsPerPage);
@@ -113,6 +158,56 @@ const BlogFullWidth = () => {
     return (
         <div className="blog-page-area section-padding">
             <div className="container">
+                <div className="row events-section">
+                    <div className="col-lg-12">
+                        <div className="events-header">
+                            <h2 className="events-title">
+                                Ближайшие События
+                            </h2>
+                            <div className="events-divider"></div>
+                        </div>
+
+                        <div className="events-video-wrapper">
+                            <div className="events-video-container" onClick={openModal}>
+                                <video
+                                    ref={videoRef}
+                                    src={video}
+                                    muted
+                                    loop
+                                    playsInline
+                                    className="events-video"
+                                />
+                                <div className="events-play-button">
+                                    <div className="events-play-icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {modalOpen && (
+                    <div className="events-modal" onClick={closeModal}>
+                        <button className="events-modal-close">
+                            ×
+                        </button>
+                        <video
+                            ref={modalVideoRef}
+                            src={video}
+                            controls
+                            autoPlay
+                            className="events-modal-video"
+                            onClick={(e) => e.stopPropagation()}
+                        />
+                    </div>
+                )}
+
+                <div className="events-header">
+                    <h2 className="events-title">
+                        Новости и Статьи
+                    </h2>
+                    <div className="events-divider"></div>
+                </div>
+
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-12">
                         <div className="blog-left-bar">
@@ -125,9 +220,7 @@ const BlogFullWidth = () => {
                                             style={{ marginBottom: '40px' }}
                                         >
                                             <div className="blog-img">
-                                                <div className="blog-s2" style={{
-                                                    width: "60%",
-                                                }}>
+                                                <div className="blog-s2">
                                                     <img
                                                         src={post.image_url || noPhoto}
                                                         alt={post.title}
@@ -146,7 +239,6 @@ const BlogFullWidth = () => {
                                                             src={defaultImage}
                                                             alt=""
                                                             style={{
-                                                                // border: '2px solid #ddd',
                                                                 borderRadius: '4px'
                                                             }}
                                                         />
@@ -157,14 +249,7 @@ const BlogFullWidth = () => {
                                             </div>
                                             <div className="blog-content-2">
                                                 <h2>
-                                                    <Link
-                                                        to={`/blog-single-fullwidth/${post.id}`}
-                                                        style={{
-                                                            color: 'inherit',
-                                                            textDecoration: 'none',
-                                                            cursor: 'pointer'
-                                                        }}
-                                                    >
+                                                    <Link to={`/blog-single-fullwidth/${post.id}`}>
                                                         {post.title}
                                                     </Link>
                                                 </h2>
@@ -173,25 +258,11 @@ const BlogFullWidth = () => {
                                         </div>
                                     ))}
 
-                                    <div style={{
-                                        display: 'flex',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        gap: '10px',
-                                        marginTop: '40px',
-                                        flexWrap: 'wrap'
-                                    }}>
+                                    <div className="pagination">
                                         <button
                                             onClick={handlePrevious}
                                             disabled={currentPage === 1}
-                                            style={{
-                                                padding: '8px 12px',
-                                                cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
-                                                opacity: currentPage === 1 ? 0.5 : 1,
-                                                border: '1px solid #ccc',
-                                                borderRadius: '4px',
-                                                backgroundColor: '#fff'
-                                            }}
+                                            className="pagination-button"
                                         >
                                             ← Назад
                                         </button>
@@ -200,15 +271,7 @@ const BlogFullWidth = () => {
                                             <button
                                                 key={pageNum}
                                                 onClick={() => handlePageClick(pageNum)}
-                                                style={{
-                                                    padding: '8px 12px',
-                                                    cursor: 'pointer',
-                                                    border: currentPage === pageNum ? '2px solid #333' : '1px solid #ccc',
-                                                    borderRadius: '4px',
-                                                    backgroundColor: currentPage === pageNum ? '#333' : '#fff',
-                                                    color: currentPage === pageNum ? '#fff' : '#000',
-                                                    fontWeight: currentPage === pageNum ? 'bold' : 'normal'
-                                                }}
+                                                className={`pagination-page ${currentPage === pageNum ? 'active' : ''}`}
                                             >
                                                 {pageNum}
                                             </button>
@@ -217,25 +280,13 @@ const BlogFullWidth = () => {
                                         <button
                                             onClick={handleNext}
                                             disabled={currentPage === totalPages}
-                                            style={{
-                                                padding: '8px 12px',
-                                                cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
-                                                opacity: currentPage === totalPages ? 0.5 : 1,
-                                                border: '1px solid #ccc',
-                                                borderRadius: '4px',
-                                                backgroundColor: '#fff'
-                                            }}
+                                            className="pagination-button"
                                         >
                                             Далее →
                                         </button>
                                     </div>
 
-                                    <div style={{
-                                        textAlign: 'center',
-                                        marginTop: '20px',
-                                        color: '#666',
-                                        fontSize: '14px'
-                                    }}>
+                                    <div className="pagination-info">
                                         Страница {currentPage} из {totalPages}
                                     </div>
                                 </>

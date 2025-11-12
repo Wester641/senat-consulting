@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
@@ -9,6 +9,32 @@ import "./style.css";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
+  const [isLangOpen, setIsLangOpen] = useState(false);
+  const langDropdownRef = useRef(null);
+
+  const languages = [
+    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+    { code: 'kg', name: 'Кыргызча', flag: '🇰🇬' },
+    { code: 'en', name: 'English', flag: '🇬🇧' }
+  ];
+
+  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (langDropdownRef.current && !langDropdownRef.current.contains(event.target)) {
+        setIsLangOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleLanguageChange = (code) => {
+    i18n.changeLanguage(code);
+    setIsLangOpen(false);
+  };
 
   return (
     <header>
@@ -50,14 +76,56 @@ const Header = () => {
                 <nav className="nav_mobile_menu">
                   <ul>
                     <li className="language-switcher">
-                      <select
-                        value={i18n.language}
-                        onChange={(e) => i18n.changeLanguage(e.target.value)}
-                      >
-                        <option value="ru">Ru</option>
-                        <option value="kg">KG</option>
-                        <option value="en">EN</option>
-                      </select>
+                      <div className="language-switcher-modern" ref={langDropdownRef}>
+                        <button 
+                          className="lang-button-modern"
+                          onClick={() => setIsLangOpen(!isLangOpen)}
+                        >
+                          <span className="lang-flag">{currentLanguage.flag}</span>
+                          <span className="lang-code-modern">{currentLanguage.code.toUpperCase()}</span>
+                          <svg 
+                            className={`lang-chevron ${isLangOpen ? 'open' : ''}`}
+                            width="12" 
+                            height="12" 
+                            viewBox="0 0 12 12" 
+                            fill="none"
+                          >
+                            <path 
+                              d="M2 4L6 8L10 4" 
+                              stroke="currentColor" 
+                              strokeWidth="2" 
+                              strokeLinecap="round" 
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </button>
+
+                        {isLangOpen && (
+                          <div className="lang-dropdown-modern">
+                            {languages.map((lang) => (
+                              <button
+                                key={lang.code}
+                                className={`lang-option-modern ${i18n.language === lang.code ? 'active' : ''}`}
+                                onClick={() => handleLanguageChange(lang.code)}
+                              >
+                                <span className="lang-flag">{lang.flag}</span>
+                                <span className="lang-name-modern">{lang.name}</span>
+                                {i18n.language === lang.code && (
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="lang-check-icon">
+                                    <path 
+                                      d="M13 4L6 11L3 8" 
+                                      stroke="#ff7b00" 
+                                      strokeWidth="2" 
+                                      strokeLinecap="round" 
+                                      strokeLinejoin="round"
+                                    />
+                                  </svg>
+                                )}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     </li>
                     <li>
                       <NavLink to="/" exact activeClassName="active">
@@ -136,29 +204,6 @@ const Header = () => {
                 </nav>
               </div>
             </div>
-            {/* <nav>
-                            <button onClick={() => i18n.changeLanguage('en')}>EN</button>
-                            <button onClick={() => i18n.changeLanguage('ru')}>RU</button>
-                            <button onClick={() => i18n.changeLanguage('kg')}>KG</button>
-
-                            <h1>{t('welcome')}</h1>
-                            <a href="/contact">{t('contact')}</a>
-                        </nav> */}
-            {/* <div className="col-lg-1 col-md-1 col-sm-1 col-1 search">
-                            <ul>
-                                <li><Link to="/"><i className="fa fa-search"></i></Link>
-                                    <ul>
-                                        <li>
-                                            <form onSubmit={SubmitHandler}>
-                                                <input type="text" placeholder="search here.." />
-                                                <button type="btn"><i className="fa fa-search"></i></button>
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div> */}
-
             <div className="mr-3">
               <MobileMenu />
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Collapse, CardBody, Card } from "reactstrap";
 import { Link } from "react-router-dom";
 
@@ -12,6 +12,42 @@ import address from "../../images/about/mobileaddress.jpg";
 
 const MobileMenu = () => {
   const { i18n, t } = useTranslation();
+  const [isMenuShow, setIsMenuShow] = useState(false);
+  const [isOpenId, setIsOpenId] = useState(0);
+  const [isLangOpen, setIsLangOpen] = useState(false);
+  const langDropdownRef = useRef(null);
+
+  const languages = [
+    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+    { code: 'kg', name: 'Кыргызча', flag: '🇰🇬' },
+    { code: 'en', name: 'English', flag: '🇬🇧' }
+  ];
+
+  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (langDropdownRef.current && !langDropdownRef.current.contains(event.target)) {
+        setIsLangOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleLanguageChange = (code) => {
+    i18n.changeLanguage(code);
+    setIsLangOpen(false);
+  };
+
+  const menuHandler = () => {
+    setIsMenuShow(!isMenuShow);
+  };
+
+  const toggleOpen = (id) => {
+    setIsOpenId(id === isOpenId ? 0 : id);
+  };
 
   const menus = [
     {
@@ -73,22 +109,65 @@ const MobileMenu = () => {
       link: "/contact",
     },
   ];
-  const [isMenuShow, setIsMenuShow] = useState(false);
-  const [isOpenId, setIsOpenId] = useState(0);
-
-  const menuHandler = () => {
-    setIsMenuShow(!isMenuShow);
-  };
-
-  const toggleOpen = (id) => {
-    setIsOpenId(id === isOpenId ? 0 : id);
-  };
 
   return (
     <div>
       <PerfectScrollbar>
         <div className={`mobileMenu ${isMenuShow ? "show" : ""}`}>
           <ul className="responsivemenu">
+            <li className="mobile-language-switcher">
+              <div className="language-switcher-modern mobile" ref={langDropdownRef}>
+                <button 
+                  className="lang-button-modern"
+                  onClick={() => setIsLangOpen(!isLangOpen)}
+                >
+                  <span className="lang-flag">{currentLanguage.flag}</span>
+                  <span className="lang-code-modern">{currentLanguage.code.toUpperCase()}</span>
+                  <svg 
+                    className={`lang-chevron ${isLangOpen ? 'open' : ''}`}
+                    width="12" 
+                    height="12" 
+                    viewBox="0 0 12 12" 
+                    fill="none"
+                  >
+                    <path 
+                      d="M2 4L6 8L10 4" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                {isLangOpen && (
+                  <div className="lang-dropdown-modern mobile">
+                    {languages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        className={`lang-option-modern ${i18n.language === lang.code ? 'active' : ''}`}
+                        onClick={() => handleLanguageChange(lang.code)}
+                      >
+                        <span className="lang-flag">{lang.flag}</span>
+                        <span className="lang-name-modern">{lang.name}</span>
+                        {i18n.language === lang.code && (
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="lang-check-icon">
+                            <path 
+                              d="M13 4L6 11L3 8" 
+                              stroke="#ff7b00" 
+                              strokeWidth="2" 
+                              strokeLinecap="round" 
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </li>
+
             {menus.map((item) => {
               return (
                 <li key={item.id}>
@@ -142,16 +221,6 @@ const MobileMenu = () => {
               </a>
             </div>
           </ul>
-          <div className="language-switcher-mobile">
-            <select
-              value={i18n.language}
-              onChange={(e) => i18n.changeLanguage(e.target.value)}
-            >
-              <option value="ru">RU</option>
-              <option value="kg">KG</option>
-              <option value="en">EN</option>
-            </select>
-          </div>
         </div>
       </PerfectScrollbar>
       <div className="showmenu" onClick={menuHandler}>
