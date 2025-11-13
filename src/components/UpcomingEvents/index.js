@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import video from '../../images/blog-page/video.webm';
+import video from '../../images/blog-page/video.mp4';
 import './style.css';
 
 const UpcomingEvent = () => {
