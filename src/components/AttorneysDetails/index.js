@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
-import ContactForm2 from '../CommentForm2'
+import ContactForm from '../CommentForm'
 import './style.css'
 import cd_1 from '../../images/Attorneys-single/img-1.jpg';
 import cd_5 from '../../images/studies/1.jpg';
@@ -114,7 +114,7 @@ class AttorneysDetails extends Component {
                             <div className="col-lg-12">
                                 <div className="contact-area contact-area-2">
                                     <h2>Contact Me</h2>
-                                          <ContactForm2/>
+                                          <ContactForm/>
                                     </div>
                                 </div>
                             </div>

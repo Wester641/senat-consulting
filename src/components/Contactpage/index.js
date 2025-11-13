@@ -1,5 +1,5 @@
 import React from "react";
-import ContactForm2 from "../CommentForm2";
+import ContactForm from "../CommentForm";
 import address from "../../images/about/address.jpg";
 import "./style.css";
 import { forwardRef } from "react";
@@ -39,7 +39,7 @@ const Contactpage = forwardRef((props, ref) => {
                             className="contact-area contact-area-2 contact-area-3"
                         >
                             <h2>{t("ContactPage.formTitle")}</h2>
-                            <ContactForm2 />
+                            <ContactForm />
                         </div>
                     </div>
                 </div>

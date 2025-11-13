@@ -108,9 +108,12 @@
     "event3": "Contracts",
     "event4": "Business support",
     "event5": "Project and festival organization",
+    "event6": "Personal injury",
     "commentsPlaceholder": "Describe your situation or ask a question",
     "submitButton": "Book now",
-
+    "successMessage": "Your request has been successfully submitted!",
+    "errorMessage": "An error occurred during submission. Please try again later.",
+    "submittingButton": "Submitting...",
     "errorName": "Please enter your name",
     "errorEmail": "Please enter your email address",
     "errorNumber": "Please enter your phone number",
@@ -259,7 +262,7 @@
     "mapAddress": "103/1a Ibraimova St., Bishkek",
     "addressAlt": "Address"
   },
-  
+
   "CommentForm2": {
     "namePlaceholder": "Your name*",
     "emailPlaceholder": "Your email address",
