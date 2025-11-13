@@ -13,6 +13,9 @@ import img9 from "../../images/rewards/9.jpeg"
 import img10 from "../../images/rewards/10.jpeg"
 import img11 from "../../images/rewards/11.jpeg"
 import img12 from "../../images/rewards/12.jpeg"
+import { motion } from "framer-motion";
+import bgIcon from "../../images/cup2.png";
+
 
 class Rewards extends Component {
     constructor(props) {
@@ -107,6 +110,24 @@ class Rewards extends Component {
 
         return (
             <div className="rewards-section">
+<motion.div
+  className="rewards-bg"
+  style={{
+    backgroundImage: `url(${bgIcon})`,
+    backgroundRepeat: "repeat",
+    backgroundSize: "90px 90px", 
+  }}
+  animate={{
+    backgroundPosition: ["0% 0%", "-200% 300%"], 
+  }}
+  transition={{
+    duration: 300,
+    repeat: Infinity,
+    repeatType: "loop",
+    ease: "linear",
+  }}
+/>
+
                 <div className="rewards-container">
                     <h2 className="rewards-title">Наши Награды</h2>
                     <Slider {...settings} className="rewards-slider">
