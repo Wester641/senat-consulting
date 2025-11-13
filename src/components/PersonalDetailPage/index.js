@@ -1,6 +1,6 @@
 import React from "react"; // Component больше не нужен
 import { Link } from "react-router-dom";
-import ContactForm2 from "../CommentForm2";
+import ContactForm from "../CommentForm";
 import "./style.css";
 
 import cd_5 from "../../images/studies/1.jpg";
@@ -188,7 +188,7 @@ const PersonalDetailPage = () => {
             <div className="col-lg-12">
               <div className="contact-area contact-area-2">
                 <h2>Связаться с нами</h2>
-                <ContactForm2 />
+                <ContactForm />
               </div>
             </div>
           </div>
