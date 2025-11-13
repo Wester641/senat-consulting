@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 // components
 import Navbar from "../../components/Navbar";
@@ -9,6 +10,7 @@ import { useEffect } from "react";
 import PersonalDetailComponent from "../../components/PersonalDetailPage";
 
 const PersonalDetailPage = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -16,8 +18,8 @@ const PersonalDetailPage = () => {
     <div>
       <Navbar />
       <Breadcumb
-        bdtitle={"О Руководителе Компании"}
-        bdsub={"О Руководителе Компании"}
+        bdtitle={t("pages.PersonalDetailPageTitle")}
+        bdsub={t("pages.PersonalDetailPageTitle")}
       />
       <PersonalDetailComponent />
       <FooterSection />

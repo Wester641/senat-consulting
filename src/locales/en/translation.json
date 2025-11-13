@@ -128,9 +128,11 @@
     "CommentsPageTitle": "Our Projects",
     "CommentsPageSubTitle": "Reviews",
     "BlogPageTitle": "Latest News",
+    "BlogFullWidthPageTitle": "News Details",
     "BlogPageSubTitle": "News",
     "ContactPageTitle": "Our Contacts",
-    "ContactPageSubTitle": "Contacts"
+    "ContactPageSubTitle": "Contacts",
+    "PersonalDetailPageTitle": "About the Company Director"
   },
 
   "footerPrivacy": "Privacy Policy",
@@ -243,7 +245,8 @@
     "error": "Retry",
     "noPosts": "No posts found",
     "Page": "Page",
-    "of": "of"
+    "of": "of",
+    "ReturnToBlog": "Return to News List"
   },
 
   "ContactPage": {
@@ -275,5 +278,39 @@
     "errorNumber": "Please enter your phone number",
     "errorAddress": "Please enter your address",
     "errorMessage": "Please enter your message"
+  },
+
+  "PersonalDetailPage": {
+    "name": "Zhenishbek Zhunusov",
+    "positionLabel": "Position",
+    "position": "Director / Head",
+    "practiceAreaLabel": "Field of Activity",
+    "practiceArea": "Law, International Relations, Public Administration",
+    "addressLabel": "Address",
+    "address": "103/1a Ibraimov Street, Bishkek, Kyrgyzstan",
+    "phoneLabel": "Phone",
+    "phone": "+996 (707) 967-711",
+    "emailLabel": "Email",
+    "email": "guljamal.muni@gmail.com",
+    "photoAlt": "Photo of the Director",
+    "professionalExperience": "Professional Experience",
+    "experienceText1": "Zhenishbek Zhunusov’s professional path covers key areas of public service, diplomacy, and law. He is the Director of the legal company 'Senat Consulting', providing qualified legal, business, and consulting services.",
+    "experienceText2": "His experience in international relations, public administration, and law has given him a deep understanding of legal and organizational processes both domestically and internationally. For his high professionalism, he was awarded the title 'Excellence in Public Service of the Kyrgyz Republic'.",
+    "education": "Education",
+    "education1": "Master of Law (Kyrgyz State Law Academy)",
+    "education2": "Master of International Relations (Diplomatic Academy of the Ministry of Foreign Affairs of the Russian Federation)",
+    "education3": "International Relations (Kyrgyz-Russian Slavic University)",
+    "education4": "Alma-Ata Higher Combined Arms Command School named after Marshal I.S. Konev",
+    "governmentExperience": "Government Service Experience",
+    "governmentText1": "Ministry of Foreign Affairs of the Kyrgyz Republic: First Secretary of the Embassy of the Kyrgyz Republic in Mongolia.",
+    "governmentText2": "Jogorku Kenesh (Parliament) of the Kyrgyz Republic: Expert of the Committees on International Affairs, Defense, Security and Migration, as well as Expert of the Department for Processing and Publishing Legal Acts.",
+    "mainDirections": "Main Areas of 'Senat Consulting'",
+    "service1Sub": "Consulting",
+    "service1Title": "Business Services",
+    "service2Sub": "Law",
+    "service2Title": "Legal Services",
+    "service3Sub": "Strategy",
+    "service3Title": "Organizational Processes",
+    "contactUs": "Contact Us"
   }
 }
