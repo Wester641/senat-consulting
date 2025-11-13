@@ -47,25 +47,12 @@ const PersonalDetailPage = () => {
                         <ul className="social">
                           <li>
                             <Link to="/">
-                              <i className="fa fa-facebook"></i>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/">
                               <i className="fa fa-instagram"></i>
                             </Link>
                           </li>
                           <li>
                             <Link to="/">
                               <i className="fa fa-whatsapp"></i>
-                            </Link>
-                          </li>
-                          <li>
-                            <Link to="/">
-                              <i
-                                className="fa fa-google-plus"
-                                aria-hidden="true"
-                              ></i>
                             </Link>
                           </li>
                         </ul>
