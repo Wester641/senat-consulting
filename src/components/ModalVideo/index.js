@@ -96,9 +96,6 @@ const VideoModal = () => {
           <li>
             <button className="wrap" onClick={openModal}>
               <i className="fa fa-play" aria-hidden="true"></i>
-              {!isLoaded && preloadProgress > 0 && (
-                <span className="preload-indicator">{Math.round(preloadProgress)}%</span>
-              )}
             </button>
           </li>
         </ul>
