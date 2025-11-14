@@ -1,13 +1,15 @@
-import React from "react"; // Component больше не нужен
+import React from "react";
 import { Link } from "react-router-dom";
 import ContactForm from "../CommentForm";
 import "./style.css";
+import { useTranslation } from "react-i18next";
 
 import cd_5 from "../../images/studies/1.jpg";
 import cd_6 from "../../images/studies/2.jpg";
 import cd_7 from "../../images/studies/3.jpg";
 
 const PersonalDetailPage = () => {
+  const { t } = useTranslation();
   return (
     <div className="Attorneys-content-section section-padding">
       <div className="container">
@@ -19,29 +21,29 @@ const PersonalDetailPage = () => {
                   <div className="col-lg-12">
                     <div className="Attorneys-info">
                       <div className="Attorneys-content">
-                        <h3>Женишбек Жунусов</h3>
+                        <h3>{t("PersonalDetailPage.name")}</h3>
                       </div>
                       <div className="info-outer">
                         <ul className="info">
                           <li>
-                            {/* Обновлено: Должность */}
-                            <span>Positon: </span> Директор / Руководитель
+                            <span>{t("PersonalDetailPage.positionLabel")}: </span> 
+                            {t("PersonalDetailPage.position")}
                           </li>
                           <li>
-                            {/* Обновлено: Сфера деятельности */}
-                            <span>Practice Area: </span>Юриспруденция,
-                            Международные отношения, Государственное управление
-                          </li>
-
-                          <li>
-                            <span>Address: </span>Ибраимова 103/1 а, Бишкек,
-                            Кыргызстан
+                            <span>{t("PersonalDetailPage.practiceAreaLabel")}: </span>
+                            {t("PersonalDetailPage.practiceArea")}
                           </li>
                           <li>
-                            <span>Phone: </span>+996 (707) 967-711
+                            <span>{t("PersonalDetailPage.addressLabel")}: </span>
+                            {t("PersonalDetailPage.address")}
                           </li>
                           <li>
-                            <span>Email: </span>guljamal.muni@gmail.com
+                            <span>{t("PersonalDetailPage.phoneLabel")}: </span>
+                            {t("PersonalDetailPage.phone")}
+                          </li>
+                          <li>
+                            <span>{t("PersonalDetailPage.emailLabel")}: </span>
+                            {t("PersonalDetailPage.email")}
                           </li>
                         </ul>
                         <ul className="social">
@@ -66,71 +68,43 @@ const PersonalDetailPage = () => {
           <div className="col-lg-8">
             <div className="exrienense-img">
               <img
-                src="https://res.cloudinary.com/dgi7dckle/image/upload/v1761908516/premium-frame-mockup-with-an-interior-in-the-style-2024-11-26-19-09-45-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_ypkpl9.jpg"
+                src="https://res.cloudinary.com/dgi7dckle/image/upload/q_60,f_auto,fl_progressive,w_1200/v1761908516/premium-frame-mockup-with-an-interior-in-the-style-2024-11-26-19-09-45-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_ypkpl9.jpg"
                 alt="Фото руководителя"
               />
             </div>
             <div className="exrienense-section">
-              <h2>Профессиональный Опыт</h2>
-              <p>
-                Профессиональный путь Женишбека Жунусова охватывает ключевые
-                направления государственной службы, дипломатии и правовой сферы.
-                Он является директором юридической компании «Сенат Консалтинг»,
-                предоставляющей квалифицированные юридические, бизнес- и
-                консалтинговые услуги.
-              </p>
-              <p>
-                Опыт работы в сфере международных отношений, государственного
-                управления и юриспруденции позволил ему глубоко понимать
-                правовые и организационные процессы как внутри страны, так и на
-                международной арене. За высокий профессионализм удостоен звания
-                “Отличник государственной службы Кыргызской Республики”.
-              </p>
+              <h2>{t("PersonalDetailPage.professionalExperience")}</h2>
+              <p>{t("PersonalDetailPage.experienceText1")}</p>
+              <p>{t("PersonalDetailPage.experienceText2")}</p>
             </div>
 
             <div className="education-section">
-              <h2>Образование</h2>
-
+              <h2>{t("PersonalDetailPage.education")}</h2>
               <span>
                 <i className="fa fa-caret-right" aria-hidden="true"></i>
-                Магистр юриспруденции (Кыргызская государственная юридическая
-                академия)
+                {t("PersonalDetailPage.education1")}
               </span>
               <span>
                 <i className="fa fa-caret-right" aria-hidden="true"></i>
-                Магистр международных отношений (Дипломатическая академия МИД
-                РФ)
+                {t("PersonalDetailPage.education2")}
               </span>
-
               <span>
                 <i className="fa fa-caret-right" aria-hidden="true"></i>
-                Международные отношения (Кыргызско-Российский Славянский
-                университет)
+                {t("PersonalDetailPage.education3")}
               </span>
-
               <span>
                 <i className="fa fa-caret-right" aria-hidden="true"></i>
-                Алма-Атинское высшее общевойсковое командное училище им. Маршала
-                И.С. Конева
+                {t("PersonalDetailPage.education4")}
               </span>
             </div>
 
             <div className="language">
-              <h2>Опыт Государственной Службы</h2>
-              {/* Обновлено: Секретарь Посольства */}
-              <p>
-                Министерство иностранных дел Кыргызской Республики: Первый
-                секретарь Посольства КР в Монголии.
-              </p>
-              {/* Обновлено: Эксперт Жогорку Кенеша */}
-              <p>
-                Жогорку Кенеш Кыргызской Республики: Эксперт комитетов по
-                международным делам, обороне, безопасности и миграции, а также
-                эксперт отдела обработки и выпуска нормативно-правовых актов.
-              </p>
+              <h2>{t("PersonalDetailPage.governmentExperience")}</h2>
+              <p>{t("PersonalDetailPage.governmentText1")}</p>
+              <p>{t("PersonalDetailPage.governmentText2")}</p>
             </div>
 
-            <h2>Основные направления «Сенат Консалтинг»</h2>
+            <h2>{t("PersonalDetailPage.mainDirections")}</h2>
             <div className="row">
               <div className="col-lg-4 col-md-6 col-sm-6">
                 <div className="studies-item">
@@ -139,8 +113,8 @@ const PersonalDetailPage = () => {
                   </div>
                   <div className="overlay-text">
                     <div className="text-inner">
-                      <p className="sub">Консалтинг</p>
-                      <h3>Бизнес-услуги</h3>
+                      <p className="sub">{t("PersonalDetailPage.service1Sub")}</p>
+                      <h3>{t("PersonalDetailPage.service1Title")}</h3>
                     </div>
                   </div>
                 </div>
@@ -152,8 +126,8 @@ const PersonalDetailPage = () => {
                   </div>
                   <div className="overlay-text">
                     <div className="text-inner">
-                      <p className="sub">Юриспруденция</p>
-                      <h3>Правовые услуги</h3>
+                      <p className="sub">{t("PersonalDetailPage.service2Sub")}</p>
+                      <h3>{t("PersonalDetailPage.service2Title")}</h3>
                     </div>
                   </div>
                 </div>
@@ -165,8 +139,8 @@ const PersonalDetailPage = () => {
                   </div>
                   <div className="overlay-text">
                     <div className="text-inner">
-                      <p className="sub">Стратегия</p>
-                      <h3>Организационные процессы</h3>
+                      <p className="sub">{t("PersonalDetailPage.service3Sub")}</p>
+                      <h3>{t("PersonalDetailPage.service3Title")}</h3>
                     </div>
                   </div>
                 </div>
@@ -174,7 +148,7 @@ const PersonalDetailPage = () => {
             </div>
             <div className="col-lg-12">
               <div className="contact-area contact-area-2">
-                <h2>Связаться с нами</h2>
+                <h2>{t("PersonalDetailPage.contactUs")}</h2>
                 <ContactForm />
               </div>
             </div>

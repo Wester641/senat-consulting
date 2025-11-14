@@ -3,10 +3,12 @@ import { Link, useParams, useHistory } from "react-router-dom";
 import { supabase } from "../../integrationSupabase/client";
 import blog4 from "../../images/da7ed7b0-5f66-4f97-a610-51100d3b9fd2.jpg";
 import noPhoto from "../../images/blog-page/no-photo.png";
+import { useTranslation } from "react-i18next";
 
 import "./style.css";
 
 const BlogDetailFullwidth = () => {
+    const { t } = useTranslation();
     const { id } = useParams();
     const history = useHistory();
     const [post, setPost] = useState(null);
@@ -124,7 +126,7 @@ const BlogDetailFullwidth = () => {
                                             e.target.style.backgroundColor = "transparent";
                                         }}
                                     >
-                                        ← Вернуться к новостям
+                                        ←
                                     </Link>
                                 </div>
 
@@ -274,13 +276,13 @@ const BlogDetailFullwidth = () => {
                                             transition: "all 0.3s ease",
                                         }}
                                         onMouseEnter={(e) => {
-                                            e.target.style.backgroundColor = "#c5a47e";
+                                            e.target.style.backgroundColor = "#ff7b00";
                                         }}
                                         onMouseLeave={(e) => {
                                             e.target.style.backgroundColor = "#333";
                                         }}
                                     >
-                                        Вернуться к списку новостей
+                                        {t("BlogPage.ReturnToBlog")}
                                     </Link>
                                 </div>
                             </div>

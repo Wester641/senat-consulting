@@ -84,10 +84,13 @@ const FooterSection = () => {
                             <div className="col-lg-6 col-md-4 col-sm-3 col-12">
                                 <ul className="d-flex">
                                     <li>
-                                        <Link to="/"><i className="fa fa-whatsapp" aria-hidden="true"></i></Link>
+                                        <Link to="/"><i className="fa fa-facebook" aria-hidden="true"></i></Link>
                                     </li>
                                     <li>
-                                        <Link to="/"><i className="fa fa-instagram" aria-hidden="true"></i></Link>
+                                        <Link to="/"><i className="fa fa-twitter" aria-hidden="true"></i></Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/"><i className="fa fa-linkedin" aria-hidden="true"></i></Link>
                                     </li>
                                 </ul>
                             </div>
