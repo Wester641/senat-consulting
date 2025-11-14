@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import pr_1 from "../../images/practice/1.jpg";
+import "./style.css";
 
 const PracticDetails = ({
   bottomImage,
