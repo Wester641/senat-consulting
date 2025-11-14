@@ -11,7 +11,6 @@ import Testimonial from "../../components/testimonial";
 import ContactSection from "../../components/ContactSection";
 import FooterSection from "../../components/Footer";
 import PhoneButton from "../../components/PhoneForm";
-import UpcomingEvent from "../../components/UpcomingEvents";
 import Rewards from "../../components/Rewards";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
@@ -37,7 +36,6 @@ const HomePage = () => {
       <ContactSection ref={targetRef} />
       <FooterSection />
       <PhoneButton />
-      <UpcomingEvent />
     </div>
   );
 };
