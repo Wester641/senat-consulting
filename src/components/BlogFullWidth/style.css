@@ -350,3 +350,64 @@
         padding: 12px;
     }
 }
+
+.blog-content-2 p {
+    margin: 0 0 120px 0;
+}
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.post-meta li {
+    display: flex;
+    margin: 15px 0 15px 15px;
+    align-items: center;
+    font-size: 16px;
+    color: #666;
+}
+
+.post-meta-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.post-meta-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.post-meta-date {
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .post-meta {
+        gap: 15px;
+    }
+    
+    .post-meta li {
+        font-size: 13px;
+    }
+    
+    .post-meta-avatar {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import pr_1 from "../../images/practice/1.jpg";
+import "./style.css";
 
 const PracticDetails = ({
   bottomImage,
@@ -21,9 +22,6 @@ const PracticDetails = ({
             <div className="row">
               <div className="col-lg-12 col-md-6 col-12">
                 <div className="field-section">
-                  <div className="field-img">
-                    <img src={pr_1} alt="" />
-                  </div>
                   <div className="field-content">
                     <h3>
                       <span>8</span> {t("servicesPage.expire")}

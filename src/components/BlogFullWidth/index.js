@@ -258,17 +258,17 @@ const BlogFullWidth = () => {
                                                     />
                                                 </div>
                                                 <ul className="post-meta">
-                                                    <li>
+                                                    <li className="post-meta-author">
                                                         <img
                                                             src={defaultImage}
-                                                            alt=""
-                                                            style={{
-                                                                borderRadius: '4px'
-                                                            }}
+                                                            alt="Senat Consulting"
+                                                            className="post-meta-avatar"
                                                         />
+                                                        <span>By Senat Consulting</span>
                                                     </li>
-                                                    <li>By Senat Consulting</li>
-                                                    <li>{formatDate(post.created_at)}</li>
+                                                    <li className="post-meta-date">
+                                                        {formatDate(post.created_at)}
+                                                    </li>
                                                 </ul>
                                             </div>
                                             <div className="blog-content-2">
