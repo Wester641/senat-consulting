@@ -22,9 +22,6 @@ const PracticDetails = ({
             <div className="row">
               <div className="col-lg-12 col-md-6 col-12">
                 <div className="field-section">
-                  <div className="field-img">
-                    <img src={pr_1} alt="" />
-                  </div>
                   <div className="field-content">
                     <h3>
                       <span>8</span> {t("servicesPage.expire")}
