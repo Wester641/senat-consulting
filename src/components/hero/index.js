@@ -7,10 +7,27 @@ import "slick-carousel/slick/slick-theme.css";
 
 import './style.css'
 
-
 class SimpleSlider extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            loadedSlides: [0]
+        };
+    }
+
+    handleBeforeChange = (current, next) => {
+        this.setState(prevState => {
+            const newLoaded = new Set(prevState.loadedSlides);
+            newLoaded.add(next);
+            if (next + 1 <= 2) newLoaded.add(next + 1);
+            return { loadedSlides: Array.from(newLoaded) };
+        });
+    }
+
     render() {
         const { t, onClick } = this.props;
+        const { loadedSlides } = this.state;
+        
         const settings = {
           dots: true,
           arrows: true,
@@ -20,12 +37,15 @@ class SimpleSlider extends Component {
           autoplay: true,
           autoplaySpeed: 2500,
           fade: true,
+          beforeChange: this.handleBeforeChange,
+          lazyLoad: 'progressive'
         };
+
         return (
             <section className="hero hero-slider-wrapper hero-style-1">
             <div className="hero-slider">
               <Slider {...settings}>
-                <div className="slide2 slide">
+                <div className={`slide slide2 ${loadedSlides.includes(0) ? 'loaded' : ''}`}>
                   <div className="container">
                     <div className="row">
                       <div className="col col-lg-8 slide-caption">
@@ -41,7 +61,7 @@ class SimpleSlider extends Component {
                   </div>
                 </div>
     
-                <div className="slide3 slide">
+                <div className={`slide slide3 ${loadedSlides.includes(1) ? 'loaded' : ''}`}>
                   <div className="container">
                     <div className="row">
                       <div className="col col-lg-8 slide-caption">
@@ -57,7 +77,7 @@ class SimpleSlider extends Component {
                   </div>
                 </div>
     
-                <div className="slide1 slide">
+                <div className={`slide slide1 ${loadedSlides.includes(2) ? 'loaded' : ''}`}>
                   <div className="container">
                     <div className="row">
                       <div className="col col-lg-8 slide-caption">

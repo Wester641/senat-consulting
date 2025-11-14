@@ -79,7 +79,7 @@ const PersonalDetailPage = () => {
           <div className="col-lg-8">
             <div className="exrienense-img">
               <img
-                src="https://res.cloudinary.com/dgi7dckle/image/upload/v1761908516/premium-frame-mockup-with-an-interior-in-the-style-2024-11-26-19-09-45-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_ypkpl9.jpg"
+                src="https://res.cloudinary.com/dgi7dckle/image/upload/q_60,f_auto,fl_progressive,w_1200/v1761908516/premium-frame-mockup-with-an-interior-in-the-style-2024-11-26-19-09-45-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_ypkpl9.jpg"
                 alt="Фото руководителя"
               />
             </div>
