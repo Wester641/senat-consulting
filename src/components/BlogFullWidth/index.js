@@ -169,18 +169,40 @@ const BlogFullWidth = () => {
                             <div className="events-divider"></div>
                         </div>
 
-                        <div className="events-video-wrapper">
-                            <div className="events-video-container" onClick={openModal}>
-                                <video
-                                    ref={videoRef}
-                                    src={video}
-                                    muted
-                                    loop
-                                    playsInline
-                                    className="events-video"
-                                />
-                                <div className="events-play-button">
-                                    <div className="events-play-icon"></div>
+                        <div className="events-content-wrapper">
+                            <div className="events-video-wrapper">
+                                <div className="events-video-container" onClick={openModal}>
+                                    <video
+                                        ref={videoRef}
+                                        src={video}
+                                        muted
+                                        loop
+                                        playsInline
+                                        className="events-video"
+                                    />
+                                    <div className="events-play-button">
+                                        <div className="events-play-icon"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="events-text-content">
+                                <h3 className="events-text-title">
+                                    {t("BlogPage.invitationTitle", "Уважаемые посетители!")}
+                                </h3>
+                                <div className="events-text-body">
+                                    <p>{t("BlogPage.invitationText1", "Приглашаем вас на международный бизнес- и логистический форум CABXPO Bishkek 2025, организованный CABEXPO и Senat Consulting.")}</p>
+                                    
+                                    <p>{t("BlogPage.invitationText2", "После успешного проведения CABXPO дважды в Ташкенте и один раз в Чикаго, мероприятие впервые пройдёт в Кыргызской Республике.")}</p>
+                                    
+                                    <p>{t("BlogPage.invitationText3", "Форум состоится 21–23 декабря в Караколе и 24–25 декабря в Бишкеке. В программе — выставка по ИТ и логистике, участие более 50 компаний, ярмарка вакансий, выступления экспертов и деловые встречи.")}</p>
+                                    
+                                    <p>{t("BlogPage.invitationText4", "CABXPO Bishkek 2025 станет платформой для укрепления делового сотрудничества, привлечения инвестиций, развития логистики и технологий, поддержки молодёжи и продвижения международного имиджа страны.")}</p>
+                                    
+                                    <div className="events-contact-info">
+                                        <p><strong>{t("BlogPage.contacts", "Контакты для информации")}:</strong></p>
+                                        <p>{t("BlogPage.phoneNumbers", "0504 96 77 11, 0707 96 77 11")}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
