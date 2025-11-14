@@ -94,21 +94,15 @@ a:focus {
   position: relative;
   z-index: 5555;
 }
-.fixed-navbar.active .header-style-1,
-.fixed-navbar.active .header-style-2,
-.fixed-navbar.active .header-style-3 {
+.fixed-navbar.active .header-style-1 {
   position: fixed;
   z-index: 555;
   top: 0;
   left: 0;
   width: 100%;
-  background: #0c5050;;
+  background: #0c5050;
   border: none;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-}
-.fixed-navbar.active .header-style-2,
-.fixed-navbar.active .header-style-3 {
-  background: #231b0e;
 }

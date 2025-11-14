@@ -127,8 +127,8 @@ function ContactForm3() {
 
                 <div className="col-12">
                     <button type="submit" className="theme-btn" disabled={isSubmitting}>
-                        {isSubmitting 
-                            ? t('CommentForm3.submitting', { defaultValue: 'Отправка...' }) 
+                        {isSubmitting
+                            ? t('CommentForm3.submitting', { defaultValue: 'Отправка...' })
                             : t('CommentForm3.submitButton', { defaultValue: 'Отправить' })
                         }
                     </button>

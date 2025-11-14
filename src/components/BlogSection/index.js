@@ -1,14 +1,14 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import blog1 from '../../images/blog/1.jpg'
 import blog2 from '../../images/blog/2.jpg'
 import blog3 from '../../images/blog/3.jpg'
-import blog4 from '../../images/blog-page/6.jpg'
+import blog4 from '../../images/blog-page/1.jpg'
 import './style.css'
 
 const BlogSection = () => {
 
-    return(
+    return (
         <div className="blog-area section-padding">
             <div className="container">
                 <div className="col-l2">
@@ -21,14 +21,14 @@ const BlogSection = () => {
                     <div className="col-lg-4 col-md-6 col-12">
                         <div className="blog-item">
                             <div className="blog-img">
-                               <img src={blog1} alt=""/>
+                                <img src={blog1} alt="" />
                             </div>
                             <div className="blog-content">
                                 <h3><Link to="/blog-fullwidth">
-                                Правосудие восторжествует, если вы стоите на стороне закона
+                                    Правосудие восторжествует, если вы стоите на стороне закона
                                 </Link></h3>
                                 <ul className="post-meta">
-                                    <li><img src={blog4} alt=""/></li>
+                                    <li><img src={blog4} alt="" /></li>
                                     <li><Link to="/blog">By Aliza anne</Link></li>
                                     <li> Oct 12,2019</li>
                                 </ul>
@@ -38,14 +38,14 @@ const BlogSection = () => {
                     <div className="col-lg-4 col-md-6 col-12">
                         <div className="blog-item">
                             <div className="blog-img">
-                               <img src={blog2} alt=""/>
+                                <img src={blog2} alt="" />
                             </div>
                             <div className="blog-content">
                                 <h3><Link to="/blog-fullwidth">
-                                Новые изменения в семейном законодательстве — что важно знать
+                                    Новые изменения в семейном законодательстве — что важно знать
                                 </Link></h3>
                                 <ul className="post-meta">
-                                    <li><img src={blog4} alt=""/></li>
+                                    <li><img src={blog4} alt="" /></li>
                                     <li><Link to="/blog">By Aliza anne</Link></li>
                                     <li> Oct 12,2019</li>
                                 </ul>
@@ -55,14 +55,14 @@ const BlogSection = () => {
                     <div className="col-lg-4 col-md-6 col-12">
                         <div className="blog-item b-0">
                             <div className="blog-img">
-                                <img src={blog3} alt=""/>
+                                <img src={blog3} alt="" />
                             </div>
                             <div className="blog-content">
                                 <h3><Link to="/blog-fullwidth">
-                                Как правильно оформить договор, чтобы избежать судебных споров
+                                    Как правильно оформить договор, чтобы избежать судебных споров
                                 </Link></h3>
                                 <ul className="post-meta">
-                                    <li><img src={blog4} alt=""/></li>
+                                    <li><img src={blog4} alt="" /></li>
                                     <li><Link to="/blog">By Aliza anne</Link></li>
                                     <li> Oct 12,2019</li>
                                 </ul>
@@ -72,8 +72,8 @@ const BlogSection = () => {
                 </div>
             </div>
         </div>
-     )
-        
+    )
+
 }
 
 export default BlogSection;

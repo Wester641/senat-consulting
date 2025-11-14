@@ -6,6 +6,7 @@ const UpcomingEvent = () => {
   const [showFloating, setShowFloating] = useState(true);
   const [showModal, setShowModal] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const videoRef = useRef(null);
   const modalVideoRef = useRef(null);
 
@@ -21,8 +22,28 @@ const UpcomingEvent = () => {
   }, []);
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setShouldLoadVideo(true);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (shouldLoadVideo && videoRef.current) {
+      videoRef.current.load();
+      
+      setTimeout(() => {
+        if (videoRef.current) {
+          videoRef.current.play().catch(err => console.log('Autoplay prevented:', err));
+        }
+      }, 100);
+    }
+  }, [shouldLoadVideo]);
+
+  useEffect(() => {
     const handleScroll = () => {
-      if (videoRef.current && showFloating) {
+      if (videoRef.current && showFloating && shouldLoadVideo) {
         const rect = videoRef.current.getBoundingClientRect();
         const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
 
@@ -38,13 +59,18 @@ const UpcomingEvent = () => {
     handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [showFloating]);
+  }, [showFloating, shouldLoadVideo]);
 
   const handleOpenModal = () => {
     setShowModal(true);
     if (videoRef.current) {
       videoRef.current.pause();
     }
+    
+    if (!shouldLoadVideo) {
+      setShouldLoadVideo(true);
+    }
+    
     setTimeout(() => {
       if (modalVideoRef.current) {
         modalVideoRef.current.muted = false;
@@ -80,9 +106,10 @@ const UpcomingEvent = () => {
               muted
               loop
               playsInline
-              onClick={handleOpenModal}
+              preload="none"
+              poster="/images/video-preview.jpg"
             >
-              <source src={video} type="video/mp4" />
+              {shouldLoadVideo && <source src={video} type="video/mp4" />}
             </video>
 
             <button
@@ -110,7 +137,7 @@ const UpcomingEvent = () => {
 
       {showModal && (
         <div className="events-modal" onClick={handleCloseModal}>
-          <button 
+          <button
             className="events-modal-close"
             onClick={handleCloseModal}
           >
@@ -118,7 +145,7 @@ const UpcomingEvent = () => {
           </button>
           <video
             ref={modalVideoRef}
-            src={video}
+            src={shouldLoadVideo ? video : ''}
             controls
             autoPlay
             muted={false}

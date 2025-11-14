@@ -148,6 +148,7 @@ function ContactForm() {
                         id="fname"
                         name="name"
                         disabled={isSubmitting}
+                        style={{ backgroundColor: '#EBEBEB' }}
                     />
                     {error.name && <p style={{ color: 'red' }}>{error.name}</p>}
                 </div>
@@ -160,6 +161,7 @@ function ContactForm() {
                         id="phone"
                         name="phone"
                         disabled={isSubmitting}
+                        style={{ backgroundColor: '#EBEBEB' }}
                     />
                     {error.phone && <p style={{ color: 'red' }}>{error.phone}</p>}
                 </div>
@@ -172,6 +174,7 @@ function ContactForm() {
                         id="email"
                         name="email"
                         disabled={isSubmitting}
+                        style={{ backgroundColor: '#EBEBEB' }}
                     />
                     {error.email && <p style={{ color: 'red' }}>{error.email}</p>}
                 </div>
@@ -182,6 +185,7 @@ function ContactForm() {
                         value={formData.service_type}
                         name="service_type"
                         disabled={isSubmitting}
+                        style={{ backgroundColor: '#EBEBEB' }}
                     >
                         <option disabled value="">{t("contactForm.eventPlaceholder")}</option>
                         <option value="1">{t("contactForm.event1")}</option>
@@ -201,6 +205,7 @@ function ContactForm() {
                         placeholder={t("contactForm.commentsPlaceholder")}
                         name="comment"
                         disabled={isSubmitting}
+                        style={{ backgroundColor: '#EBEBEB' }}
                     ></textarea>
                 </div>
                 
