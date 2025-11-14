@@ -22,6 +22,7 @@ const PricingSection = (props) => {
                     </div>
                 </div>
                 <div className="row">
+                    {/* Начальный план */}
                     <div className="col-lg-4 col-md-6 col-12">
                         <div className="pricing-item">
                             <div className="pricing-header">
@@ -38,6 +39,7 @@ const PricingSection = (props) => {
                         </div>
                     </div>
 
+                    {/* Базовый план */}
                     <div className="col-lg-4 col-md-6 col-12">
                         <div className="pricing-item">
                             <div className="pricing-header">
@@ -54,6 +56,7 @@ const PricingSection = (props) => {
                         </div>
                     </div>
 
+                    {/* Продвинутый план */}
                     <div className="col-lg-4 col-md-6 col-12">
                         <div className="pricing-item">
                             <div className="pricing-header">
