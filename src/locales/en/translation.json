@@ -67,7 +67,7 @@
     "title": "About us",
     "companyName": "Senat Consulting — a legal and consulting company",
     "companyDescription": "uniting experienced lawyers and project organization specialists. We carefully study each case, develop a strategy, and bring the matter to a result — from negotiations and document preparation to court decisions.",
-    "learnMore": "More about us…"
+    "learnMore": "About the Company Leader..."
   },
   "rewardsSection": {
     "title": "Awards"
@@ -139,6 +139,7 @@
   },
 
   "footerPrivacy": "Privacy Policy",
+  "footerTerms": "Terms of Service",
   "footerRights": "All Rights Reserved",
 
   "practiceDetails": {
@@ -242,7 +243,7 @@
   },
 
   "BlogPage": {
-    "pageTitle": "Upcoming Events", 
+    "pageTitle": "Upcoming Events",
     "pageSubTitle": "News and Articles",
     "loading": "Loading news...",
     "error": "Retry",
