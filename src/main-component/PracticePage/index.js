@@ -23,7 +23,7 @@ const PracticePage = () => {
             <Breadcumb bdtitle={'Наши услуги'} bdsub={'Наши услуги'} />
             <Features />
             <PracticeArea />
-            <PricingSection />
+            {/* <PricingSection /> */}
             <Testimonial />
             <FooterSection />
         </div>

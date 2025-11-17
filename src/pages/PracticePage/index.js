@@ -25,7 +25,7 @@ const PracticePage = () => {
             <Breadcumb bdtitle={t('pages.ServicesPageTitle')} bdsub={t('pages.ServicesPageTitle')} />
             <Features />
             <PracticeArea />
-            <PricingSection />
+            {/* <PricingSection /> */}
             <Testimonial />
             <FooterSection />
         </div>
