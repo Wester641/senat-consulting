@@ -7,7 +7,6 @@ import Breadcumb from '../../components/breadcumb'
 
 import Features from '../../components/features'
 import PracticeArea from '../../components/PracticeArea'
-import PricingSection from '../../components/Pricing'
 import Testimonial from '../../components/testimonial'
 import FooterSection from '../../components/Footer'
 import { useEffect } from 'react';
