@@ -114,6 +114,7 @@ const Rewards = () => {
                                         className="reward-image"
                                         onClick={() => openModal(reward.img)}
                                         style={{ cursor: 'pointer' }}
+                                        loading="lazy"
                                     />
                                 </div>
                             </div>
