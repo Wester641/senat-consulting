@@ -25,9 +25,11 @@ const LoadingFallback = () => (
     alignItems: 'center',
     height: '100vh',
     fontSize: '18px',
-    color: '#333'
+    color: '#e3e3e3ff',
+    backgroundColor: '#0c5050',
+    animation: 'pulse 2s infinite'
   }}>
-    Загрузка...
+    Loading...
   </div>
 );
 
