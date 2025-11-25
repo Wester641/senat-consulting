@@ -1,5 +1,4 @@
 .contact-area:before {
-  /* Отключаем все свойства */
   content: none !important;
   background-color: transparent !important;
   width: auto !important;
