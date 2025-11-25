@@ -62,6 +62,7 @@ function ContactForm3() {
                                 message: t('CommentForm3.messageMaxLength', { defaultValue: 'Сообщение не должно быть более 1000 символов' })
                             }
                         })}
+                        style={{ backgroundColor: '#EBEBEB' }}
                     ></textarea>
                     {errors.notes && <span style={{ color: 'red', fontSize: '12px' }}>{errors.notes.message}</span>}
                 </div>
@@ -77,6 +78,7 @@ function ContactForm3() {
                                 message: t('CommentForm3.companyMaxLength', { defaultValue: 'Название компании не должно быть более 150 символов' })
                             }
                         })}
+                        style={{ backgroundColor: '#EBEBEB' }}
                     />
                     {errors.companyName && <span style={{ color: 'red', fontSize: '12px' }}>{errors.companyName.message}</span>}
                 </div>
@@ -101,6 +103,7 @@ function ContactForm3() {
                                 message: t('CommentForm3.namePattern', { defaultValue: 'Имя может содержать только буквы, пробелы и дефисы' })
                             }
                         })}
+                        style={{ backgroundColor: '#EBEBEB' }}
                     />
                     {errors.name && <span style={{ color: 'red', fontSize: '12px' }}>{errors.name.message}</span>}
                 </div>
@@ -121,6 +124,7 @@ function ContactForm3() {
                                 message: t('CommentForm3.phoneMinLength', { defaultValue: 'Телефон должен быть минимум 10 символов' })
                             }
                         })}
+                        style={{ backgroundColor: '#EBEBEB' }}
                     />
                     {errors.phoneNumber && <span style={{ color: 'red', fontSize: '12px' }}>{errors.phoneNumber.message}</span>}
                 </div>
