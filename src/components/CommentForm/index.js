@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
-import "./style.css";
+import "./style1.css";
 
 function ContactForm() {
     const { t } = useTranslation();
