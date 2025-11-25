@@ -141,8 +141,8 @@
 @media (max-width: 768px) {
   .about-style-1 .about-img:before,
   .about-style-2 .about-img:before {
-    width: 97%;
-    height: 97%;
+    width: 92%;
+    height: 93%;
   }
 }
 .about-style-2 .video-btn {

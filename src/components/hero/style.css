@@ -3,9 +3,29 @@
   height: 800px;
   overflow: hidden;
 }
+
+@media (max-width: 991px) {
+  .hero {
+    height: 700px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    height: 600px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero {
+    height: 500px;
+  }
+}
+
 .slide {
   position: relative;
 }
+
 .slide:after {
   content: "";
   width: 100%;
@@ -13,7 +33,6 @@
   position: absolute;
   left: 0;
   top: 0;
-  /* background: #000; */
   opacity: 0.5;
 }
 
@@ -21,10 +40,12 @@
   z-index: 19;
   padding-bottom: 30px;
 }
+
 .hero-style-1 .slide-caption {
   z-index: 19;
   padding-bottom: 20px;
 }
+
 .hero .slide {
   height: 800px;
   position: relative;
@@ -34,36 +55,108 @@
   flex-direction: column;
 }
 
-.slide1, .slide2, .slide3 {
-  min-height: 500px;
-  background-color: #1a1a1a;
-  transition: background-image 0.3s ease;
-}
-.slide1.loaded {
-  background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_50,f_auto,fl_progressive,w_1920/v1761908521/modern-private-office-room-interior-with-laptop-t-2025-01-07-12-16-12-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_joi3od.jpg")
-    80% center/cover no-repeat local;
-}
-.slide2.loaded {
-  background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_50,f_auto,fl_progressive,w_1920/v1761908517/indoors-2025-01-09-05-52-55-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_r2tysd.jpg")
-    80% center / cover no-repeat local;
-}
-.slide3.loaded {
-  background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_50,f_auto,fl_progressive,w_1920/v1761908516/vintage-books-on-bookshelves-in-old-library-educa-2025-03-06-16-00-47-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_umtlxt.jpg")
-    center 20% / cover no-repeat local;
+@media (max-width: 991px) {
+  .hero .slide {
+    height: 700px;
+  }
 }
 
 @media (max-width: 767px) {
-  .slide1 {
-    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_50,f_auto,fl_progressive,w_800/v1761908521/modern-private-office-room-interior-with-laptop-t-2025-01-07-12-16-12-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_joi3od.jpg")
-      77% center/cover no-repeat local;
+  .hero .slide {
+    height: 600px;
   }
-  .slide2 {
-    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_50,f_auto,fl_progressive,w_800/v1761908517/indoors-2025-01-09-05-52-55-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_r2tysd.jpg")
-      80% center/cover no-repeat local
+}
+
+@media (max-width: 575px) {
+  .hero .slide {
+    height: 500px;
   }
-  .slide3 {
-    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_50,f_auto,fl_progressive,w_800/v1761908516/vintage-books-on-bookshelves-in-old-library-educa-2025-03-06-16-00-47-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_umtlxt.jpg")
-      67% center / cover no-repeat local;
+}
+
+.slide1, .slide2, .slide3 {
+  min-height: 100%;
+  background-color: #1a1a1a;
+  transition: background-image 0.3s ease;
+}
+
+.slide1.loaded {
+  background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_95,f_auto,fl_progressive,w_1920/v1761908521/modern-private-office-room-interior-with-laptop-t-2025-01-07-12-16-12-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_joi3od.jpg")
+    80% center/cover no-repeat local;
+}
+
+.slide2.loaded {
+  background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_95,f_auto,fl_progressive,w_1920/v1761908517/indoors-2025-01-09-05-52-55-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_r2tysd.jpg")
+    80% center / cover no-repeat local;
+}
+
+.slide3.loaded {
+  background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_95,f_auto,fl_progressive,w_1920/v1761908516/vintage-books-on-bookshelves-in-old-library-educa-2025-03-06-16-00-47-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_umtlxt.jpg")
+    center 20% / cover no-repeat local;
+}
+
+@media (max-width: 991px) {
+  .slide1.loaded {
+    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_95,f_auto,fl_progressive,w_1200/v1761908521/modern-private-office-room-interior-with-laptop-t-2025-01-07-12-16-12-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_joi3od.jpg")
+      center center no-repeat local;
+    background-size: cover;
+  }
+  
+  .slide2.loaded {
+    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_95,f_auto,fl_progressive,w_1200/v1761908517/indoors-2025-01-09-05-52-55-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_r2tysd.jpg")
+      center center no-repeat local;
+    background-size: cover;
+  }
+  
+  .slide3.loaded {
+    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_95,f_auto,fl_progressive,w_1200/v1761908516/vintage-books-on-bookshelves-in-old-library-educa-2025-03-06-16-00-47-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_umtlxt.jpg")
+      center center no-repeat local;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 767px) {
+  .slide1.loaded {
+    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_95,f_auto,fl_progressive,w_800/v1761908521/modern-private-office-room-interior-with-laptop-t-2025-01-07-12-16-12-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_joi3od.jpg")
+      center center no-repeat local;
+    background-size: cover;
+    background-position: 60% center;
+    min-height: 600px;
+  }
+  
+  .slide2.loaded {
+    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_95,f_auto,fl_progressive,w_800/v1761908517/indoors-2025-01-09-05-52-55-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_r2tysd.jpg")
+      center center no-repeat local;
+    background-size: cover;
+    background-position: 55% center;
+    min-height: 600px;
+  }
+  
+  .slide3.loaded {
+    background: url("https://res.cloudinary.com/dgi7dckle/image/upload/q_95,f_auto,fl_progressive,w_800/v1761908516/vintage-books-on-bookshelves-in-old-library-educa-2025-03-06-16-00-47-utc_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_umtlxt.jpg")
+      center center no-repeat local;
+    background-size: cover;
+    background-position: 50% 30%;
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 575px) {
+  .slide1.loaded {
+    background-size: cover;
+    background-position: 90% center;
+    min-height: 500px;
+  }
+  
+  .slide2.loaded {
+    background-size: cover;
+    background-position: 90% center;
+    min-height: 500px;
+  }
+  
+  .slide3.loaded {
+    background-size: cover;
+    background-position: 90% 25%;
+    min-height: 500px;
   }
 }
 
@@ -87,8 +180,10 @@
   .hero .slide .container {
     position: relative;
     top: 35px;
+    padding: 0 15px;
   }
 }
+
 .slick-prev,
 .slick-next {
   width: 50px;
@@ -98,8 +193,36 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
+@media (max-width: 767px) {
+  .slick-prev,
+  .slick-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .slick-prev,
+  .slick-next {
+    width: 35px;
+    height: 35px;
+  }
+}
+
 .slick-prev {
   left: 25px;
+}
+
+@media (max-width: 767px) {
+  .slick-prev {
+    left: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .slick-prev {
+    left: 10px;
+  }
 }
 
 .slick-prev:before {
@@ -109,8 +232,27 @@
   color: #fff;
 }
 
+@media (max-width: 767px) {
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 18px;
+  }
+}
+
 .slick-next {
   right: 25px;
+}
+
+@media (max-width: 767px) {
+  .slick-next {
+    right: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .slick-next {
+    right: 10px;
+  }
 }
 
 .slick-next:before {
@@ -136,16 +278,33 @@
   color: red;
 }
 
+@media (max-width: 767px) {
+  .hero .slick-dots {
+    bottom: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero .slick-dots {
+    bottom: 20px;
+  }
+}
+
 .hero .slick-dots li {
   margin: 10px;
+}
+
+@media (max-width: 575px) {
+  .hero .slick-dots li {
+    margin: 5px;
+  }
 }
 
 .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #ff9500;
-  /* border: 1px solid #ff7b00; */
-  /* border-radius: 100%; */
 }
+
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before {
   opacity: 1;
@@ -160,6 +319,15 @@
   opacity: 1;
 }
 
+@media (max-width: 575px) {
+  .slick-dots li button:before {
+    font-size: 10px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
 /*================================
   0.4 hero style 1
 ================================*/
@@ -171,6 +339,26 @@
   line-height: 30px;
   font-weight: 300;
   margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .hero-style-1 .slide-caption p,
+  .hero-style-2 .slide-caption p,
+  .hero-style-3 .slide-caption p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-style-1 .slide-caption p,
+  .hero-style-2 .slide-caption p,
+  .hero-style-3 .slide-caption p {
+    font-size: 13px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
 }
 
 .hero-style-1 .slide-caption p span,
@@ -189,64 +377,23 @@
   font-family: "Montserrat", sans-serif;
   color: #fff;
 }
-.hero-style-2 .slide-caption h2 {
-  font-size: 44px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 90px;
-  margin: 10px 0 20px;
-}
-@media (max-width: 450px) {
-  .hero-style-1 .slide-caption h2,
-  .hero-style-2 .slide-caption h2,
-  .hero-style-3 .slide-caption h2 {
-    font-size: 30px;
+
+@media (max-width: 767px) {
+  .hero-style-1 .slide-caption span,
+  .hero-style-2 .slide-caption span,
+  .hero-style-3 .slide-caption span {
+    font-size: 22px;
+    margin-bottom: 8px;
   }
 }
 
-@media (max-width: 450px) {
-  .hero-style-1 .slide-caption h2 span,
-  .hero-style-2 .slide-caption h2 span,
-  .hero-style-3 .slide-caption h2 span {
-    padding: 4px 0;
+@media (max-width: 575px) {
+  .hero-style-1 .slide-caption span,
+  .hero-style-2 .slide-caption span,
+  .hero-style-3 .slide-caption span {
+    font-size: 18px;
+    margin-bottom: 5px;
   }
-}
-.half-colt {
-  width: 100%;
-  padding-bottom: 30px;
-}
-.header-p {
-  position: relative;
-}
-.hero-contact {
-  width: 400px;
-  height: 610px;
-  position: absolute;
-  bottom: -210px;
-  right: 15px;
-  z-index: 999;
-  background-color: rgba(7, 47, 79, 0.76);
-  padding: 50px 40px;
-}
-.hero-contact h2 {
-  font-size: 24px;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 20px;
-}
-.hero-contact p {
-  color: #fffefe;
-  margin-bottom: 30px;
-}
-.hero-contact form input,
-.hero-contact form textarea {
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.38);
-  height: 50px;
-  background: rgba(255, 255, 255, 0.02);
-}
-.hero-contact form textarea {
-  height: 130px;
 }
 
 .hero.hero-style-1 .slide-caption h2,
@@ -259,7 +406,147 @@
   margin: 10px 0 20px;
 }
 
+@media (max-width: 991px) {
+  .hero.hero-style-1 .slide-caption h2,
+  .hero.hero-style-2 .slide-caption h2,
+  .hero.hero-style-3 .slide-caption h2 {
+    font-size: 44px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero.hero-style-1 .slide-caption h2,
+  .hero.hero-style-2 .slide-caption h2,
+  .hero.hero-style-3 .slide-caption h2 {
+    font-size: 32px;
+    line-height: 45px;
+    margin: 8px 0 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero.hero-style-1 .slide-caption h2,
+  .hero.hero-style-2 .slide-caption h2,
+  .hero.hero-style-3 .slide-caption h2 {
+    font-size: 26px;
+    line-height: 38px;
+    margin: 5px 0 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero-style-1 .slide-caption h2,
+  .hero-style-2 .slide-caption h2,
+  .hero-style-3 .slide-caption h2 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero-style-1 .slide-caption h2 span,
+  .hero-style-2 .slide-caption h2 span,
+  .hero-style-3 .slide-caption h2 span {
+    padding: 4px 0;
+  }
+}
+
+.half-colt {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.header-p {
+  position: relative;
+}
+
+.hero-contact {
+  width: 400px;
+  height: 610px;
+  position: absolute;
+  bottom: -210px;
+  right: 15px;
+  z-index: 999;
+  background-color: rgba(7, 47, 79, 0.76);
+  padding: 50px 40px;
+}
+
+@media (max-width: 991px) {
+  .hero-contact {
+    width: 350px;
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-contact {
+    position: relative;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    padding: 30px 20px;
+  }
+}
+
+.hero-contact h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .hero-contact h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+.hero-contact p {
+  color: #fffefe;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .hero-contact p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+.hero-contact form input,
+.hero-contact form textarea {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  height: 50px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.hero-contact form textarea {
+  height: 130px;
+}
+
 .hero-style-3 {
   height: 100vh;
   min-height: 850px;
+}
+
+@media (max-width: 991px) {
+  .hero-style-3 {
+    min-height: 700px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-style-3 {
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-style-3 {
+    min-height: 500px;
+  }
 }
