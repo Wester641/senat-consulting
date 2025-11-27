@@ -1,4 +1,4 @@
-name: Deploy to GoDaddy Hosting
+name: Auto Deploy to VPS
 
 on:
   push:
@@ -8,30 +8,67 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      CI: false
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Copy files to VPS via SSH
+        uses: appleboy/scp-action@v0.1.7
         with:
-          node-version: 18
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          source: "."
+          target: "/opt/project"
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: npm run build
-
-      - name: Upload to GoDaddy hosting
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Deploy and restart Docker
+        uses: appleboy/ssh-action@v1.1.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./build/
-          server-dir: ./
-          protocol: ftp
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: |
+            cd /opt/project
+            git pull origin main || true
+            docker compose build
+            docker compose up -d
+            
+
+# name: Deploy to GoDaddy Hosting
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     env:
+#       CI: false
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
+
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 18
+
+#       - name: Install dependencies
+#         run: npm ci
+
+#       - name: Build project
+#         run: npm run build
+
+#       - name: Upload to GoDaddy hosting
+#         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+#         with:
+#           server: ${{ secrets.FTP_SERVER }}
+#           username: ${{ secrets.FTP_USERNAME }}
+#           password: ${{ secrets.FTP_PASSWORD }}
+#           local-dir: ./build/
+#           server-dir: ./
+#           protocol: ftp
