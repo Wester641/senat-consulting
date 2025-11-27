@@ -60,7 +60,7 @@
     -ms-filter: grayscale(50%);
     filter: grayscale(50%);
 }
-.blog-page-area .blog-item .post-meta {
+.blog-page-area .blog-item {
     padding-top: 20px;
 }
 

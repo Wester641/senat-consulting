@@ -33,7 +33,7 @@
     "phoneLabel": "Phone",
     "phone": "+996 (707) 967-711",
     "emailLabel": "Email",
-    "email": "guljamal.muni@gmail.com"
+    "email": "senat.kyrgyzstan@gmail.com"
   },
   "contactHours": {
     "title": "Free consultation",
@@ -67,7 +67,10 @@
     "title": "About us",
     "companyName": "Senat Consulting — a legal and consulting company",
     "companyDescription": "uniting experienced lawyers and project organization specialists. We carefully study each case, develop a strategy, and bring the matter to a result — from negotiations and document preparation to court decisions.",
-    "learnMore": "More about us…"
+    "learnMore": "About the Company Leader..."
+  },
+  "rewardsSection": {
+    "title": "Awards"
   },
 
   "features": {
@@ -136,6 +139,7 @@
   },
 
   "footerPrivacy": "Privacy Policy",
+  "footerTerms": "Terms of Service",
   "footerRights": "All Rights Reserved",
 
   "practiceDetails": {
@@ -246,7 +250,14 @@
     "noPosts": "No posts found",
     "Page": "Page",
     "of": "of",
-    "ReturnToBlog": "Return to News List"
+    "ReturnToBlog": "Return to News List",
+    "invitationTitle": "Dear visitors!",
+    "invitationText1": "We invite you to the international business and logistics forum CABXPO Bishkek 2025, organized by CABEXPO and Senat Consulting.",
+    "invitationText2": "After the successful holding of CABXPO twice in Tashkent and once in Chicago, the event will be held for the first time in the Kyrgyz Republic.",
+    "invitationText3": "The forum will take place on December 21-23 in Karakol and on December 24-25 in Bishkek. The program includes an exhibition on IT and logistics, participation of more than 50 companies, a job fair, expert presentations and business meetings.",
+    "invitationText4": "CABXPO Bishkek 2025 will become a platform for strengthening business cooperation, attracting investments, developing logistics and technologies, supporting youth and promoting the country's international image.",
+    "contacts": "Contacts for information",
+    "phoneNumbers": "0504 96 77 11, 0707 96 77 11"
   },
 
   "ContactPage": {
@@ -258,7 +269,7 @@
     "phone1": "+996 (707) 967-711",
     "phone2": "+996 (707) 967-711",
     "emailLabel": "Email",
-    "email": "guljamal.muni@gmail.com",
+    "email": "senat.kyrgyzstan@gmail.com",
     "formTitle": "Quick Contact Form",
     "viewOnMap": "View on Bishkek Map",
     "findRoute": "Find route to Intellect IT & Business College - Senat Consulting",
@@ -291,7 +302,7 @@
     "phoneLabel": "Phone",
     "phone": "+996 (707) 967-711",
     "emailLabel": "Email",
-    "email": "guljamal.muni@gmail.com",
+    "email": "senat.kyrgyzstan@gmail.com",
     "photoAlt": "Photo of the Director",
     "professionalExperience": "Professional Experience",
     "experienceText1": "Zhenishbek Zhunusov’s professional path covers key areas of public service, diplomacy, and law. He is the Director of the legal company 'Senat Consulting', providing qualified legal, business, and consulting services.",

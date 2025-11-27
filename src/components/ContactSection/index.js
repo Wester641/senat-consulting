@@ -2,13 +2,13 @@ import React, { forwardRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import ContactForm from '../CommentForm';
 import './style.css';
-
+import './style1.css';
 
 const ContactSection = forwardRef((props, ref) => {
     const { t } = useTranslation();
 
     return (
-        <div className="contact-area section-padding" ref={ref}>
+        <div className="contact-area section-padding contact-section-bg-wrapper" ref={ref}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-5">

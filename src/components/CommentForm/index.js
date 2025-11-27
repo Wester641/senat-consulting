@@ -138,7 +138,27 @@ function ContactForm() {
 
     return (
         <form onSubmit={submitHandler}>
-            <div className="contact-form form-style row">
+            <div 
+                className="contact-form form-style row"
+                style={{
+                    background: 'none',
+                    backgroundImage: 'none',
+                    position: 'static',
+                    backgroundAttachment: 'scroll'
+                }}
+            >
+                <style>{`
+                    .contact-form.form-style.row:before {
+                        content: none !important;
+                        background-color: transparent !important;
+                        width: auto !important;
+                        height: auto !important;
+                        position: static !important;
+                        left: auto !important;
+                        top: auto !important;
+                        display: none !important;
+                    }
+                `}</style>
                 <div className="col-12 col-lg-6">
                     <input
                         type="text"

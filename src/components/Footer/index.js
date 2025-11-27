@@ -77,20 +77,20 @@ const FooterSection = () => {
                         <div className="row">
                             <div className="col-lg-6 col-md-8 col-sm-9 col-12">
                                 <span>
-                                    {t('footerPrivacy')} | © 2025{' '}
+                                    <Link to="/Privacy_Policy_Senat.pdf" target="_blank" rel="noopener noreferrer">{t('footerPrivacy')}</Link>
+                                    {" "} - {" "}
+                                    <Link to="/Terms_of_Use_Senat.pdf" target="_blank" rel="noopener noreferrer">{t('footerTerms')}</Link> {" "}
+
+                                    | © 2025{' '}
+
                                     <Link to="/">Senat Consulting</Link>. {t('footerRights')}
                                 </span>
+
                             </div>
                             <div className="col-lg-6 col-md-4 col-sm-3 col-12">
                                 <ul className="d-flex">
                                     <li>
-                                        <Link to="/"><i className="fa fa-facebook" aria-hidden="true"></i></Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/"><i className="fa fa-twitter" aria-hidden="true"></i></Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/"><i className="fa fa-linkedin" aria-hidden="true"></i></Link>
+                                        <Link to="/"><i className="fa fa-instagram" aria-hidden="true"></i></Link>
                                     </li>
                                 </ul>
                             </div>
